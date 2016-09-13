@@ -5,7 +5,6 @@ namespace SingleDArray
 
     public class PrintReverse
     {
-
         #region Methods.
         public static void Run(int[] arrayElements)
         {
@@ -17,7 +16,6 @@ namespace SingleDArray
             WriteLine();
         }
         #endregion
-
     }
 
 }

@@ -7,7 +7,6 @@ namespace DataStructureConsoleApp
 
     public class MainCls
     {
-
         public static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
@@ -23,7 +22,6 @@ namespace DataStructureConsoleApp
             Console.WriteLine("\n\nPress any key ...");
             Console.ReadKey();
         }
-
     }
 
 }
