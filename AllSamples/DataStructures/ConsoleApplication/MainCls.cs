@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
 using SingleDArray;
+using static System.Console;
+using TwoDArray;
 
 namespace DataStructureConsoleApp
 {
@@ -9,18 +11,20 @@ namespace DataStructureConsoleApp
     {
         public static void Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.Cyan;
+            ForegroundColor = ConsoleColor.Cyan;
+
+            Transpose.Run();
 
             //Print SD Array in Reverse
-            var numberOfRepetations = int.Parse(Console.ReadLine().Trim());
+            var numberOfRepetations = int.Parse(ReadLine().Trim());
             for ( ; numberOfRepetations>0; numberOfRepetations--)
             {
-                var arrayElements = Console.ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
+                var arrayElements = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
                 PrintReverse.Run(arrayElements);
             }
 
-            Console.WriteLine("\n\nPress any key ...");
-            Console.ReadKey();
+            WriteLine("\n\nPress any key ...");
+            ReadKey();
         }
     }
 

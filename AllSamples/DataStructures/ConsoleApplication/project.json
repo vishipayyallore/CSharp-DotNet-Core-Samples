@@ -9,7 +9,8 @@
       "type": "platform",
       "version": "1.0.0"
     },
-    "SingleDArray": "1.0.0.0"
+    "SingleDArray": "1.0.1",
+    "TwoDArray": "1.0.1"
   },
 
   "frameworks": {
