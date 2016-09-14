@@ -1,13 +1,9 @@
-﻿using System;
-using System.Linq;
-using SingleDArray;
+﻿using System.Linq;
 using static System.Console;
-using TwoDArray;
 
-namespace DataStructureConsoleApp
+namespace SingleDArray
 {
-
-    public class MainCls
+    public class MonksLoveForFood
     {
 
         private static void Push(int?[] tempArray, int number)
@@ -27,15 +23,13 @@ namespace DataStructureConsoleApp
             for (var iCtr = 0; iCtr < tempArray.Length - 2; iCtr++)
             {
                 if (tempArray[iCtr] == null) continue;
-                tempArray[iCtr] = tempArray[iCtr+1];
+                tempArray[iCtr] = tempArray[iCtr + 1];
             }
             return output;
         }
 
-        public static void Main(string[] args)
+        public static void Run()
         {
-            ForegroundColor = ConsoleColor.Cyan;
-
             const string nofood = "No Food";
             var numberOfQueries = int.Parse(ReadLine().Trim());
             if (numberOfQueries < 1 || numberOfQueries > 100000)
@@ -62,21 +56,6 @@ namespace DataStructureConsoleApp
                 var returnValue = Pop(priceArray);
                 WriteLine((returnValue == null) ? nofood : returnValue.ToString());
             }
-
-            //Two D Array
-            Transpose.Run();
-
-            //Print SD Array in Reverse
-            var numberOfRepetations = int.Parse(ReadLine().Trim());
-            for ( ; numberOfRepetations>0; numberOfRepetations--)
-            {
-                var arrayElements = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
-                PrintReverse.Run(arrayElements);
-            }
-
-            WriteLine("\n\nPress any key ...");
-            ReadKey();
         }
     }
-
 }
