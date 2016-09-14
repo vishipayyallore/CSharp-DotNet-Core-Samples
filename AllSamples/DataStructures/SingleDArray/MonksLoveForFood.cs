@@ -22,10 +22,38 @@ namespace SingleDArray
             if (output == null) return null;
             for (var iCtr = 0; iCtr < tempArray.Length - 2; iCtr++)
             {
-                if (tempArray[iCtr] == null) continue;
+                if (tempArray[iCtr] == null) break;
                 tempArray[iCtr] = tempArray[iCtr + 1];
             }
             return output;
+        }
+
+        public static void Run1()
+        {
+            const string nofood = "No Food";
+            var numberOfQueries = int.Parse(ReadLine().Trim());
+            if (numberOfQueries < 1 || numberOfQueries > 100000)
+            {
+                return;
+            }
+            var priceArray = new int?[numberOfQueries];
+
+            for (var iCtr = 0; iCtr < numberOfQueries; iCtr++)
+            {
+                var arrayElements = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
+                if (arrayElements.Length == 2)
+                {
+                    if (arrayElements[1] < 1 || arrayElements[1] > 10000000)
+                    {
+                        iCtr--;
+                        continue;
+                    }
+                    Push(priceArray, arrayElements[1]);
+                }
+                if (arrayElements[0] != 1) continue;
+                var returnValue = Pop(priceArray);
+                WriteLine((returnValue == null) ? nofood : string.Format("{0}", returnValue));
+            }
         }
 
         public static void Run()

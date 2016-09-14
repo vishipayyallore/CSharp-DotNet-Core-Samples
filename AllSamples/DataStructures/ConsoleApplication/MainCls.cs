@@ -26,8 +26,8 @@ namespace DataStructureConsoleApp
             if (output == null) return null;
             for (var iCtr = 0; iCtr < tempArray.Length - 2; iCtr++)
             {
-                if (tempArray[iCtr] == null) continue;
-                tempArray[iCtr] = tempArray[iCtr+1];
+                if (tempArray[iCtr] == null) break;
+                tempArray[iCtr] = tempArray[iCtr + 1];
             }
             return output;
         }
@@ -58,7 +58,7 @@ namespace DataStructureConsoleApp
                 }
                 if (arrayElements[0] != 1) continue;
                 var returnValue = Pop(priceArray);
-                WriteLine((returnValue == null) ? nofood : returnValue.ToString());
+                WriteLine((returnValue == null) ? nofood : string.Format("{0}", returnValue));
             }
 
             //Two D Array
