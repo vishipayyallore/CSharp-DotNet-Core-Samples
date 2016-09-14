@@ -9,52 +9,67 @@ namespace DataStructureConsoleApp
 
     public class MainCls
     {
+
+        private static void Push(int?[] tempArray, int number)
+        {
+            for (var iCtr = tempArray.Length - 1; iCtr > 0; iCtr--)
+            {
+                if (tempArray[iCtr - 1] == null) continue;
+                tempArray[iCtr] = tempArray[iCtr - 1];
+            }
+            tempArray[0] = number;
+        }
+
+        private static int? Pop(int?[] tempArray)
+        {
+            var output = tempArray[0];
+            if (output == null) return null;
+            for (var iCtr = 0; iCtr < tempArray.Length - 2; iCtr++)
+            {
+                if (tempArray[iCtr] == null) continue;
+                tempArray[iCtr] = tempArray[iCtr+1];
+            }
+            return output;
+        }
+
         public static void Main(string[] args)
         {
             ForegroundColor = ConsoleColor.Cyan;
 
             const string nofood = "No Food";
-            var numberOfPrices = 0;
             var numberOfQueries = int.Parse(ReadLine().Trim());
             if (numberOfQueries < 1 || numberOfQueries > 100000)
             {
                 return;
             }
             var queryArray = new int[numberOfQueries];
-            var onlyPrices = new int?[numberOfQueries];
             var priceArray = new int?[numberOfQueries];
-            
+            var outputArray = new string[numberOfQueries];
+            var jCtr = 0;
+
             for (var iCtr = 0; iCtr < numberOfQueries; iCtr++)
             {
                 var arrayElements = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
+                if (arrayElements.Length == 2)
+                {
+                    if (arrayElements[1] < 1 || arrayElements[1] > 10000000)
+                    {
+                        iCtr--;
+                        continue;
+                    }
+                    Push(priceArray, arrayElements[1]);
+                }
                 queryArray[iCtr] = arrayElements[0];
-                if (arrayElements.Length != 2) continue;
-                onlyPrices[numberOfPrices] = arrayElements[1];
-                if (onlyPrices[numberOfPrices] < 1 || onlyPrices[numberOfPrices] > 10000000)
-                {
-                    iCtr--;
-                }
-                numberOfPrices++;
-            }
-
-            var currentPosition = numberOfPrices - 1;
-            for (var iCtr = 0; iCtr < numberOfQueries; iCtr++)
-            {
-                if (currentPosition <= -1)
-                {
-                    continue;
-                }
-                priceArray[iCtr] = (queryArray[iCtr] == 1) ? -1 : onlyPrices[currentPosition--];
-                
-            }
-
-            currentPosition = 0;
-            for (var iCtr = 0; iCtr < numberOfQueries; iCtr++)
-            {
                 if (queryArray[iCtr] != 1) continue;
-                WriteLine(priceArray[currentPosition] == -1 ? nofood : $"{priceArray[currentPosition]}");
-                currentPosition++;
+                var returnValue = Pop(priceArray);
+                WriteLine((returnValue == null) ? nofood : returnValue.ToString());
+                //outputArray[jCtr++] = (returnValue == null) ? nofood : returnValue.ToString();
             }
+
+            //foreach (var data in outputArray.Where(data => data != null))
+            //{
+            //    WriteLine(data);
+            //}
 
             //Two D Array
             Transpose.Run();
