@@ -42,7 +42,6 @@ namespace DataStructureConsoleApp
             {
                 return;
             }
-            var queryArray = new int[numberOfQueries];
             var priceArray = new int?[numberOfQueries];
 
             for (var iCtr = 0; iCtr < numberOfQueries; iCtr++)
@@ -57,8 +56,7 @@ namespace DataStructureConsoleApp
                     }
                     Push(priceArray, arrayElements[1]);
                 }
-                queryArray[iCtr] = arrayElements[0];
-                if (queryArray[iCtr] != 1) continue;
+                if (arrayElements[0] != 1) continue;
                 var returnValue = Pop(priceArray);
                 WriteLine((returnValue == null) ? nofood : returnValue.ToString());
             }
