@@ -3,7 +3,7 @@ using static System.Console;
 
 namespace SortingConsoleApp
 {
-    public class Program
+    public class MainCls
     {
         public static void Main(string[] args)
         {
