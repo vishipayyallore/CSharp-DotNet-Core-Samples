@@ -52,7 +52,7 @@ namespace SingleDArray
                 }
                 if (arrayElements[0] != 1) continue;
                 var returnValue = Pop(priceArray);
-                WriteLine((returnValue == null) ? nofood : string.Format("{0}", returnValue));
+                WriteLine((returnValue == null) ? nofood : returnValue.ToString());
             }
         }
 
