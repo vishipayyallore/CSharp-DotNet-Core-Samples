@@ -11,7 +11,7 @@ namespace SortingConsoleApp
             ForegroundColor = ConsoleColor.Cyan;
 
             //var arrayElements = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
-            var numbers = new int[] { 3, 8, 7, 5, 2, 1, 9, 6, 4 };
+            var numbers = new[] { 3, 8, 7, 5, 2, 1, 9, 6, 4 };
 
             WriteLine($"Before: {string.Join(" ", numbers)}");
             MergeSort.Run(numbers, 0, numbers.Length-1);

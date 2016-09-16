@@ -25,11 +25,11 @@
             var tempArray = new int[numbers.Length];
             var startPosition = left;
             var leftEnd = mid - 1;
-            var numberOfElements = (right - left + 1);
+            var numberOfElements = right - left + 1;
 
             while ((left <= leftEnd) && (mid <= right))
             {
-                tempArray[startPosition++] = (numbers[left] <= numbers[mid]) ? numbers[left++] : numbers[mid++];
+                tempArray[startPosition++] = numbers[left] <= numbers[mid] ? numbers[left++] : numbers[mid++];
             }
 
             while (left <= leftEnd)

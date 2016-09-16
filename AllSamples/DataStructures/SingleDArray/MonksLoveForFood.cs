@@ -52,7 +52,7 @@ namespace SingleDArray
                 }
                 if (arrayElements[0] != 1) continue;
                 var returnValue = Pop(priceArray);
-                WriteLine((returnValue == null) ? nofood : returnValue.ToString());
+                WriteLine(returnValue == null ? nofood : returnValue.ToString());
             }
         }
 
@@ -82,7 +82,7 @@ namespace SingleDArray
                 queryArray[iCtr] = arrayElements[0];
                 if (queryArray[iCtr] != 1) continue;
                 var returnValue = Pop(priceArray);
-                WriteLine((returnValue == null) ? nofood : returnValue.ToString());
+                WriteLine(returnValue == null ? nofood : returnValue.ToString());
             }
         }
     }
