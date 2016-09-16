@@ -36,6 +36,29 @@ namespace DataStructureConsoleApp
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+            //Speed Of Cars
+            var carSpeeds = new int[] { 55, 2, 4, 3, 5, 1, 12, 13, 67, 87 };
+            //{4, 5, 1, 2, 3};
+            //{8, 3, 6};
+            //{3, 1, 3, 4, 2};
+            //{ 55, 2, 4, 3, 5, 1, 12, 13, 67, 87 }; 
+            //{4, 5, 1, 2, 3};
+            var count = 1;
+            //var minimum = carSpeeds[0];
+            //for (var iCtr = 1; iCtr < carSpeeds.Length; iCtr++)
+            //{
+            //    if (carSpeeds[iCtr] > minimum) continue;
+            //    ++count;
+            //    minimum = carSpeeds[iCtr];
+            //}
+
+            for (var iCtr = 1; iCtr < carSpeeds.Length; iCtr++)
+            {
+                if (carSpeeds[iCtr] > carSpeeds[iCtr-1]) continue;
+                ++count;
+                carSpeeds[iCtr - 1] = carSpeeds[iCtr];
+            }
+            WriteLine($"Count: {count}");
 
             //MonksLoveForFood
             const string nofood = "No Food";
