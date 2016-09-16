@@ -36,6 +36,8 @@ namespace DataStructureConsoleApp
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+
+            //MonksLoveForFood
             const string nofood = "No Food";
             var numberOfQueries = int.Parse(ReadLine().Trim());
             if (numberOfQueries < 1 || numberOfQueries > 100000)
