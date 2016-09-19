@@ -1,4 +1,7 @@
-﻿namespace Sortings
+﻿using System.Linq;
+using static System.Console;
+
+namespace Sortings
 {
 
     /*
@@ -48,9 +51,12 @@
             }
         }
 
-        public static void Run(int[] numbers, int left, int right)
+        public static void Run()
         {
-            SortMerge(numbers, left, right);
+            var arrayElements = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
+            WriteLine($"Before: {string.Join(" ", arrayElements)}");
+            SortMerge(arrayElements, 0, arrayElements.Length-1);
+            WriteLine($"After: {string.Join(" ", arrayElements)}");
         }
     }
 
