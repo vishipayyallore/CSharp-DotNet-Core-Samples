@@ -54,9 +54,9 @@ namespace Sortings
         public static void Run()
         {
             var arrayElements = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
-            WriteLine($"Before: {string.Join(" ", arrayElements)}");
+            WriteLine($"Before Merge Sort: {string.Join(" ", arrayElements)}");
             SortMerge(arrayElements, 0, arrayElements.Length-1);
-            WriteLine($"After: {string.Join(" ", arrayElements)}");
+            WriteLine($"After Merge Sort: {string.Join(" ", arrayElements)}");
         }
     }
 

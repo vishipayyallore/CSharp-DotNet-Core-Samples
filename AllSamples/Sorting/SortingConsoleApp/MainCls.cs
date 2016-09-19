@@ -18,6 +18,8 @@ namespace SortingConsoleApp
                 MergeSort.Run();
 
                 SelectionSort.Run();
+
+                InsertionSort.Run();
             }
 
             WriteLine("\n\nPress any key ...");
