@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
 using SingleDArray;
-using static System.Console;
 using TwoDArray;
+using static System.Console;
 
 namespace DataStructureConsoleApp
 {
