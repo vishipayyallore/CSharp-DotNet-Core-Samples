@@ -7,6 +7,7 @@ namespace Logicals
     {
         public static void Run()
         {
+            WriteLine("Enter number between {1 -10}: ");
             var numberOfElements = int.Parse(ReadLine().Trim());
             if ((numberOfElements < 1) || (numberOfElements > 10))
             {

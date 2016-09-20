@@ -1,4 +1,5 @@
 ﻿using System;
+using Logicals;
 using static System.Console;
 
 namespace LogicalConsoleApp
@@ -8,6 +9,8 @@ namespace LogicalConsoleApp
         public static void Main(string[] args)
         {
             ForegroundColor = ConsoleColor.Cyan;
+
+            FizzBuzz.Run();
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
