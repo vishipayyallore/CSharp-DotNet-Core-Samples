@@ -1,6 +1,6 @@
 ﻿using System;
-using Logicals;
 using static System.Console;
+using Logicals;
 
 namespace LogicalConsoleApp
 {
@@ -10,7 +10,7 @@ namespace LogicalConsoleApp
         {
             ForegroundColor = ConsoleColor.Cyan;
 
-            //FizzBuzz.Run();
+            FizzBuzz.Run();
 
             FriendsAndBudget.Run();
 
