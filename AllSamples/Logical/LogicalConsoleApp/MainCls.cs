@@ -10,7 +10,9 @@ namespace LogicalConsoleApp
         {
             ForegroundColor = ConsoleColor.Cyan;
 
-            FizzBuzz.Run();
+            //FizzBuzz.Run();
+
+            FriendsAndBudget.Run();
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
