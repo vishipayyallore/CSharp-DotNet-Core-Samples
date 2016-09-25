@@ -7,11 +7,10 @@
   "dependencies": {
     "Microsoft.NETCore.App": {
       "type": "platform",
-      "version": "1.0.0"
+      "version": "1.0.1"
     },
     "NETStandard.Library": "1.6.0",
-    "SingleDArray": "1.0.2",
-    "TwoDArray": "1.0.2"
+    "SingleDArray": "1.0.2"
   },
 
   "frameworks": {
