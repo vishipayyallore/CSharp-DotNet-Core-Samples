@@ -10,8 +10,8 @@
       "version": "1.0.1"
     },
     "NETStandard.Library": "1.6.0",
-    "Logicals": "1.0.1",
-    "CoreResuables": "1.0.1"
+    "CoreResuables": "1.0.1",
+    "Logicals": "1.0.2"
   },
 
   "frameworks": {
