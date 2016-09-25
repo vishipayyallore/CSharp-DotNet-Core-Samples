@@ -10,6 +10,8 @@ namespace LogicalConsoleApp
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+            ConsecutiveLetters.Run();
+
             FizzBuzz.Run();
 
             FriendsAndBudget.Run();
