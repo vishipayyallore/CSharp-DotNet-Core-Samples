@@ -1,5 +1,5 @@
 ﻿{
-  "version": "1.0.0-1",
+  "version": "1.0.1",
   "buildOptions": {
     "emitEntryPoint": true
   },
@@ -10,8 +10,8 @@
       "version": "1.0.0"
     },
     "NETStandard.Library": "1.6.0",
-    "SingleDArray": "1.0.1",
-    "TwoDArray": "1.0.1"
+    "SingleDArray": "1.0.2",
+    "TwoDArray": "1.0.2"
   },
 
   "frameworks": {
