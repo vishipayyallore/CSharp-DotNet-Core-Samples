@@ -1,12 +1,13 @@
 ﻿using System.Text;
+using CoreResuables;
 using static System.Console;
 
 namespace Logicals
 {
-    public class ConsecutiveLetters
+    public class ConsecutiveLetters : IProgram
     {
-        #region
-        public static void Run()
+        #region Methods
+        public void Run()
         {
             var rows = int.Parse(ReadLine().Trim());
             if ((rows < 1) || (rows > 10))

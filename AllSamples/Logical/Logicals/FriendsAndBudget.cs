@@ -1,11 +1,12 @@
-﻿using static System.Console;
+﻿using CoreResuables;
+using static System.Console;
 
 namespace Logicals
 {
-    public class FriendsAndBudget
+    public class FriendsAndBudget : IProgram
     {
         #region Methods
-        public static void Run()
+        public void Run()
         {
             var rows = int.Parse(ReadLine().Trim());
             if ((rows < 1) || (rows > 10))

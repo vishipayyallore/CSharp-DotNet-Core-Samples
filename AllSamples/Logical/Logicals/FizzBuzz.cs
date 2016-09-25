@@ -1,11 +1,13 @@
 ﻿using System.Linq;
+using CoreResuables;
 using static System.Console;
 
 namespace Logicals
 {
-    public class FizzBuzz
+    public class FizzBuzz : IProgram
     {
-        public static void Run()
+        #region Methods.
+        public void Run()
         {
             WriteLine("Enter number between {1 -10}: ");
             var numberOfElements = int.Parse(ReadLine().Trim());
@@ -33,5 +35,6 @@ namespace Logicals
                 }
             }
         }
+        #endregion
     }
 }
