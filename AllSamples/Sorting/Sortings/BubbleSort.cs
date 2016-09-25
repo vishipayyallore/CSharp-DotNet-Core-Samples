@@ -8,7 +8,7 @@ namespace Sortings
         //Bubble Sort. {89 76 45 92 67 12 99 | 7 4 5 2 | 4 83 9 6 34 45}
         public static void Run()
         {
-            var arrayData = Console.ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
+            var arrayData = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
 
             for (var iCtr = 0; iCtr < arrayData.Length - 1; iCtr++)
             {
@@ -19,9 +19,9 @@ namespace Sortings
                     arrayData[jCtr] = arrayData[jCtr + 1];
                     arrayData[jCtr + 1] = temp;
                 }
-                Console.WriteLine($"Pass {iCtr + 1}: {string.Join(" ", arrayData)}");
+                WriteLine($"Pass {iCtr + 1}: {string.Join(" ", arrayData)}");
             }
-            Console.WriteLine($"\nBubble Sorted: {string.Join(" ", arrayData)}\n");
+            WriteLine($"\nBubble Sorted: {string.Join(" ", arrayData)}\n");
         }
     }
 }
