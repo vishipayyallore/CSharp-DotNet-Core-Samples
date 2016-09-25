@@ -9,6 +9,7 @@
       "type": "platform",
       "version": "1.0.0"
     },
+    "NETStandard.Library": "1.6.0",
     "SingleDArray": "1.0.1",
     "TwoDArray": "1.0.1"
   },

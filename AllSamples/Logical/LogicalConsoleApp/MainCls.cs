@@ -1,6 +1,8 @@
 ﻿using System;
-using static System.Console;
+using System.Collections.Generic;
 using Logicals;
+using CoreResuables;
+using static System.Console;
 
 namespace LogicalConsoleApp
 {
@@ -9,12 +11,14 @@ namespace LogicalConsoleApp
         public static void Main(string[] args)
         {
             ForegroundColor = ConsoleColor.Cyan;
+            var programsList = new List<IProgram>()
+            {
+                new ConsecutiveLetters(),
+                new FizzBuzz(),
+                new FriendsAndBudget()
+            };
 
-            ConsecutiveLetters.Run();
-
-            FizzBuzz.Run();
-
-            FriendsAndBudget.Run();
+            programsList.ForEach(program => program.Run());
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
