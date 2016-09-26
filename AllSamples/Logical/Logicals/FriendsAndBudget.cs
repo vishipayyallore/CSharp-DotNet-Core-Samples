@@ -5,7 +5,7 @@ namespace Logicals
 {
     public class FriendsAndBudget : IProgram
     {
-        #region Methods
+        #region Methods 
         public void Run()
         {
             var rows = int.Parse(ReadLine().Trim());
