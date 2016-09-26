@@ -7,7 +7,8 @@ namespace Logicals
 {
     public class CallingNIdealOrder : IProgram
     {
-        public static void Run()
+        #region Methods.
+        public void Run()
         {
             WriteLine("Enter the number of Elements:");
             var numberOfElements = int.Parse(ReadLine().Trim());
@@ -50,5 +51,6 @@ namespace Logicals
                 WriteLine($" {idealOrder[iCtr]} --- {callingOrder[iCtr]}");
             }
         }
+        #endregion
     }
 }
