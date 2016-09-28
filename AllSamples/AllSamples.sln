@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicProgramming", "BasicPr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataStructures", "DataStructures", "{ED0CD0E5-D72E-485C-BAD0-2A39D65E43FA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesignPatterns", "DesignPatterns", "{D1D8C0C9-9C8A-4FA4-AEB2-A9EE9FC75F9A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logical", "Logical", "{57EB169E-1F2D-445B-82A8-01F3A44BDD80}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DataStructureConsoleApp", "DataStructures\ConsoleApplication\DataStructureConsoleApp.xproj", "{0A3238ED-C933-45AF-916F-CBF3BFB87B44}"
