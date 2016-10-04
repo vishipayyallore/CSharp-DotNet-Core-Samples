@@ -8,6 +8,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicProgramming", "BasicProgramming", "{18C0895E-1892-4056-B945-090A5B7DF0B1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataStructures", "DataStructures", "{ED0CD0E5-D72E-485C-BAD0-2A39D65E43FA}"
+	ProjectSection(SolutionItems) = preProject
+		DataStructures\ReadMe.docx = DataStructures\ReadMe.docx
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logical", "Logical", "{57EB169E-1F2D-445B-82A8-01F3A44BDD80}"
 EndProject
