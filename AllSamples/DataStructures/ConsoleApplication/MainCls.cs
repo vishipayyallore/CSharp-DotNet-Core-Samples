@@ -13,11 +13,12 @@ namespace DataStructureConsoleApp
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+            //MonksLoveForFood
+            WriteLine("MonksLoveForFood.cs");
+            MonksLoveForFood.Run();
+
             //Speed of Cars Count
             CarsSpeed.Run();
-
-            //MonksLoveForFood
-            MonksLoveForFood.Run1();
 
             ////Two D Array
             //Transpose.Run();
