@@ -31,18 +31,17 @@ namespace DataStructureConsoleApp
                 }
 
                 var queryType = currentQuery[0];
-                var indexToChange = currentQuery[1]-1;
-                sum = Convert.ToInt32(string.Join("", arrayValues.Reverse()), 2);
-                //for ( ; jCtr < arrayLength; jCtr++)
-                //{
-                //    var currentValue = (queryType == 1 && (jCtr == indexToChange)) ? (1-arrayValues[indexToChange]) : arrayValues[jCtr];
-                //    sum += (currentValue * (Math.Pow(2, jCtr)));
-                //}
+                var indexToChange = currentQuery[1] - 1;
+                for (; jCtr < arrayLength; jCtr++)
+                {
+                    var currentValue = (queryType == 1 && (jCtr == indexToChange)) ? (1 - arrayValues[indexToChange]) : arrayValues[jCtr];
+                    sum += (currentValue * (Math.Pow(2, jCtr)));
+                }
                 if (currentQuery[0] == 0)
                 {
-                    WriteLine("{0}", ((sum % 2 == 1) ? "Odd" : "Even"));
+                    WriteLine("{0}", ((sum % 2 == 1) ? "ODD" : "EVEN"));
                 }
-                    
+
             }
 
             //MonksLoveForFood
