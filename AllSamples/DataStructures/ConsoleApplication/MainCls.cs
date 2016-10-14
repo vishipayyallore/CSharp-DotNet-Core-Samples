@@ -13,6 +13,37 @@ namespace DataStructureConsoleApp
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+            var firstLineInput = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
+            var arrayLength = firstLineInput[0];
+            var numberOfQueries = firstLineInput[1];
+
+            var arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
+            for (var iCtr = 0; iCtr < numberOfQueries; iCtr++)
+            {
+                var currentQuery = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
+                var sum = 0.0;
+                var jCtr = 0;
+
+                if (currentQuery[0] == 0)
+                {
+                    jCtr = currentQuery[1] - 1;
+                    arrayLength = currentQuery[2] - currentQuery[1] + 1;
+                }
+
+                var queryType = currentQuery[0];
+                var indexToChange = currentQuery[1]-1;
+                for ( ; jCtr < arrayLength; jCtr++)
+                {
+                    var currentValue = (queryType == 1 && (jCtr == indexToChange)) ? (1-arrayValues[indexToChange]) : arrayValues[jCtr];
+                    sum += (currentValue * (Math.Pow(2, jCtr)));
+                }
+                if (currentQuery[0] == 0)
+                {
+                    WriteLine("{0}", ((sum % 2 == 1) ? "Odd" : "Even"));
+                }
+                    
+            }
+
             //MonksLoveForFood
             WriteLine("MonksLoveForFood.cs");
             MonksLoveForFood.Run();
