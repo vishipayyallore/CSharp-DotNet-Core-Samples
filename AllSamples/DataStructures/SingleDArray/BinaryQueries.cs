@@ -4,6 +4,16 @@ using static System.Console;
 
 namespace SingleDArray
 {
+
+    /*
+     * SAMPLE INPUT 
+        5 2
+        1 0 1 1 0
+        1 2
+        0 1 4
+       SAMPLE OUTPUT 
+        ODD
+     */
     public class BinaryQueries
     {
         public static void Run()
