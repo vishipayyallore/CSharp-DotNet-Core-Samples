@@ -13,7 +13,7 @@ namespace DataStructureConsoleApp
         {
             ForegroundColor = ConsoleColor.Cyan;
 
-            
+            BinaryQueries.Run();
 
             //MonksLoveForFood
             WriteLine("MonksLoveForFood.cs");
