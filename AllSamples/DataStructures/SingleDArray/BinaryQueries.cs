@@ -51,8 +51,7 @@ namespace SingleDArray
                     sum += (tempArray[jCtr] * powerValue);
                     powerValue *= 2;
                 }
-                //var data = string.Join("", tempArray.Skip(jCtr).Take(arrayLength - 1).Reverse().ToArray());
-                //sum = Convert.ToInt64(data, 2);
+
                 if (currentQuery[0] == 0)
                 {
                     WriteLine("{0}", ((sum % 2 == 0) ? "EVEN" : "ODD"));
@@ -64,3 +63,6 @@ namespace SingleDArray
         
     }
 }
+
+//var data = string.Join("", tempArray.Skip(jCtr).Take(arrayLength - 1).Reverse().ToArray());
+//sum = Convert.ToInt64(data, 2);
