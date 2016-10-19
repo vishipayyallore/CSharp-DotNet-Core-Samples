@@ -38,6 +38,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InputOutput", "InputOutput"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "InputOutput.App", "BasicProgramming\InputOutput\InputOutput.App\InputOutput.App.xproj", "{67B52F31-CD4E-4F4A-91BB-9508218E1C1A}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "InputOutput.Lib", "BasicProgramming\InputOutput\InputOutput.Lib\InputOutput.Lib.xproj", "{985E6BCE-8E1B-4624-B4D8-4DF0AB1FCE51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -80,6 +82,10 @@ Global
 		{67B52F31-CD4E-4F4A-91BB-9508218E1C1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67B52F31-CD4E-4F4A-91BB-9508218E1C1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67B52F31-CD4E-4F4A-91BB-9508218E1C1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{985E6BCE-8E1B-4624-B4D8-4DF0AB1FCE51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{985E6BCE-8E1B-4624-B4D8-4DF0AB1FCE51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{985E6BCE-8E1B-4624-B4D8-4DF0AB1FCE51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{985E6BCE-8E1B-4624-B4D8-4DF0AB1FCE51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,5 +101,6 @@ Global
 		{D3964ED0-00D7-4795-B655-AE24146A4F9F} = {71FF54A5-C68D-40F2-BE8F-7009B44524A9}
 		{E3497743-ED24-4DC7-A81A-D7A9084077E8} = {18C0895E-1892-4056-B945-090A5B7DF0B1}
 		{67B52F31-CD4E-4F4A-91BB-9508218E1C1A} = {E3497743-ED24-4DC7-A81A-D7A9084077E8}
+		{985E6BCE-8E1B-4624-B4D8-4DF0AB1FCE51} = {E3497743-ED24-4DC7-A81A-D7A9084077E8}
 	EndGlobalSection
 EndGlobal

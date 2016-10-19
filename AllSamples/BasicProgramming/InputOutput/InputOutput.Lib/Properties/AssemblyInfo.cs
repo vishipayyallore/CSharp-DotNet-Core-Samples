@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("InputOutput.App")]
+[assembly: AssemblyProduct("InputOutput.Lib")]
 [assembly: AssemblyTrademark("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
@@ -15,4 +15,4 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("67b52f31-cd4e-4f4a-91bb-9508218e1c1a")]
+[assembly: Guid("985e6bce-8e1b-4624-b4d8-4df0ab1fce51")]
