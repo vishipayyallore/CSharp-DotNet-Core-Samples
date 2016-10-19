@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Runtime.CompilerServices;
 using InputOutput.Lib;
 using static System.Console;
 
@@ -9,6 +11,11 @@ namespace InputOutput.App
         public static void Main(string[] args)
         {
             ForegroundColor = ConsoleColor.Cyan;
+
+
+            FindProduct.Run();
+
+            PalindromicString.Run();
 
             ToggleString.Run();
 
