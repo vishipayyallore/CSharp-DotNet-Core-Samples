@@ -12,6 +12,9 @@ namespace InputOutput.App
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+            
+            
+
             Factorial.Run();
 
             RoyAndProfilePicture.Run();
