@@ -12,6 +12,8 @@ namespace InputOutput.App
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+            RoyAndProfilePicture.Run();
+
             CountDivisors.Run();
 
             FindProduct.Run();
