@@ -1,0 +1,81 @@
+﻿Toggle String
+Input Format: The first and only line of input contains the String SS
+Output Format: Print the resultant String on a single line.
+Constraints: 1≤|S|≤100 where |S| denotes the length of string SS.
+SAMPLE INPUT
+abcdE
+SAMPLE OUTPUT
+ABCDe
+
+Palindromic String
+Input Format: The first and only line of input contains the String SS. The String shall consist of lowercase English alphabets only.
+Output Format: Print the required answer on a single line.
+Constraints 1≤|S|≤100
+Note: String SS consists of lowercase English Alphabets only.
+SAMPLE INPUT
+aba
+SAMPLE OUTPUT
+YES
+
+Find Product
+Input Format: The first line contains a single integer NN denoting the size of the array. The next line contains NN space separated integers denoting the elements of the array
+Output Format: Print a single integer denoting the product of all the elements of the array Modulo 109+7109+7.
+Constraints: 1≤N≤103 | 1≤N≤103
+SAMPLE INPUT
+5	
+1 2 3 4 5
+SAMPLE OUTPUT
+120
+
+Count Divisors
+Input Format: The first and only line of input contains 3 space separated integers l, r and k.
+Output Format: Print the required answer on a single line.
+Constraints: 1≤ l ≤ r ≤1000 | 1≤k≤1000
+SAMPLE INPUT
+1 10 1
+SAMPLE OUTPUT
+10
+
+Roy and Profile Picture
+Input: First line contains L. Second line contains N, number of photos. Following N lines each contains two space separated integers W and H.
+Output: Print appropriate text for each photo in a new line.
+Constraints: 1 <= L,W,H <= 10000 | 1 <= N <= 1000
+SAMPLE INPUT
+180
+3
+640 480
+120 300
+180 180
+400 400
+SAMPLE OUTPUT
+CROP IT
+UPLOAD ANOTHER
+ACCEPTED
+ACCEPTED
+Note:
+ 	If any of the width or height is less than L, user is prompted to upload another one. Print "UPLOAD ANOTHER" in this case.
+ 	If width and height, both are large enough and 
+	if the photo is already square then it is accepted. Print "ACCEPTED" in this case.
+	else user is prompted to crop it. Print "CROP IT" in this case.
+
+Factorial!
+Input Format: The first and only line of the input contains a single integer NN denoting the number whose factorial you need to find.
+Output Format: Output a single line denoting the factorial of the number NN.
+Constraints: 1≤N≤10
+SAMPLE INPUT
+2
+SAMPLE OUTPUT
+2
+
+Life, the Universe, and Everything
+Your program is to use the brute-force approach in order to find the Answer to Life, the Universe, and Everything. More precisely... rewrite small numbers from input to output. Stop processing input after reading in the number 42. All numbers at input are integers of one or two digits.
+SAMPLE INPUT
+1
+2
+88
+42
+99
+SAMPLE OUTPUT
+1
+2
+88
