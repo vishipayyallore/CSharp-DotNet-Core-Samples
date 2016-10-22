@@ -11,6 +11,8 @@ namespace BasicsofImplementation.App
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+            LittleJhoolPsychicPowers.Run();
+
             TheGreatKian.Run();
 
             CountDigits.Run();
