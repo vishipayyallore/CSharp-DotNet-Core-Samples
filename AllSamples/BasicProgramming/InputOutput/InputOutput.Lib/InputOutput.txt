@@ -5,7 +5,7 @@ Constraints: 1≤|S|≤100 where |S| denotes the length of string SS.
 SAMPLE INPUT
 abcdE
 SAMPLE OUTPUT
-ABCDe
+ABCDe 
 
 Palindromic String
 Input Format: The first and only line of input contains the String SS. The String shall consist of lowercase English alphabets only.
