@@ -14,12 +14,21 @@ namespace ByteCode1._0.App
         /// <summary>
         /// The time limit for the puzzle
         /// </summary>
-        const int TIME_LIMIT_SECONDS = 115;
+        const int TIME_LIMIT_SECONDS = 1500;
 
         /// <summary>
         /// Set this static field to true to quit the game
         /// </summary>
         static bool quit = false;
+
+        static StringBuilder inputContent = new StringBuilder();
+
+        static Dictionary<char, int> dataCounts = new Dictionary<char, int>
+            {
+                {'A', 0 },{'B', 0 },{'C', 0 },{'D', 0 },{'E', 0 },{'F', 0 },{'G', 0 },{'H', 0 },{'I', 0 },
+                {'J', 0 },{'K', 0 },{'L', 0 },{'M', 0 },{'N', 0 },{'O', 0 },{'P', 0 },{'Q', 0 },{'R', 0 },
+                {'S', 0 },{'T', 0 },{'U', 0 },{'V', 0 },{'W', 0 },{'X', 0 },{'Y', 0 },{'Z', 0 },
+            };
 
         /// <summary>
         /// The main gameloop
@@ -30,10 +39,10 @@ namespace ByteCode1._0.App
             int totalMilliseconds = TIME_LIMIT_SECONDS * 1000;
             const int INTERVAL = 100;
 
-            while (elapsedMilliseconds < totalMilliseconds && !quit)
+            while (elapsedMilliseconds < totalMilliseconds)
             {
                 // Sleep for a short period
-                Thread.Sleep(INTERVAL);
+                //Thread.Sleep(INTERVAL);
                 elapsedMilliseconds += INTERVAL;
 
                 HandleInput();
@@ -41,9 +50,8 @@ namespace ByteCode1._0.App
                 //PrintRemainingTime(elapsedMilliseconds, totalMilliseconds);
             }
 
-            Console.SetCursorPosition(0, 20);
-            Console.WriteLine(Environment.NewLine + Environment.NewLine
-                + "Game over! You found {0} words.");
+            //Console.SetCursorPosition(0, 20);
+            //Console.WriteLine(Environment.NewLine + Environment.NewLine + "Game over! You found {0} words.");
         }
 
         /// <summary>
@@ -55,8 +63,8 @@ namespace ByteCode1._0.App
             if (Console.KeyAvailable)
             {
                 ConsoleKeyInfo keyInfo = Console.ReadKey(true);
-                string key = keyInfo.KeyChar.ToString().ToUpper();
-                Write(key);
+                inputContent.Append(keyInfo.KeyChar.ToString().ToUpper());
+                //Write(key);
             }
         }
 
@@ -109,6 +117,16 @@ namespace ByteCode1._0.App
             //}
 
             MainLoop();
+
+            foreach (var currentChar in inputContent.ToString().Where(currentChar => dataCounts.ContainsKey(currentChar)))
+            {
+                dataCounts[currentChar] += 1;
+            }
+
+            foreach (var keyValuePair in dataCounts.Where(k => k.Value > 0))
+            {
+                WriteLine($"{keyValuePair.Key} : {keyValuePair.Value}");
+            }
 
             Console.WriteLine("Press ESC to stop");
             do
