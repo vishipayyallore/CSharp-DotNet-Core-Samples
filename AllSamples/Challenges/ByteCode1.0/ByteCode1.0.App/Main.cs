@@ -14,7 +14,7 @@ namespace ByteCode1._0.App
         /// <summary>
         /// The time limit for the puzzle
         /// </summary>
-        const int TIME_LIMIT_SECONDS = 5;
+        const int TIME_LIMIT_SECONDS = 115;
 
         /// <summary>
         /// Set this static field to true to quit the game
@@ -33,7 +33,7 @@ namespace ByteCode1._0.App
             while (elapsedMilliseconds < totalMilliseconds && !quit)
             {
                 // Sleep for a short period
-                //Thread.Sleep(INTERVAL);
+                Thread.Sleep(INTERVAL);
                 elapsedMilliseconds += INTERVAL;
 
                 HandleInput();
@@ -56,7 +56,7 @@ namespace ByteCode1._0.App
             {
                 ConsoleKeyInfo keyInfo = Console.ReadKey(true);
                 string key = keyInfo.KeyChar.ToString().ToUpper();
-                WriteLine(key);
+                Write(key);
             }
         }
 
@@ -73,40 +73,40 @@ namespace ByteCode1._0.App
 
             
 
-            while (true)
-            {
-                if (Console.KeyAvailable)
-                {
-                    ConsoleKeyInfo key = Console.ReadKey(true);
-                    switch (key.Key)
-                    {
-                        case ConsoleKey.F1:
-                            Console.WriteLine("You pressed F1!");
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                else
-                {
-                    int elapsedMilliseconds = 0;
-                    int totalMilliseconds = TIME_LIMIT_SECONDS * 1000;
-                    const int INTERVAL = 100;
-                    WriteLine("Not entered");
-                    while (elapsedMilliseconds < totalMilliseconds && !quit)
-                    {
-                        // Sleep for a short period
-                        Thread.Sleep(INTERVAL);
-                        elapsedMilliseconds += INTERVAL;
-                        Write($"{elapsedMilliseconds} ");
-                        //HandleInput();
+            //while (true)
+            //{
+            //    if (Console.KeyAvailable)
+            //    {
+            //        ConsoleKeyInfo key = Console.ReadKey(true);
+            //        switch (key.Key)
+            //        {
+            //            case ConsoleKey.F1:
+            //                Console.WriteLine("You pressed F1!");
+            //                break;
+            //            default:
+            //                break;
+            //        }
+            //    }
+            //    else
+            //    {
+            //        int elapsedMilliseconds = 0;
+            //        int totalMilliseconds = TIME_LIMIT_SECONDS * 1000;
+            //        const int INTERVAL = 100;
+            //        WriteLine("Not entered");
+            //        while (elapsedMilliseconds < totalMilliseconds && !quit)
+            //        {
+            //            // Sleep for a short period
+            //            Thread.Sleep(INTERVAL);
+            //            elapsedMilliseconds += INTERVAL;
+            //            Write($"{elapsedMilliseconds} ");
+            //            //HandleInput();
 
-                        //PrintRemainingTime(elapsedMilliseconds, totalMilliseconds);
-                    }
-                    break;
-                }
-                // Do something more useful
-            }
+            //            //PrintRemainingTime(elapsedMilliseconds, totalMilliseconds);
+            //        }
+            //        break;
+            //    }
+            //    // Do something more useful
+            //}
 
             MainLoop();
 
