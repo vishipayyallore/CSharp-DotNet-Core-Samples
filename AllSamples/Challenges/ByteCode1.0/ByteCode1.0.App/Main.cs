@@ -11,119 +11,55 @@ namespace ByteCode1._0.App
 {
     public class Program
     {
-        /// <summary>
-        /// The time limit for the puzzle
-        /// </summary>
-        const int TIME_LIMIT_SECONDS = 1500;
 
-        /// <summary>
-        /// Set this static field to true to quit the game
-        /// </summary>
-        static bool quit = false;
-
-        static StringBuilder inputContent = new StringBuilder();
-
-        static Dictionary<char, int> dataCounts = new Dictionary<char, int>
+        private const int TimeLimitSeconds = 1500;
+        private static readonly StringBuilder InputContent = new StringBuilder();
+        private static Dictionary<char, int> _dataCounts = new Dictionary<char, int>
             {
                 {'A', 0 },{'B', 0 },{'C', 0 },{'D', 0 },{'E', 0 },{'F', 0 },{'G', 0 },{'H', 0 },{'I', 0 },
                 {'J', 0 },{'K', 0 },{'L', 0 },{'M', 0 },{'N', 0 },{'O', 0 },{'P', 0 },{'Q', 0 },{'R', 0 },
                 {'S', 0 },{'T', 0 },{'U', 0 },{'V', 0 },{'W', 0 },{'X', 0 },{'Y', 0 },{'Z', 0 },
             };
 
-        /// <summary>
-        /// The main gameloop
-        /// </summary>
-        static void MainLoop()
+        private static void MainLoop()
         {
-            int elapsedMilliseconds = 0;
-            int totalMilliseconds = TIME_LIMIT_SECONDS * 1000;
-            const int INTERVAL = 100;
+            var elapsedMilliseconds = 0;
+            const int totalMilliseconds = TimeLimitSeconds * 1000;
+            const int interval = 100;
 
             while (elapsedMilliseconds < totalMilliseconds)
             {
-                // Sleep for a short period
-                //Thread.Sleep(INTERVAL);
-                elapsedMilliseconds += INTERVAL;
-
+                elapsedMilliseconds += interval;
                 HandleInput();
-
-                //PrintRemainingTime(elapsedMilliseconds, totalMilliseconds);
             }
-
-            //Console.SetCursorPosition(0, 20);
-            //Console.WriteLine(Environment.NewLine + Environment.NewLine + "Game over! You found {0} words.");
         }
 
-        /// <summary>
-        /// Handle any waiting user keystrokes 
-        /// </summary>
-        static void HandleInput()
+        private static void HandleInput()
         {
-            //Thread.Sleep(50);
-            if (Console.KeyAvailable)
-            {
-                ConsoleKeyInfo keyInfo = Console.ReadKey(true);
-                inputContent.Append(keyInfo.KeyChar.ToString().ToUpper());
-                //Write(key);
-            }
+            if (!Console.KeyAvailable) return;
+            var keyInfo = Console.ReadKey(true);
+            InputContent.Append(keyInfo.KeyChar.ToString().ToUpper());
         }
 
         public static void Main(string[] args)
         {
             ForegroundColor = Cyan;
 
-            var dataCounts = new Dictionary<char, int>
-            {
-                {'A', 0 },{'B', 0 },{'C', 0 },{'D', 0 },{'E', 0 },{'F', 0 },{'G', 0 },{'H', 0 },{'I', 0 },
-                {'J', 0 },{'K', 0 },{'L', 0 },{'M', 0 },{'N', 0 },{'O', 0 },{'P', 0 },{'Q', 0 },{'R', 0 },
-                {'S', 0 },{'T', 0 },{'U', 0 },{'V', 0 },{'W', 0 },{'X', 0 },{'Y', 0 },{'Z', 0 },
-            };
-
-            
-
-            //while (true)
+            //var dataCounts = new Dictionary<char, int>
             //{
-            //    if (Console.KeyAvailable)
-            //    {
-            //        ConsoleKeyInfo key = Console.ReadKey(true);
-            //        switch (key.Key)
-            //        {
-            //            case ConsoleKey.F1:
-            //                Console.WriteLine("You pressed F1!");
-            //                break;
-            //            default:
-            //                break;
-            //        }
-            //    }
-            //    else
-            //    {
-            //        int elapsedMilliseconds = 0;
-            //        int totalMilliseconds = TIME_LIMIT_SECONDS * 1000;
-            //        const int INTERVAL = 100;
-            //        WriteLine("Not entered");
-            //        while (elapsedMilliseconds < totalMilliseconds && !quit)
-            //        {
-            //            // Sleep for a short period
-            //            Thread.Sleep(INTERVAL);
-            //            elapsedMilliseconds += INTERVAL;
-            //            Write($"{elapsedMilliseconds} ");
-            //            //HandleInput();
-
-            //            //PrintRemainingTime(elapsedMilliseconds, totalMilliseconds);
-            //        }
-            //        break;
-            //    }
-            //    // Do something more useful
-            //}
+            //    {'A', 0 },{'B', 0 },{'C', 0 },{'D', 0 },{'E', 0 },{'F', 0 },{'G', 0 },{'H', 0 },{'I', 0 },
+            //    {'J', 0 },{'K', 0 },{'L', 0 },{'M', 0 },{'N', 0 },{'O', 0 },{'P', 0 },{'Q', 0 },{'R', 0 },
+            //    {'S', 0 },{'T', 0 },{'U', 0 },{'V', 0 },{'W', 0 },{'X', 0 },{'Y', 0 },{'Z', 0 },
+            //};
 
             MainLoop();
 
-            foreach (var currentChar in inputContent.ToString().Where(currentChar => dataCounts.ContainsKey(currentChar)))
+            foreach (var currentChar in InputContent.ToString().Where(currentChar => _dataCounts.ContainsKey(currentChar)))
             {
-                dataCounts[currentChar] += 1;
+                _dataCounts[currentChar] += 1;
             }
 
-            foreach (var keyValuePair in dataCounts.Where(k => k.Value > 0))
+            foreach (var keyValuePair in _dataCounts.Where(k => k.Value > 0))
             {
                 WriteLine($"{keyValuePair.Key} : {keyValuePair.Value}");
             }
@@ -170,24 +106,24 @@ namespace ByteCode1._0.App
                 data = ReadLine().Trim().ToUpperInvariant();
             } while (!string.IsNullOrWhiteSpace(data));
 
-            while (!string.IsNullOrWhiteSpace(data = Console.ReadLine()))
-            {
-                //but here it seems to be an infinite loop 
-                foreach (var currentChar in data.Where(currentChar => dataCounts.ContainsKey(currentChar)))
-                {
-                    dataCounts[currentChar] += 1;
-                }
-            }
+            //while (!string.IsNullOrWhiteSpace(data = Console.ReadLine()))
+            //{
+            //    //but here it seems to be an infinite loop 
+            //    foreach (var currentChar in data.Where(currentChar => dataCounts.ContainsKey(currentChar)))
+            //    {
+            //        dataCounts[currentChar] += 1;
+            //    }
+            //}
 
-            foreach (var currentChar in data.Where(currentChar => dataCounts.ContainsKey(currentChar)))
-            {
-                dataCounts[currentChar] += 1;
-            }
+            //foreach (var currentChar in data.Where(currentChar => dataCounts.ContainsKey(currentChar)))
+            //{
+            //    dataCounts[currentChar] += 1;
+            //}
 
-            foreach (var keyValuePair in dataCounts.Where(k => k.Value > 0))
-            {
-                WriteLine($"{keyValuePair.Key} : {keyValuePair.Value}");
-            }
+            //foreach (var keyValuePair in dataCounts.Where(k => k.Value > 0))
+            //{
+            //    WriteLine($"{keyValuePair.Key} : {keyValuePair.Value}");
+            //}
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
