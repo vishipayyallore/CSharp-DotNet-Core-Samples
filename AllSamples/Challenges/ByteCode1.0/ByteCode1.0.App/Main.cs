@@ -12,7 +12,7 @@ namespace ByteCode1._0.App
     public class Program
     {
 
-        private const int TimeLimitSeconds = 1500;
+        private const int TimeLimitSeconds = 10;
         private static readonly StringBuilder InputContent = new StringBuilder();
         private static readonly Dictionary<char, int> _dataCounts = new Dictionary<char, int>
             {
@@ -37,17 +37,30 @@ namespace ByteCode1._0.App
         private static void HandleInput()
         {
             if (!Console.KeyAvailable) return;
-            var keyInfo = Console.ReadKey(true);
-            InputContent.Append(keyInfo.KeyChar.ToString().ToUpper());
+            //var keyInfo = Console.ReadKey(true);
+            //InputContent.Append(keyInfo.KeyChar.ToString().ToUpper());
+            var keyInfo = ReadLine();
+            InputContent.Append(keyInfo);
         }
 
         public static void Main(string[] args)
         {
             ForegroundColor = Cyan;
+            var inputBuffer = new byte[4096];
+            var inputStream = Console.OpenStandardInput();
+            Console.SetIn(new StreamReader(inputStream, Console.InputEncoding, false, inputBuffer.Length));
 
             MainLoop();
+            //var output = InputContent.ToString().Replace('\n', ' ');
+            //foreach (var currentChar in output.ToCharArray())
+            //{
+            //    if (_dataCounts.ContainsKey(currentChar))
+            //    {
+            //        _dataCounts[currentChar] += 1;
+            //    }
+            //}
 
-            foreach (var currentChar in InputContent.ToString().Where(currentChar => _dataCounts.ContainsKey(currentChar)))
+            foreach (var currentChar in InputContent.ToString().Trim().ToUpperInvariant().Where(currentChar => _dataCounts.ContainsKey(currentChar)))
             {
                 _dataCounts[currentChar] += 1;
             }
@@ -58,46 +71,46 @@ namespace ByteCode1._0.App
             }
 
             Console.WriteLine("Press ESC to stop");
-            do
-            {
-                while (!Console.KeyAvailable)
-                {
-                    // Do something
-                }
-            } while (Console.ReadKey(true).Key != ConsoleKey.Escape);
+            //do
+            //{
+            //    while (!Console.KeyAvailable)
+            //    {
+            //        // Do something
+            //    }
+            //} while (Console.ReadKey(true).Key != ConsoleKey.Escape);
 
-            var inputData = @"";
+            //var inputData = @"";
 
-            byte[] inputBuffer = new byte[4096];
-            Stream inputStream = Console.OpenStandardInput();
-            Console.SetIn(new StreamReader(inputStream, Console.InputEncoding, false, inputBuffer.Length));
+            //byte[] inputBuffer = new byte[4096];
+            //Stream inputStream = Console.OpenStandardInput();
+            //Console.SetIn(new StreamReader(inputStream, Console.InputEncoding, false, inputBuffer.Length));
 
-            StringBuilder sb = new StringBuilder();
-            StringReader sr = new StringReader(sb.ToString());
-            Console.WriteLine("Reading Profile");
+            //StringBuilder sb = new StringBuilder();
+            //StringReader sr = new StringReader(sb.ToString());
+            //Console.WriteLine("Reading Profile");
 
-            //Peek to see if the next character exists
-            while (sr.Peek() > -1)
-            {
-                //Read a line from the string and display it on the
-                //console
-                Console.WriteLine(sr.ReadLine());
-            }
+            ////Peek to see if the next character exists
+            //while (sr.Peek() > -1)
+            //{
+            //    //Read a line from the string and display it on the
+            //    //console
+            //    Console.WriteLine(sr.ReadLine());
+            //}
 
-            Console.WriteLine("Data Read Complete!");
-            //Close the string
-            sr.Dispose();
+            //Console.WriteLine("Data Read Complete!");
+            ////Close the string
+            //sr.Dispose();
 
-            //var data = ReadLine().Trim().ToUpperInvariant();
-            var data = string.Empty;
+            ////var data = ReadLine().Trim().ToUpperInvariant();
+            //var data = string.Empty;
 
-            do
-            {
-                //input code
+            //do
+            //{
+            //    //input code
 
-                //Check for exit conditions
-                data = ReadLine().Trim().ToUpperInvariant();
-            } while (!string.IsNullOrWhiteSpace(data));
+            //    //Check for exit conditions
+            //    data = ReadLine().Trim().ToUpperInvariant();
+            //} while (!string.IsNullOrWhiteSpace(data));
 
             //while (!string.IsNullOrWhiteSpace(data = Console.ReadLine()))
             //{
