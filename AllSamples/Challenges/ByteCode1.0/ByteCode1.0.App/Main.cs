@@ -9,6 +9,7 @@ using static System.ConsoleColor;
 
 namespace ByteCode1._0.App
 {
+
     public class Program
     {
 
