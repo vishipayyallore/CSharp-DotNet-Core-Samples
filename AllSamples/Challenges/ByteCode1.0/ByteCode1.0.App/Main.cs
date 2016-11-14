@@ -9,7 +9,19 @@ namespace ByteCode1._0.App
 
     public class Program
     {
-
+        /*
+         * 10
+pe8150 
+pe8152
+pe8150
+pe8151
+pe8150
+pe8152
+pe815
+pe815
+pe8150
+pe8153
+         */
         public static void Main(string[] args)
         {
             ForegroundColor = Cyan;
@@ -25,13 +37,16 @@ namespace ByteCode1._0.App
                 }
                 else
                 {
-                    for (var iCtr = 0; iCtr < 100000; iCtr++)
+                    var lastChar = loginId[loginId.Length - 1];
+                    var startValue = 0;
+                    int.TryParse(string.Format("{0}", lastChar), out startValue);
+                    for ( ; startValue < 100000; startValue++)
                     {
-                        if (loginIds.Contains(string.Format("{0}{1}", loginId, iCtr)))
+                        if (loginIds.Contains(string.Format("{0}{1}", loginId, startValue)))
                         {
                             continue;
                         }
-                        loginIds.Add(string.Format("{0}{1}", loginId, iCtr));
+                        loginIds.Add(string.Format("{0}{1}", loginId, startValue));
                         break;
                     }
                 }
