@@ -64,6 +64,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AllChallenges", "AllChallen
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AllChallenges.App", "Challenges\AllChallenges\AllChallenges.App\AllChallenges.App.xproj", "{5FB28699-406F-4DED-8640-56FB6B6A02AA}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AllChallenges.Lib", "Challenges\AllChallenges\AllChallenges.Lib\AllChallenges.Lib.xproj", "{30586088-17DB-4248-A7A3-A72FE488B7A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -138,6 +140,10 @@ Global
 		{5FB28699-406F-4DED-8640-56FB6B6A02AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FB28699-406F-4DED-8640-56FB6B6A02AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FB28699-406F-4DED-8640-56FB6B6A02AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30586088-17DB-4248-A7A3-A72FE488B7A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30586088-17DB-4248-A7A3-A72FE488B7A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30586088-17DB-4248-A7A3-A72FE488B7A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30586088-17DB-4248-A7A3-A72FE488B7A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -165,5 +171,6 @@ Global
 		{6103789C-A511-428F-90BB-29447BCC67FE} = {94F1214A-9700-4374-B97B-D29CE810C9AB}
 		{753A4FD0-42A7-4C8B-B787-40AE7ECD6AAA} = {7D89C49E-F3A7-465D-9E9E-D2A3406C3807}
 		{5FB28699-406F-4DED-8640-56FB6B6A02AA} = {753A4FD0-42A7-4C8B-B787-40AE7ECD6AAA}
+		{30586088-17DB-4248-A7A3-A72FE488B7A7} = {753A4FD0-42A7-4C8B-B787-40AE7ECD6AAA}
 	EndGlobalSection
 EndGlobal

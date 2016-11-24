@@ -8,7 +8,9 @@
     "Microsoft.NETCore.App": {
       "type": "platform",
       "version": "1.0.1"
-    }
+    },
+    "NETStandard.Library": "1.6.0",
+    "AllChallenges.Lib": "1.0.1"
   },
 
   "frameworks": {

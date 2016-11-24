@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using AllChallenges.Lib;
+using static System.Console;
 
 namespace AllChallenges.App
 {
@@ -9,6 +8,12 @@ namespace AllChallenges.App
     {
         public static void Main(string[] args)
         {
+            ForegroundColor = ConsoleColor.Cyan;
+
+            FredoIsInAHurry.Run();
+
+            WriteLine("\n\nPress any key ...");
+            ReadKey();
         }
     }
 }
