@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using static System.Console;
 using static System.ConsoleColor;
 
@@ -25,6 +26,51 @@ pe8153
         public static void Main(string[] args)
         {
             ForegroundColor = Cyan;
+
+            var numberOfRepeats = int.Parse(ReadLine().Trim());
+            while (numberOfRepeats > 0)
+            {
+                var walkingTime = 0;
+                var iCtr = 1;
+                var numberOfFloors = int.Parse(ReadLine().Trim());
+                while (numberOfFloors >= 0)
+                {
+                    if (numberOfFloors > walkingTime)
+                    {
+                        walkingTime += iCtr++;
+                    }
+                    else
+                    {
+                        walkingTime = (walkingTime == numberOfFloors) ? numberOfFloors * 2 : (numberOfFloors + 1) * 2;
+                        break;
+                    }
+                    numberOfFloors--;
+                }
+                WriteLine($"{walkingTime}");
+                numberOfRepeats--;
+            }
+            
+            var numberOfRepeatations = int.Parse(ReadLine().Trim());
+            while (numberOfRepeatations-- > 0)
+            {
+                ulong sum = 0;
+                byte flag = 0;
+                var numberOfRows = int.Parse(ReadLine().Trim());
+                for (; numberOfRows > 0; numberOfRows--)
+                {
+                    var arrayElements = ReadLine().Trim().Split(' ').Select(ulong.Parse).ToArray();
+                    if (arrayElements[0] == 0 || arrayElements[1] == 0) continue;
+                    sum += ((arrayElements[0] % 9) * (arrayElements[1] % 9)) % 9;
+                    sum = sum%9;
+                    flag = 1;
+                }
+
+                if (sum == 0 && flag == 1)
+                {
+                    sum = 9;
+                }
+                WriteLine($"{sum}");
+            }
 
             var numberOfIterations = int.Parse(ReadLine().Trim());
             var loginIds = new List<string>();
