@@ -1,36 +1,18 @@
 ﻿using System;
-using AllChallenges.Lib;
-using static System.Console;
 using System.Linq;
+using static System.Console;
 
-namespace AllChallenges.App
+namespace AllChallenges.Lib
 {
 
-
-    public class MainCls
+    /*
+        1. If the list is of length 0 or 1, then it is already sorted. Otherwise: 
+        2. Divide the unsorted list into two sublists of about half the size. 
+        3. Sort each sublist recursively by re-applying merge sort. 
+        4. Merge the two sublists back into one sorted list. 
+     */
+    public class MinMax
     {
-        public static void Main(string[] args)
-        {
-            ForegroundColor = ConsoleColor.Cyan;
-
-            MinMax.Run();
-            //var numberOfElements = int.Parse(ReadLine().Trim());
-            //var arrayElements = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
-            //SortMerge(arrayElements, 0, arrayElements.Length - 1);
-            //var found = "YES";
-            //for (var iCtr = 1; iCtr < arrayElements.Length; iCtr++)
-            //{
-            //    if (arrayElements[iCtr] - arrayElements[iCtr - 1] < 2) continue;
-            //    found = "NO";
-            //    break;
-            //}
-            //WriteLine($"{found}");
-
-            FredoIsInAHurry.Run();
-
-            WriteLine("\n\nPress any key ...");
-            ReadKey();
-        }
 
         private static void SortMerge(int[] numbers, int left, int right)
         {
@@ -69,5 +51,23 @@ namespace AllChallenges.App
                 numbers[right] = tempArray[right];
             }
         }
+
+        public static void Run()
+        {
+            var numberOfElements = int.Parse(ReadLine().Trim());
+            var arrayElements = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
+            WriteLine($"Before Merge Sort: {string.Join(" ", arrayElements)}");
+            SortMerge(arrayElements, 0, arrayElements.Length-1);
+            WriteLine($"After Merge Sort: {string.Join(" ", arrayElements)}");
+            var found = "YES";
+            for (var iCtr = 1; iCtr < arrayElements.Length; iCtr++)
+            {
+                if (arrayElements[iCtr] - arrayElements[iCtr - 1] < 2) continue;
+                found = "NO";
+                break;
+            }
+            WriteLine($"{found}");
+        }
     }
+
 }
