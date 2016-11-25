@@ -14,17 +14,6 @@ namespace AllChallenges.App
             ForegroundColor = ConsoleColor.Cyan;
 
             MinMax.Run();
-            //var numberOfElements = int.Parse(ReadLine().Trim());
-            //var arrayElements = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
-            //SortMerge(arrayElements, 0, arrayElements.Length - 1);
-            //var found = "YES";
-            //for (var iCtr = 1; iCtr < arrayElements.Length; iCtr++)
-            //{
-            //    if (arrayElements[iCtr] - arrayElements[iCtr - 1] < 2) continue;
-            //    found = "NO";
-            //    break;
-            //}
-            //WriteLine($"{found}");
 
             FredoIsInAHurry.Run();
 
