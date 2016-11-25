@@ -22,13 +22,21 @@ namespace AllChallenges.App
                 {'s', 19 },{'t', 20 },{'u', 21 },{'v', 22 },{'w', 23 },{'x', 24 },{'y', 25 },{'z', 26 }
             };
 
-            var jCtr = 0;
-            var data = "hello"; //ReadLine().Trim();
-            for (var iCtr = data.Length - 1; iCtr >= 0; iCtr--, jCtr++)
+            var numberOfRepeats = int.Parse(ReadLine().Trim());
+
+            while (numberOfRepeats > 0)
             {
-                var index = dataCounts[data[iCtr]] + dataCounts[data[jCtr]]%26;
-                WriteLine($"{dataCounts[data[iCtr]]} {dataCounts[data[jCtr]]} {dataCounts[data[iCtr]] + dataCounts[data[jCtr]]} {dataCounts.Select(v => v.Value == index).ToList()[0]}"); 
+                var jCtr = 0;
+                var data = ReadLine().Trim();
+                for (var iCtr = data.Length - 1; iCtr >= 0; iCtr--, jCtr++)
+                {
+                    var index = dataCounts[data[iCtr]] + dataCounts[data[jCtr]] % 26;
+                    //WriteLine($"{dataCounts[data[iCtr]]} {dataCounts[data[jCtr]]} {dataCounts[data[iCtr]] + dataCounts[data[jCtr]]} {dataCounts.FirstOrDefault(v => v.Value == index).Key}"); 
+                    Write($"{dataCounts.FirstOrDefault(v => v.Value == index).Key}");
+                }
+                numberOfRepeats--;
             }
+            
 
             MinMax.Run();
 
