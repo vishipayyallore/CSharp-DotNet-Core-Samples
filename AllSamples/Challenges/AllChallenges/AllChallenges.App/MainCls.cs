@@ -30,10 +30,12 @@ namespace AllChallenges.App
                 var data = ReadLine().Trim();
                 for (var iCtr = data.Length - 1; iCtr >= 0; iCtr--, jCtr++)
                 {
-                    var index = dataCounts[data[iCtr]] + dataCounts[data[jCtr]] % 26;
-                    //WriteLine($"{dataCounts[data[iCtr]]} {dataCounts[data[jCtr]]} {dataCounts[data[iCtr]] + dataCounts[data[jCtr]]} {dataCounts.FirstOrDefault(v => v.Value == index).Key}"); 
+                    var index = (dataCounts[data[iCtr]] + dataCounts[data[jCtr]]) % 26;
+                    index = (index == 0) ? 26 : index;
+                    //Write($"{dataCounts[data[iCtr]]} {dataCounts[data[jCtr]]} {dataCounts[data[iCtr]] + dataCounts[data[jCtr]]} {dataCounts.FirstOrDefault(v => v.Value == index).Key}"); 
                     Write($"{dataCounts.FirstOrDefault(v => v.Value == index).Key}");
                 }
+                WriteLine();
                 numberOfRepeats--;
             }
             
