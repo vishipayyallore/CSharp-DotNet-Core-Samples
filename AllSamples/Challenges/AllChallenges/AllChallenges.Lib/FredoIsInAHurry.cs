@@ -12,6 +12,11 @@ namespace AllChallenges.Lib
                 var walkingTime = 0;
                 var iCtr = 1;
                 var numberOfFloors = int.Parse(ReadLine().Trim());
+                if (numberOfFloors == 1)
+                {
+                    walkingTime = 1;
+                    goto Display_Output;
+                }
                 while (numberOfFloors >= 0)
                 {
                     if (numberOfFloors > walkingTime)
@@ -25,6 +30,7 @@ namespace AllChallenges.Lib
                     }
                     numberOfFloors--;
                 }
+            Display_Output:
                 WriteLine($"{walkingTime}");
                 numberOfRepeats--;
             }
