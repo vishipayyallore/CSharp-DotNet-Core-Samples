@@ -16,18 +16,7 @@ namespace AllChallenges.App
         {
             ForegroundColor = ConsoleColor.Cyan;
 
-            var input = ReadLine().Trim();
-            var output = new StringBuilder(1024);
-            foreach (var currentWord in input.Split(' '))
-            {
-                if (currentWord.Length < 2)
-                {
-                    output.Append($"{char.ToUpper(currentWord[0])} ");
-                }
-                output.Append($"{char.ToUpper(currentWord[0])}{currentWord.Substring(1)} ");
-            }
-
-            WriteLine($"{output}");
+            
 
             War.Run();
 
