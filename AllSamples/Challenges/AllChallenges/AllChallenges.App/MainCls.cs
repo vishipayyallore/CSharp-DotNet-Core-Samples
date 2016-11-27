@@ -4,6 +4,7 @@ using System.Collections.Immutable;
 using AllChallenges.Lib;
 using static System.Console;
 using System.Linq;
+using System.Text;
 
 namespace AllChallenges.App
 {
@@ -14,6 +15,19 @@ namespace AllChallenges.App
         public static void Main(string[] args)
         {
             ForegroundColor = ConsoleColor.Cyan;
+
+            var input = ReadLine().Trim();
+            var output = new StringBuilder(1024);
+            foreach (var currentWord in input.Split(' '))
+            {
+                if (currentWord.Length < 2)
+                {
+                    output.Append($"{char.ToUpper(currentWord[0])} ");
+                }
+                output.Append($"{char.ToUpper(currentWord[0])}{currentWord.Substring(1)} ");
+            }
+
+            WriteLine($"{output}");
 
             War.Run();
 
