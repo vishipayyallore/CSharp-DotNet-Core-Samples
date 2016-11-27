@@ -16,7 +16,7 @@ namespace AllChallenges.App
         {
             ForegroundColor = ConsoleColor.Cyan;
 
-            
+            UpUp.Run();
 
             War.Run();
 
