@@ -14,7 +14,26 @@ namespace AllChallenges.App
         public static void Main(string[] args)
         {
             ForegroundColor = ConsoleColor.Cyan;
+            var inputLine = string.Empty;
+            while ((inputLine = ReadLine().Trim()) != null)
+            {
+                // Do whatever you want here with line
+                var words = inputLine.Replace("//", "/").Split('/');
+            }
 
+            //var lineInput = ReadLine().Trim();
+            var lineInput = "int t; //variable t";
+            
+            var output = new StringBuilder(1024);
+            foreach (var words in lineInput.Replace("//", "/").Split('/'))
+            {
+                WriteLine($"{words.Length}");
+            }
+            //foreach (var lineParts in input.Split('\n').Select(currentLine => currentLine.Split("//".ToCharArray())).Where(lineParts => lineParts.Length != 0))
+            //{
+            //    output.Append((lineParts.Length == 1) ? lineParts[0] : string.Format("{0} //{1}", lineParts[0].Replace("->", "."), lineParts[1]));
+            //}
+            WriteLine($"{output}");
 
             BinaryQueries.Run();  //Not working.
 
