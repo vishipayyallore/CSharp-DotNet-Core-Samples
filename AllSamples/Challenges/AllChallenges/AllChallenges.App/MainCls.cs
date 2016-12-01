@@ -15,6 +15,15 @@ namespace AllChallenges.App
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+            var inputData = ReadLine().Trim();
+            var outputData = new StringBuilder(1024);
+
+            foreach (var currentChar in inputData.ToCharArray().Where(currentChar => outputData.ToString().IndexOf(currentChar) == -1))
+            {
+                outputData.Append(currentChar);
+            }
+            WriteLine($"{outputData}");
+
             CompilerVersion.Run();
 
             BinaryQueries.Run();  //Not working.
