@@ -15,6 +15,15 @@ namespace AllChallenges.App
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+            var arrayValues = ReadLine().Trim().Split(' ').ToArray();
+            var numberOfDigits = int.Parse(arrayValues[1]);
+            var digitValue = Math.Pow(10, numberOfDigits);
+            WriteLine($"{digitValue - 1}{arrayValues[0].Substring(numberOfDigits)}");
+            //var digitValue = Math.Pow(10, arrayValues[1]);
+            //WriteLine($"{arrayValues[0] / digitValue} :: {arrayValues[0] % digitValue}");
+            //WriteLine(arrayValues[0] > digitValue ? $"{digitValue - 1}{arrayValues[0]%digitValue}" : $"{digitValue - 1}");
+
+
             var inputData = ReadLine().Trim();
             var outputData = new StringBuilder(1024);
 
