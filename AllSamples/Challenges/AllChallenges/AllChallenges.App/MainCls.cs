@@ -15,6 +15,10 @@ namespace AllChallenges.App
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+            var n = Convert.ToInt32(ReadLine());
+            var arrayValues1 = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
+            WriteLine($"{arrayValues1.Sum()}");
+
             var arrayValues = ReadLine().Trim().Split(' ').ToArray();
             var numberOfDigits = int.Parse(arrayValues[1]);
             var digitValue = Math.Pow(10, numberOfDigits);
