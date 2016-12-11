@@ -15,6 +15,23 @@ namespace AllChallenges.App
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+            var aliceValues = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            var bobValues = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+            for (var iCtr = 0; iCtr < aliceValues.Length; iCtr++)
+            {
+                if (aliceValues[iCtr] != bobValues[iCtr])
+                {
+                    Write("1 ");
+                }
+            }
+            
+
+            var number = Convert.ToInt32(Console.ReadLine());
+            var arrayValues2 = Console.ReadLine().Split(' ').Select(long.Parse).ToArray();
+
+            Console.WriteLine($"{arrayValues2.Sum()}");
+
             var mealPrice = double.Parse(ReadLine());
             var tipPercent = double.Parse(ReadLine());
             var taxPercent = double.Parse(ReadLine());
