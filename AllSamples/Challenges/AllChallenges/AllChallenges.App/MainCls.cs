@@ -17,15 +17,26 @@ namespace AllChallenges.App
 
             var aliceValues = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
             var bobValues = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            var aliceCount = 0;
+            var bobCount = 0;
 
             for (var iCtr = 0; iCtr < aliceValues.Length; iCtr++)
             {
-                if (aliceValues[iCtr] != bobValues[iCtr])
+                if (aliceValues[iCtr] == bobValues[iCtr])
                 {
-                    Write("1 ");
+                    continue;
+                }
+
+                if (aliceValues[iCtr] > bobValues[iCtr])
+                {
+                    aliceCount++;
+                }
+                else
+                {
+                    bobCount++;
                 }
             }
-            
+            WriteLine($"{aliceCount} {bobCount}");
 
             var number = Convert.ToInt32(Console.ReadLine());
             var arrayValues2 = Console.ReadLine().Split(' ').Select(long.Parse).ToArray();
