@@ -15,6 +15,13 @@ namespace AllChallenges.App
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+            var mealPrice = double.Parse(ReadLine());
+            var tipPercent = double.Parse(ReadLine());
+            var taxPercent = double.Parse(ReadLine());
+
+            var totalCost = mealPrice + (mealPrice*(tipPercent/100.0)) + (mealPrice*(taxPercent / 100.0));
+
+            WriteLine($"{Math.Round(totalCost)} ");
 
             int i = 4;
             double d = 4.0;
