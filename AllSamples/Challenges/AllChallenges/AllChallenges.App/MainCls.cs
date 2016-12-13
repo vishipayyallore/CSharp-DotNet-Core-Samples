@@ -15,59 +15,11 @@ namespace AllChallenges.App
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+            //var
             //var fives = new string();
+            
 
-            var aliceValues = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-            var bobValues = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-            var aliceCount = 0;
-            var bobCount = 0;
 
-            for (var iCtr = 0; iCtr < aliceValues.Length; iCtr++)
-            {
-                if (aliceValues[iCtr] == bobValues[iCtr])
-                {
-                    continue;
-                }
-
-                if (aliceValues[iCtr] > bobValues[iCtr])
-                {
-                    aliceCount++;
-                }
-                else
-                {
-                    bobCount++;
-                }
-            }
-            WriteLine($"{aliceCount} {bobCount}");
-
-            var number = Convert.ToInt32(Console.ReadLine());
-            var arrayValues2 = Console.ReadLine().Split(' ').Select(long.Parse).ToArray();
-
-            Console.WriteLine($"{arrayValues2.Sum()}");
-
-            var mealPrice = double.Parse(ReadLine());
-            var tipPercent = double.Parse(ReadLine());
-            var taxPercent = double.Parse(ReadLine());
-
-            var totalCost = mealPrice + (mealPrice*(tipPercent/100.0)) + (mealPrice*(taxPercent / 100.0));
-
-            WriteLine($"{Math.Round(totalCost)} ");
-
-            int i = 4;
-            double d = 4.0;
-            string s = "HackerRank ";
-
-            var value1 = int.Parse(ReadLine());
-            var value2 = double.Parse(ReadLine());
-            var value3 = ReadLine();
-
-            WriteLine($"{i + value1}");
-            WriteLine($"{string.Format("{0:0.0}",(d + value2))}");
-            WriteLine($"{s}{value3}");
-
-            var n = Convert.ToInt32(ReadLine());
-            var arrayValues1 = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
-            WriteLine($"{arrayValues1.Sum()}");
 
             var arrayValues = ReadLine().Trim().Split(' ').ToArray();
             var numberOfDigits = int.Parse(arrayValues[1]);
@@ -86,6 +38,14 @@ namespace AllChallenges.App
                 outputData.Append(currentChar);
             }
             WriteLine($"{outputData}");
+
+            HelloWorld.Run();
+
+            MealCost.Run();
+
+            SimpleArraySum.Run();
+
+            PointsCount.Run();
 
             CompilerVersion.Run();
 
