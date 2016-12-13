@@ -15,6 +15,8 @@ namespace AllChallenges.App
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+            //var fives = new string();
+
             var aliceValues = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
             var bobValues = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
             var aliceCount = 0;
