@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using AllChallenges.Lib;
@@ -13,6 +14,7 @@ namespace AllChallenges.App
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+            SockMerchant.Run();
 
             CamelCase.Run();
 
