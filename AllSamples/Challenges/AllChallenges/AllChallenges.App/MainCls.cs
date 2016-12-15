@@ -14,6 +14,25 @@ namespace AllChallenges.App
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+            var arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
+            var minValue = arrayValues[0];
+            var maxValue = arrayValues[0];
+            var sum = 0;
+
+            foreach (var arrayValue in arrayValues)
+            {
+                if (maxValue < arrayValue)
+                {
+                    maxValue = arrayValue;
+                }
+                if (minValue > arrayValue)
+                {
+                    minValue = arrayValue;
+                }
+                sum += arrayValue;
+            }
+            WriteLine($"{sum-maxValue} {sum-minValue}");
+
             SockMerchant.Run();
 
             CamelCase.Run();
