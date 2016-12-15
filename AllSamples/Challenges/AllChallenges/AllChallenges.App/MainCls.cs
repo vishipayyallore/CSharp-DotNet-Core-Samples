@@ -15,9 +15,7 @@ namespace AllChallenges.App
         {
             ForegroundColor = ConsoleColor.Cyan;
 
-            //var
-            //var fives = new string();
-            
+            SherlockAndTheBeast.Run();
 
             HelloWorld.Run();
 
