@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Text;
 using AllChallenges.Lib;
 using static System.Console;
 
@@ -11,6 +13,23 @@ namespace AllChallenges.App
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+            var input = "appleAntBall";
+            var output = input.ToCharArray().Where(currentChar => currentChar >= 65 && currentChar <= 90).Count();
+            foreach (var currentChar in input.ToCharArray().Where(currentChar => currentChar >= 65 && currentChar <= 90))
+            {
+            }
+
+            var inputData = ReadLine().Trim();
+            foreach (var currentByte in Encoding.ASCII.GetBytes(inputData))
+            {
+                if (currentByte >= 65 && currentByte <= 90)
+                {
+                    WriteLine();
+                }
+                Write((char)currentByte);
+            }
+
+            DiagonalMinus.Run();
 
             HelloWorld1.Run();
 
