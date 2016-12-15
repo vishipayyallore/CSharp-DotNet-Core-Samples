@@ -15,6 +15,9 @@ namespace AllChallenges.App
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+
+            HelloWorld1.Run();
+
             SherlockAndTheBeast.Run();
 
             HelloWorld.Run();
