@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.Immutable;
 using AllChallenges.Lib;
 using static System.Console;
-using System.Linq;
-using System.Text;
 
 namespace AllChallenges.App
 {
