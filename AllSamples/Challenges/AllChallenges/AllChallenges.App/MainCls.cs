@@ -14,6 +14,19 @@ namespace AllChallenges.App
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+            var T = int.Parse(ReadLine().Trim());
+            for (var i = 0; i < T; i++)
+            {
+                var age = int.Parse(ReadLine().Trim());
+                Person p = new Person(age);
+                p.AmIOld();
+                for (var j = 0; j < 3; j++)
+                {
+                    p.YearPasses();
+                }
+                p.AmIOld();
+            }
+
             MinSumMaxSum.Run();
 
             SockMerchant.Run();
