@@ -14,6 +14,8 @@ namespace AllChallenges.App
         {
             ForegroundColor = ConsoleColor.Cyan;
 
+            ReverseArray.Run();
+
             EvenOddIndexedChars.Run();
 
             PersonDemo.Run();
