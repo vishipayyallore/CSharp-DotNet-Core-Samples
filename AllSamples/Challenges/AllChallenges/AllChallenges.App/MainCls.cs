@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using AllChallenges.Lib;
 using static System.Console;
 
@@ -13,7 +10,7 @@ namespace AllChallenges.App
         public static void Main(string[] args)
         {
             ForegroundColor = ConsoleColor.Cyan;
-
+             
             ReverseArray.Run();
 
             EvenOddIndexedChars.Run();
