@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using AllChallenges.Lib;
 using static System.Console;
 
@@ -10,7 +12,9 @@ namespace AllChallenges.App
         public static void Main(string[] args)
         {
             ForegroundColor = ConsoleColor.Cyan;
-             
+
+            PhoneBook.Run();
+
             ReverseArray.Run();
 
             EvenOddIndexedChars.Run();
