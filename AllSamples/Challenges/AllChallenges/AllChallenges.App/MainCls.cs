@@ -9,9 +9,25 @@ namespace AllChallenges.App
 
     public class MainCls
     {
+
+        private static int Factorial(int number)
+        {
+            if (number == 1)
+            {
+                return 1;
+            }
+            else
+            {
+                return number*Factorial(number-=1);
+            }
+        }
+
         public static void Main(string[] args)
         {
             ForegroundColor = ConsoleColor.Cyan;
+
+            var number = int.Parse(ReadLine().Trim());
+            WriteLine($"{Factorial(number)}");
 
             PhoneBook.Run();
 
