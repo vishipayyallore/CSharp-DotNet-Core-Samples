@@ -2,7 +2,7 @@
 
 namespace DaysOfCode.App
 {
-    public class Program
+    public class MainCls
     {
         public static void Main(string[] args)
         {
