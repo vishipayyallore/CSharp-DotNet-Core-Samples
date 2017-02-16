@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using static System.Console;
 
 namespace DaysOfCode.App
@@ -9,21 +10,26 @@ namespace DaysOfCode.App
         public static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
-            var stackData = new Stack<int>();
             var number = int.Parse(ReadLine().Trim());
 
-            while(number > 0)
-            {
-                stackData.Push(number % 2);
-                number /= 2;
-            }
+            var binaryData = BinaryNumbers.DecimalToBinary(number);
+            var binaryValues = binaryData.Split('0');
+            var highestNumber = 0;
 
-            var dat1a = string.Join("", stackData.ToArray());
+            //Method 1
+            highestNumber = binaryValues.OrderByDescending(s => s.Length).First().Length;
 
-            foreach(var data in stackData)
+            //Method 2
+            foreach (var binary in binaryValues)
             {
-                Write($"{data}");
+                var value = binary.Length;
+                if(highestNumber < value)
+                {
+                    highestNumber = value;
+                }
             }
+            
+            WriteLine($"{highestNumber}");
 
             WriteLine("\n\nPress any key.");
             ReadKey();

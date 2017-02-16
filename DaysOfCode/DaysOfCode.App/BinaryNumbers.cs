@@ -7,7 +7,7 @@ namespace DaysOfCode.App
     {
 
         #region Methods
-        public static string BinaryToDecimal(int number)
+        public static string DecimalToBinary(int number)
         {
             var stackData = new Stack<int>();
 
