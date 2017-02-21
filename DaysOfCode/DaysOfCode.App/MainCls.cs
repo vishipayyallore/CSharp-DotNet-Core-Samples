@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Day1Library;
+using System;
 using System.Linq;
 using static System.Console;
 
@@ -9,6 +10,9 @@ namespace DaysOfCode.App
         public static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
+
+            HelloWorld.Run();
+
             var number = int.Parse(ReadLine().Trim());
 
             var binaryData = BinaryNumbers.DecimalToBinary(number);
