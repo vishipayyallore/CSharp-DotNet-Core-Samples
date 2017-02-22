@@ -1,10 +1,11 @@
-﻿using static System.Console;
+﻿using Days.CoreLibrary;
+using static System.Console;
 
 namespace Day1Library
 {
-    public class HelloWorld
+    public class HelloWorld : IProgram
     {
-        public static void Run()
+        public void Run()
         {
             var input = ReadLine();
 
