@@ -6,6 +6,7 @@
 
   "dependencies": {
     "Day1Library": "1.0.0.1",
+    "Day2Library": "1.0.0.1",
     "Microsoft.NETCore.App": {
       "type": "platform",
       "version": "1.0.1"

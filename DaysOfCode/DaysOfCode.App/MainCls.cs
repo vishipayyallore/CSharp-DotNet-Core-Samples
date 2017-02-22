@@ -1,4 +1,5 @@
 ﻿using Day1Library;
+using Day2Library;
 using System;
 using System.Linq;
 using static System.Console;
@@ -12,6 +13,7 @@ namespace DaysOfCode.App
             Console.ForegroundColor = ConsoleColor.Cyan;
 
             HelloWorld.Run();
+            DataTypes.Run();
 
             var number = int.Parse(ReadLine().Trim());
 
