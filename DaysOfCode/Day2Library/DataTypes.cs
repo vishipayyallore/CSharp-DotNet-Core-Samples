@@ -1,16 +1,17 @@
-﻿using static System.Console;
+﻿using Days.CoreLibrary;
+using static System.Console;
 
 namespace Day2Library
 {
 
-    public class DataTypes
+    public class DataTypes : IProgram
     {
 
         const int number1 = 4;
         const double value1 = 4.0;
         const string firstPart = "Hello World, ";
 
-        public static void Run()
+        public void Run()
         {
             int number2 = int.Parse(ReadLine().Trim());
             double value2 = double.Parse(ReadLine().Trim());

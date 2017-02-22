@@ -13,7 +13,7 @@ namespace DaysOfCode.App
             Console.ForegroundColor = ConsoleColor.Cyan;
 
             new HelloWorld().Run();
-            DataTypes.Run();
+            new DataTypes().Run();
 
             var number = int.Parse(ReadLine().Trim());
 
