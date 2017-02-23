@@ -11,6 +11,7 @@ namespace DaysOfCode.App
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
 
+            new Operators().Run();
             new HelloWorld().Run();
             new DataTypes().Run();
 
