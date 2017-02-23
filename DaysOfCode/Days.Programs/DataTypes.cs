@@ -1,7 +1,7 @@
 ﻿using Days.CoreLibrary;
 using static System.Console;
 
-namespace Day2Library
+namespace Days.Programs
 {
 
     public class DataTypes : IProgram

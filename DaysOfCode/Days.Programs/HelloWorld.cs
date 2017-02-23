@@ -1,7 +1,7 @@
 ﻿using Days.CoreLibrary;
 using static System.Console;
 
-namespace Day1Library
+namespace Days.Programs
 {
     public class HelloWorld : IProgram
     {

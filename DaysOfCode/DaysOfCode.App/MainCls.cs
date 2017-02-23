@@ -1,5 +1,4 @@
-﻿using Day1Library;
-using Day2Library;
+﻿using Days.Programs;
 using System;
 using System.Linq;
 using static System.Console;
