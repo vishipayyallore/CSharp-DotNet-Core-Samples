@@ -10,18 +10,8 @@ namespace DaysOfCode.App
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
 
-            var output = string.Empty;
-            var number = int.Parse(ReadLine().Trim());
-            if(number % 2 == 1)
-            {
-                output = "Weird";
-            }
-            else
-            {
-                output = (number >= 6 && number <= 20) ? "Weird" : "Not Weird";
-            }
-            WriteLine($"{output}");
-
+            new ConditionalStatementsV1().Run();
+            new ConditionalStatementsV2().Run();
             new Operators().Run();
             new HelloWorld().Run();
             new DataTypes().Run();
