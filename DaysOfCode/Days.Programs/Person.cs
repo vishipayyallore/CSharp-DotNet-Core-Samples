@@ -8,6 +8,8 @@ namespace Days.Programs
     {
         private int age;
 
+        public Person() { }
+
         public Person(int initialAge)
         {
             if(initialAge < 0)
@@ -21,12 +23,12 @@ namespace Days.Programs
             }
         }
 
-        public void YearPasses()
+        private void YearPasses()
         {
             age++;
         }
 
-        public void AmIOld()
+        private void AmIOld()
         {
             var output = (age < 13) ? "You are young." : (((age >= 13) && (age < 18)) ? "You are a teenager." : "You are old.");
             WriteLine($"{output}");

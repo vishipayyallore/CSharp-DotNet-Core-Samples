@@ -10,6 +10,7 @@ namespace DaysOfCode.App
         { 
             Console.ForegroundColor = ConsoleColor.Cyan;
 
+            new Person().Run();
             new ConditionalStatementsV1().Run();
             new ConditionalStatementsV2().Run();
             new Operators().Run();
