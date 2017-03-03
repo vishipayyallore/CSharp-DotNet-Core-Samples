@@ -7,7 +7,7 @@ namespace DaysOfCode.App
     public class MainCls
     {
         public static void Main(string[] args)
-        {
+        { 
             Console.ForegroundColor = ConsoleColor.Cyan;
 
             new ConditionalStatementsV1().Run();
