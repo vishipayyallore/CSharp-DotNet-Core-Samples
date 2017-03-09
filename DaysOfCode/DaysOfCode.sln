@@ -9,6 +9,13 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Days.CoreLibrary", "Days.Co
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Days.Programs", "Days.Programs\Days.Programs.xproj", "{7B7F4F01-7B95-43CF-947B-11EFA2BED466}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C27092FB-8061-498D-B888-A654E7072CF4}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AF98E098-2129-45C0-980B-0238427FE286}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +37,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F3032EA8-6C4B-457D-81B0-0A2832E9ECE0} = {AF98E098-2129-45C0-980B-0238427FE286}
+		{AF645EAA-F591-47D8-98E4-046036522DB3} = {AF98E098-2129-45C0-980B-0238427FE286}
+		{7B7F4F01-7B95-43CF-947B-11EFA2BED466} = {AF98E098-2129-45C0-980B-0238427FE286}
 	EndGlobalSection
 EndGlobal
