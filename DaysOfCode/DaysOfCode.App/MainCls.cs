@@ -1,5 +1,6 @@
 ﻿using Days.Programs;
 using System;
+using System.Reflection;
 using static System.Console;
 
 namespace DaysOfCode.App
@@ -9,6 +10,16 @@ namespace DaysOfCode.App
         public static void Main(string[] args)
         { 
             Console.ForegroundColor = ConsoleColor.Cyan;
+
+            var programsAssembly = Assembly.Load(new AssemblyName("Days.Programs"));
+            foreach(var currentClass in programsAssembly.GetTypes())
+            {
+                var currentMethod = currentClass.GetMethod("Run");
+                currentMethod.Invoke(currentClass, null);
+            }
+            var types = programsAssembly.GetTypes();
+                //.GetTypeInfo().GetMembers();
+            //var members = obj.GetType().GetTypeInfo().GetMembers();
 
             new EvenOddCharacters().Run();
             new LoopsDemo().Run();
