@@ -7,7 +7,7 @@ namespace Days.Programs
     public class DataTypes : IProgram
     {
 
-        const int number1 = 4;
+        const int number1 = 4; 
         const double value1 = 4.0;
         const string firstPart = "Hello World, ";
 
