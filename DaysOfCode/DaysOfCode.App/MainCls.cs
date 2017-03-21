@@ -13,7 +13,7 @@ namespace DaysOfCode.App
             var assemblyNames = new string[] { "Basic.Programs", "Days.Programs" };
             const string METHODNAME = "Run";
 
-            foreach(var assemblyName in assemblyNames)
+            foreach (var assemblyName in assemblyNames)
             {
                 RunPrograms(assemblyName, METHODNAME);
             }
