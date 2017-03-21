@@ -1,9 +1,21 @@
-﻿namespace Basic.Programs
+﻿using static System.Console;
+using Days.CoreLibrary;
+
+namespace Basic.Programs
 {
-    public class FactorialDemo
+    public class FactorialDemo : IProgram
     {
-        public FactorialDemo()
+        
+        public void Run()
         {
+            var number = int.Parse(ReadLine().Trim());
+            var factorial = 1;
+            while (number > 0)
+            {
+                factorial *= number;
+                number--;
+            }
+            WriteLine(factorial);
         }
     }
 }
