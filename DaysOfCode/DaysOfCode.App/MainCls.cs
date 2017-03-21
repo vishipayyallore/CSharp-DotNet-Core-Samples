@@ -7,28 +7,32 @@ namespace DaysOfCode.App
     public class MainCls
     {
         public static void Main(string[] args)
-        { 
+        {
+
             Console.ForegroundColor = ConsoleColor.Cyan;
+            var assemblyNames = new string[] { "Basic.Programs", "Days.Programs" };
+            const string METHODNAME = "Run";
 
-            var programsAssembly = Assembly.Load(new AssemblyName("Basic.Programs"));
-            foreach (var currentClass in programsAssembly.GetTypes())
+            foreach(var assemblyName in assemblyNames)
             {
-                var currentMethod = currentClass.GetMethod("Run");
-                WriteLine($"{currentClass.Name} ....");
-                currentMethod.Invoke(Activator.CreateInstance(currentClass), null);
+                RunPrograms(assemblyName, METHODNAME);
             }
 
-            programsAssembly = Assembly.Load(new AssemblyName("Days.Programs"));
-            foreach(var currentClass in programsAssembly.GetTypes())
-            {
-                var currentMethod = currentClass.GetMethod("Run");
-                WriteLine($"{currentClass.Name} ....");
-                currentMethod.Invoke(Activator.CreateInstance(currentClass), null);
-            }
-            
             WriteLine("\n\nPress any key.");
             ReadKey();
         }
+
+        private static void RunPrograms(string assemblyName, string methodName)
+        {
+            var programsAssembly = Assembly.Load(new AssemblyName(assemblyName));
+            foreach (var currentClass in programsAssembly.GetTypes())
+            {
+                var currentMethod = currentClass.GetMethod(methodName);
+                WriteLine($"{currentClass.Name} ....");
+                currentMethod.Invoke(Activator.CreateInstance(currentClass), null);
+            }
+        }
+
     }
 }
 
