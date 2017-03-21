@@ -10,7 +10,15 @@ namespace DaysOfCode.App
         { 
             Console.ForegroundColor = ConsoleColor.Cyan;
 
-            var programsAssembly = Assembly.Load(new AssemblyName("Days.Programs"));
+            var programsAssembly = Assembly.Load(new AssemblyName("Basic.Programs"));
+            foreach (var currentClass in programsAssembly.GetTypes())
+            {
+                var currentMethod = currentClass.GetMethod("Run");
+                WriteLine($"{currentClass.Name} ....");
+                currentMethod.Invoke(Activator.CreateInstance(currentClass), null);
+            }
+
+            programsAssembly = Assembly.Load(new AssemblyName("Days.Programs"));
             foreach(var currentClass in programsAssembly.GetTypes())
             {
                 var currentMethod = currentClass.GetMethod("Run");
