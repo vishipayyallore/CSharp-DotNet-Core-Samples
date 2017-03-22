@@ -6,9 +6,9 @@ namespace DaysOfCode.App
 {
     public class MainCls
     {
+        
         public static void Main(string[] args)
         {
-
             Console.ForegroundColor = ConsoleColor.Cyan;
             var assemblyNames = new string[] { "Basic.Programs", "Days.Programs" };
             const string METHODNAME = "Run";
