@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Days.Programs;
+using System;
 using System.Reflection;
 using static System.Console;
 
@@ -9,6 +10,9 @@ namespace DaysOfCode.App
         
         public static void Main(string[] args)
         {
+
+            new HourGlass2DArray().Run();
+
             Console.ForegroundColor = ConsoleColor.Cyan;
             var assemblyNames = new string[] { "Basic.Programs", "Days.Programs" };
             const string METHODNAME = "Run";
