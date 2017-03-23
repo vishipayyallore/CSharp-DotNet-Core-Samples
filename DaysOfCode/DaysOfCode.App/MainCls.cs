@@ -1,5 +1,4 @@
-﻿using Days.Programs;
-using System;
+﻿using System;
 using System.Reflection;
 using static System.Console;
 
