@@ -11,6 +11,12 @@ namespace DaysOfCode.App
         public static void Main(string[] args)
         {
 
+            var total = 0;
+            total += -1;
+            total += -20;
+
+            WriteLine($"{total}");
+
             new HourGlass2DArray().Run();
 
             Console.ForegroundColor = ConsoleColor.Cyan;
