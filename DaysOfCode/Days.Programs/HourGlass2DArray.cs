@@ -30,7 +30,7 @@ namespace Days.Programs
                 arrayData[iCtr] = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
             }
 
-            var output = 0;
+            var output = int.MinValue;
             var returnValue =0;
             for (var iCtr = 0; iCtr <= 3; iCtr++)
             {
