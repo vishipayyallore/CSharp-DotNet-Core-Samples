@@ -6,30 +6,13 @@ namespace DaysOfCode.App
 {
     public class MainCls
     {
-        
-        private static int IsPrime(int number)
-        {
-            var iCtr = 2;
-            while (iCtr < number)
-            {
-                if (number % iCtr == 0)
-                {
-                    break;
-                }
-                iCtr++;
-            }
-
-            return (iCtr == number) ? number : 0;
-        }
 
         public static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
             var assemblyNames = new string[] { "Basic.Programs", "Days.Programs" };
             const string METHODNAME = "Run";
-            var number = int.Parse(ReadLine().Trim());
-            WriteLine($"{IsPrime(number)}");
-
+            
             foreach (var assemblyName in assemblyNames)
             {
                 RunPrograms(assemblyName, METHODNAME);
