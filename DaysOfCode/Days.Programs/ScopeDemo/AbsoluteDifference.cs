@@ -1,16 +1,21 @@
-﻿using System;
+﻿using Days.CoreLibrary;
+using System;
+using System.Linq;
 using static System.Console;
 
-namespace Test.App
+namespace Days.Programs.ScopeDemo
 {
-    public class MainCls
+    public class AbsoluteDifference : IProgram
     {
-        public static void Main(string[] args)
-        {
-            Console.ForegroundColor = ConsoleColor.Yellow;
 
-            var arrayElements = new int[] { 129, 1, 2, 90, 10, 110 };
-            var maximumDifference = arrayElements[1] - arrayElements[0];
+        private int[] arrayElements;
+        public int maximumDifference;
+
+        public void Run()
+        {
+            arrayElements = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
+            maximumDifference = int.MinValue;
+
             for (var iCtr = 0; iCtr < arrayElements.Length; iCtr++)
             {
                 for (var jCtr = iCtr + 1; jCtr < arrayElements.Length; jCtr++)
@@ -22,8 +27,6 @@ namespace Test.App
                 }
             }
             WriteLine($"{maximumDifference}");
-            WriteLine("\n\nPress any key.");
-            ReadKey();
         }
     }
 }
