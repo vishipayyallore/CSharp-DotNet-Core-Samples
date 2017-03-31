@@ -9,7 +9,7 @@ namespace Test.App
 
         public static void Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            ForegroundColor = ConsoleColor.Yellow;
 
             WriteLine("\n\nPress any key.");
             ReadKey();
