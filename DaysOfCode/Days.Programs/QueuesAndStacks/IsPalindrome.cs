@@ -1,5 +1,4 @@
 ﻿using Days.CoreLibrary;
-using System;
 using static System.Console;
 
 namespace Days.Programs.QueuesAndStacks
