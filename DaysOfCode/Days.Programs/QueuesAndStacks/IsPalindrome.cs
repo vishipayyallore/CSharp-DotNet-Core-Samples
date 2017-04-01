@@ -1,5 +1,6 @@
 ﻿using Days.CoreLibrary;
 using System;
+using static System.Console;
 
 namespace Days.Programs.QueuesAndStacks
 {
@@ -10,34 +11,29 @@ namespace Days.Programs.QueuesAndStacks
             var stackNQueue = new StackNQueue();
             bool isPalindrome = true;
 
-            foreach (char c in Console.ReadLine().Trim())
+            var inputString = ReadLine().Trim();
+            foreach (char c in inputString)
             {
-                stackNQueue.pushCharacter(c);
-                stackNQueue.enqueueCharacter(c);
+                stackNQueue.PushCharacter(c);
+                stackNQueue.EnqueueCharacter(c);
             }
 
-
-            // pop the top character from stack.
-            // dequeue the first character from queue.
-            // compare both the characters.
-            for (int i = 0; i < s.Length / 2; i++)
+            for (var iCtr = 0; iCtr < inputString.Length / 2; iCtr++)
             {
-                if (obj.popCharacter() != obj.dequeueCharacter())
+                if (stackNQueue.PopCharacter() != stackNQueue.DequeueCharacter())
                 {
                     isPalindrome = false;
-
                     break;
                 }
             }
 
-            // finally print whether string s is palindrome or not.
             if (isPalindrome)
             {
-                Console.Write("The word, {0}, is a palindrome.", s);
+                Write($"The word, {inputString}, is a palindrome.");
             }
             else
             {
-                Console.Write("The word, {0}, is not a palindrome.", s);
+                Write($"The word, {inputString}, is not a palindrome.");
             }
         }
     }
