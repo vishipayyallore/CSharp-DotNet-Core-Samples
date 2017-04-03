@@ -10,7 +10,7 @@ namespace Days.Programs
         const int number1 = 4; 
         const double value1 = 4.0;
         const string firstPart = "Hello World, ";
-
+         
         public void Run()
         {
             int number2 = int.Parse(ReadLine().Trim());
