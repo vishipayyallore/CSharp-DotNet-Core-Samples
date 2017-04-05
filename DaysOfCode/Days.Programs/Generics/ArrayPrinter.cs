@@ -7,11 +7,11 @@ namespace Days.Programs.Generics
 {
     public class ArrayPrinter
     {
-        public void PrintArray<T>(T arrayElements)
+        public void PrintArray<T>(T[] arrayElements)
         {
-            foreach(var current in arrayElements.)
+            foreach(var current in arrayElements)
             {
-
+                Console.WriteLine($"{current}");
             }
         }
     }

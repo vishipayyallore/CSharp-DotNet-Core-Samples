@@ -1,4 +1,5 @@
 ﻿using Days.Programs;
+using Days.Programs.Generics;
 using System;
 using System.Reflection;
 using static System.Console;
@@ -13,6 +14,10 @@ namespace DaysOfCode.App
             ForegroundColor = ConsoleColor.Cyan; 
             var assemblyNames = new string[] { "Basic.Programs", "Days.Programs" };
             const string METHODNAME = "Run";
+
+            var input = new int[] { 1, 3, 4 });
+            new ArrayPrinter().PrintArray<int>(input);
+            new ArrayPrinter().PrintArray<int>(input);
 
             foreach (var assemblyName in assemblyNames)
             {
