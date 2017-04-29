@@ -20,7 +20,6 @@ namespace Days.Programs.SortDemo
                 {
                     if (numbers[j] > numbers[j + 1])
                     {
-                        //swap(a[j], a[j + 1]);
                         currentValue = numbers[j];
                         numbers[j] = numbers[j + 1];
                         numbers[j + 1] = currentValue;
