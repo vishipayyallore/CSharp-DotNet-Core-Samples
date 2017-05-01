@@ -11,6 +11,7 @@
             this.data = data;
             Left = Right = null;
         }
+
     }
 
 }
