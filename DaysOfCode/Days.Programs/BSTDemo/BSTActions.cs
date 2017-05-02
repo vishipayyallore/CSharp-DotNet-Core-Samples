@@ -1,5 +1,5 @@
 ﻿using Days.CoreLibrary;
-using System;
+using static System.Console;
 
 namespace Days.Programs.BSTDemo
 {
@@ -9,17 +9,15 @@ namespace Days.Programs.BSTDemo
         public void Run()
         {
             Node root = null;
-            int T = Int32.Parse(Console.ReadLine());
-            while (T-- > 0)
+            var numberOfItems = int.Parse(ReadLine());
+            while (numberOfItems-- > 0)
             {
-                int data = Int32.Parse(Console.ReadLine());
-                root = insert(root, data);
+                var data = int.Parse(ReadLine());
+                root = BSTree.Insert(root, data);
             }
-
-            int height = MaxDepth(root);
-            Console.WriteLine(height);
+            var height = BSTree.MaxDepth(root);
+            WriteLine(height);
         }
-
         
     }
 }
