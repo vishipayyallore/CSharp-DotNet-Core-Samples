@@ -25,7 +25,7 @@ namespace Days.Programs.BSTDemo
         static int MaxDepth(Node node) 
         {
             if (node==null) 
-                return 0;
+                return -1;
             else
             {
                 /* compute the depth of each subtree */
