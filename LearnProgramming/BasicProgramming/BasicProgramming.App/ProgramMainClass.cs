@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Programs.Library;
+using System;
+using static System.Console;
 
 namespace BasicProgramming.App
 {
@@ -6,7 +8,12 @@ namespace BasicProgramming.App
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ForegroundColor = ConsoleColor.Yellow;
+
+            new ToggleString().Run();
+
+            WriteLine("\n\nPress any key ...");
+            ReadKey();
         }
     }
 }

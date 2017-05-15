@@ -1,13 +1,29 @@
 ﻿using BasicProgramming.CoreLibrary;
-using System;
+using static System.Console;
 
 namespace Programs.Library
 {
     public class ToggleString : IProgram
     {
+        #region Methods
         public void Run()
         {
-
+            var data = ReadLine().Trim();
+            var output = 0;
+            foreach (var currentChar in data)
+            {
+                if ((currentChar >= 65 && currentChar <= 90))
+                {
+                    output = currentChar + 32;
+                }
+                else if ((currentChar >= 97 && currentChar <= 122))
+                {
+                    output = currentChar - 32;
+                }
+                Write($"{(char)output}");
+            }
         }
+        #endregion
+
     }
 }
