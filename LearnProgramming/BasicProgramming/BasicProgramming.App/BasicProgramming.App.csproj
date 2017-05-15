@@ -5,8 +5,4 @@
     <TargetFramework>netcoreapp1.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\BasicProgramming.CoreLibrary\BasicProgramming.CoreLibrary.csproj" />
-  </ItemGroup>
-
 </Project>
