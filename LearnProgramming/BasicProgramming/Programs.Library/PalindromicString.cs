@@ -15,7 +15,10 @@ namespace Programs.Library
 
             for (var iCtr = data.Length - 1; iCtr >= 0; iCtr--, jCtr++)
             {
-                if (data[iCtr].Equals(data[jCtr])) continue;
+                if (data[iCtr].Equals(data[jCtr]))
+                {
+                    continue;
+                }
                 output = "NO";
                 break;
             }
