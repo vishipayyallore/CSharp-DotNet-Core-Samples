@@ -15,7 +15,8 @@ namespace Programs.Library
 
             for (var iCtr = data.Length - 1; iCtr >= 0; iCtr--, jCtr++)
             {
-                if (data[iCtr].Equals(data[jCtr]))
+                
+                if (char.ToLowerInvariant(data[iCtr]).Equals(char.ToLowerInvariant(data[jCtr])))
                 {
                     continue;
                 }
