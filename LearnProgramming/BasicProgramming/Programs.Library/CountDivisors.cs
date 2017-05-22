@@ -4,6 +4,11 @@ using static System.Console;
 
 namespace Programs.Library
 {
+
+    /// <summary>
+    /// You have been given 3 integers - l, r and k. 
+    /// Find how many numbers between l and r (both inclusive) are divisible by k.
+    /// </summary>
     class CountDivisors : IProgram
     {
         public void Run()
