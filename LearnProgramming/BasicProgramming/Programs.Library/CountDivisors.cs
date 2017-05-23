@@ -13,6 +13,7 @@ namespace Programs.Library
     {
         public void Run()
         {
+            WriteLine("Sample Input {1 10 1}");
             var arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
             var count = 0;
             for (var iCtr = arrayValues[0]; iCtr <= arrayValues[1]; iCtr++)

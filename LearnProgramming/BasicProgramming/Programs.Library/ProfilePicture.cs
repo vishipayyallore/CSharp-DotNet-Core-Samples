@@ -8,6 +8,7 @@ namespace Programs.Library
     {
         public void Run()
         {
+            WriteLine("Sample Input {180 \n3 \n640 480 \n120 300 \n180 180");
             var pictureLength = int.Parse(ReadLine().Trim());
             var numberOfPictures = int.Parse(ReadLine().Trim());
             for (var iCtr = 0; iCtr < numberOfPictures; iCtr++)
