@@ -9,6 +9,7 @@ namespace Programs.Library
         #region Methods
         public void Run()
         {
+            WriteLine("Sample Input {aba}");
             var jCtr = 0;
             var output = "YES";
             var data = ReadLine().Trim();

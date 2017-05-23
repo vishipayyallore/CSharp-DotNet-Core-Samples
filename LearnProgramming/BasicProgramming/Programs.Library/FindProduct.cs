@@ -10,6 +10,7 @@ namespace Programs.Library
         #region
         public void Run()
         {
+            WriteLine("Sample Input {5 \n1 2 3 4 5");
             var numberOfElements = int.Parse(ReadLine().Trim());
             var arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
             var answer = 1.0;

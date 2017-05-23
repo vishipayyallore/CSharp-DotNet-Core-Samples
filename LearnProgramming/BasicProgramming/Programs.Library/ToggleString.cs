@@ -8,6 +8,7 @@ namespace Programs.Library
         #region Methods
         public void Run()
         {
+            WriteLine("Sample Input {abcdE}");
             var data = ReadLine();
             var output = 0;
             foreach (var currentChar in data)
