@@ -1,10 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using BasicProgramming.CoreLibrary;
+using static System.Console;
 
 namespace Programs.Library
 {
-    class Factorial
+    class Factorial : IProgram
     {
+        public void Run()
+        {
+            WriteLine("Sample Input {5}");
+            var number = int.Parse(ReadLine().Trim());
+            var factorial = 1;
+            while (number > 0)
+            {
+                factorial *= number;
+                number--;
+            }
+            WriteLine(factorial);
+        }
     }
 }
