@@ -7,7 +7,7 @@ namespace FirstConsoleApp
         public (int average, int studentCount) GetAverageAndCount(int[] scores)
         {
             (int average, int studentCount) result;
-            result = (result.average = (scores.Sum()/scores.Length), result.studentCount = scores.Length);
+            result = ((scores.Sum()/scores.Length), scores.Length);
 
             return result;
         }
