@@ -1,10 +1,13 @@
-﻿namespace FirstConsoleApp
+﻿using System.Linq;
+
+namespace FirstConsoleApp
 {
     public class Student
     {
         public (int average, int studentCount) GetAverageAndCount(int[] scores)
         {
-            var result = (average:0, studentCount:0);
+            (int average, int studentCount) result;
+            result = (result.average = (scores.Sum()/scores.Length), result.studentCount = scores.Length);
 
             return result;
         }
