@@ -11,7 +11,7 @@ namespace FirstConsoleApp
             var student = new Student();
             var scores = new[] {17, 46, 39, 62, 81, 79, 52, 24};
 
-            var (average, studentCount) = student.GetAverageAndCount(scores);
+            var (average, studentCount, belowAverage) = student.GetAverageAndCount(scores, 51);
             WriteLine($"Average was {average} across {studentCount} students.");
 
             WriteLine("\n\nPress any key...");

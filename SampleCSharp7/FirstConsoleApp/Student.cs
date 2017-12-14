@@ -4,10 +4,11 @@ namespace FirstConsoleApp
 {
     public class Student
     {
-        public (int average, int studentCount) GetAverageAndCount(int[] scores)
+        public (int average, int studentCount, bool belowAverage) 
+            GetAverageAndCount(int[] scores, int threshold)
         {
-            (int average, int studentCount) result;
-            result = ((scores.Sum()/scores.Length), scores.Length);
+            (int average, int studentCount, bool belowAverage) result;
+            result = ((scores.Sum()/scores.Length), scores.Length, result.average.CheckIfBelowAverage(threshold));
 
             return result;
         }
