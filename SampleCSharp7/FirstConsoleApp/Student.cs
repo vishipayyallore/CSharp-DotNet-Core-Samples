@@ -7,7 +7,7 @@ namespace FirstConsoleApp
         public (int average, int studentCount, bool belowAverage) 
             GetAverageAndCount(int[] scores, int threshold)
         {
-            (int average, int studentCount, bool belowAverage) result;
+            var result = (average:0, studentCount:0, belowAverage:true);
             result = ((scores.Sum()/scores.Length), scores.Length, result.average.CheckIfBelowAverage(threshold));
 
             return result;

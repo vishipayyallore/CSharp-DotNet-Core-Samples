@@ -10,9 +10,10 @@ namespace FirstConsoleApp
             ForegroundColor = ConsoleColor.Yellow;
             var student = new Student();
             var scores = new[] {17, 46, 39, 62, 81, 79, 52, 24};
+            const int threshold = 51;
 
-            var (average, studentCount, belowAverage) = student.GetAverageAndCount(scores, 51);
-            WriteLine($"Average was {average} across {studentCount} students.");
+            var (average, studentCount, belowAverage) = student.GetAverageAndCount(scores, threshold);
+            WriteLine($"Average was {average} across {studentCount} students. Below Average: {(average < threshold ? " Class score below average." : " Class score above average.")}");
 
             WriteLine("\n\nPress any key...");
             ReadKey();
