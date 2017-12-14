@@ -6,9 +6,9 @@ namespace FirstConsoleApp
 {
     public static class ExtensionMethods
     {
-        public static bool CheckIfBelowAverage()
+        public static bool CheckIfBelowAverage(this int classAverage, int threshold)
         {
-            return true;
+            return (classAverage < threshold);
         }
 
     }
