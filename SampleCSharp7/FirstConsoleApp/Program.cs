@@ -9,7 +9,7 @@ namespace FirstConsoleApp
         {
             ForegroundColor = ConsoleColor.Yellow;
             var student = new Student();
-            var scores = new[] {17, 46, 39, 62, 81, 79, 52, 24};
+            var scores = new[] { 17, 46, 39, 62, 81, 79, 52, 24, 49 };
             const int threshold = 40;
 
             var (average, studentCount, _) = student.GetAverageAndCount(scores, threshold);
@@ -20,3 +20,4 @@ namespace FirstConsoleApp
         }
     }
 }
+
