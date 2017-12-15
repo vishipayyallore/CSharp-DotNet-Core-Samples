@@ -1,5 +1,6 @@
 ﻿using System;
 using static System.Console;
+using static System.Math;
 
 namespace FirstConsoleApp
 {
@@ -13,7 +14,7 @@ namespace FirstConsoleApp
             const int threshold = 40;
 
             var (average, studentCount, _) = student.GetAverageAndCount(scores, threshold);
-            WriteLine($"Average was {average} across {studentCount} students. Below Average: {(average < threshold ? " Class score below average." : " Class score above average.")}");
+            WriteLine($"Average was {Round(average,2)} across {studentCount} students. Below Average: {(average < threshold ? " Class score below average." : " Class score above average.")}");
 
             WriteLine("\n\nPress any key...");
             ReadKey();
