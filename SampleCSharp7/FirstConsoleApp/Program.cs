@@ -9,11 +9,11 @@ namespace FirstConsoleApp
         private static void Main()
         {
             ForegroundColor = ConsoleColor.Yellow;
-            var student = new Student();
+            var studentsHelper = new StudentsHelper();
             var scores = new[] { 17, 46, 39, 62, 81, 79, 52, 24, 49 };
             const int threshold = 40;
 
-            var (average, studentCount, _) = student.GetAverageAndCount(scores, threshold);
+            var (average, studentCount, _) = studentsHelper.GetAverageAndCount(scores, threshold);
             WriteLine($"Average was {Round(average,2)} across {studentCount} students. Below Average: {(average < threshold ? " Class score below average." : " Class score above average.")}");
 
             WriteLine("\n\nPress any key...");

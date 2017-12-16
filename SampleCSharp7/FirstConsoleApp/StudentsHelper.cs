@@ -2,7 +2,7 @@
 
 namespace FirstConsoleApp
 {
-    public class Student
+    public class StudentsHelper
     {
         public (double average, int studentCount, bool belowAverage) 
             GetAverageAndCount(int[] scores, int threshold)
