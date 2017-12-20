@@ -22,6 +22,11 @@ namespace FirstConsoleApp
                 var studentObject = (Student) person;
                 WriteLine($" Student {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join<int>(", ", studentObject.CourseCodes)}");
             }
+            if (person is Professor)
+            {
+                var professorObject = (Professor)person;
+                WriteLine($" Student {professorObject.Name} {professorObject.LastName} teaches {string.Join<string>(", ", professorObject.TeachesSubject)}");
+            }
 
 
         }
