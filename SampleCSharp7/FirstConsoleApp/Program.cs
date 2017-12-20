@@ -9,7 +9,7 @@ namespace FirstConsoleApp
         private static void Main()
         {
             ForegroundColor = ConsoleColor.Yellow;
-            var studentsHelper = new StudentsHelper();
+            var studentsHelper = new PersonHelper();
             var scores = new[] { 17, 46, 39, 62, 81, 79, 52, 24, 49 };
             const int threshold = 40;
 
