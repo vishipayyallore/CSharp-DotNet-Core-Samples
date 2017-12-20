@@ -24,6 +24,7 @@ namespace FirstConsoleApp
                 CourseCodes = new List<int> {203, 202, 101}
             };
             personHelper.PrintData(student);
+            personHelper.PrintDataWithPatternMatching(student);
 
             var professor = new Professor
             {
@@ -32,6 +33,7 @@ namespace FirstConsoleApp
                 TeachesSubject = new List<string> { "Mobile Development", "Cryptography" }
             };
             personHelper.PrintData(professor);
+            personHelper.PrintDataWithPatternMatching(professor);
 
             WriteLine("\n\nPress any key...");
             ReadKey();

@@ -14,7 +14,10 @@ namespace FirstConsoleApp
             return result;
         }
 
-
+        /// <summary>
+        /// Without Pattern Matching
+        /// </summary>
+        /// <param name="person"></param>
         public void PrintData(object person)
         {
             switch (person)
@@ -27,6 +30,18 @@ namespace FirstConsoleApp
                     var professorObject = (Professor)person;
                     WriteLine($"\nProfessor {professorObject.Name} {professorObject.LastName} teaches {string.Join<string>(", ", professorObject.TeachesSubject)}");
                     break;
+            }
+        }
+
+        public void PrintDataWithPatternMatching(object person)
+        {
+            if (person is Student studentObject)
+            {
+                WriteLine($"\nStudent {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join<int>(", ", studentObject.CourseCodes)}");
+            }
+            if (person is Professor professorObject)
+            {
+                WriteLine($"\nProfessor {professorObject.Name} {professorObject.LastName} teaches {string.Join<string>(", ", professorObject.TeachesSubject)}");
             }
         }
 
