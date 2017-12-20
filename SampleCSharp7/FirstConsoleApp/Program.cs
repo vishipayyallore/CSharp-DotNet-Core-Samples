@@ -25,7 +25,7 @@ namespace FirstConsoleApp
             };
             personHelper.PrintData(student);
             personHelper.PrintDataWithPatternMatching(student);
-            personHelper.PrintDataWithPatternMatching((Student) null);
+            personHelper.PrintDataWithPatternMatching(null);
 
             var professor = new Professor
             {
@@ -35,7 +35,7 @@ namespace FirstConsoleApp
             };
             personHelper.PrintData(professor);
             personHelper.PrintDataWithPatternMatching(professor);
-            personHelper.PrintDataWithPatternMatching((Professor) null);
+            personHelper.PrintDataWithPatternMatching(null);
 
             WriteLine("\n\nPress any key...");
             ReadKey();
