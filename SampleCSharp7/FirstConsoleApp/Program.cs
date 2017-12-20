@@ -25,6 +25,8 @@ namespace FirstConsoleApp
             };
             personHelper.PrintData(student);
             personHelper.PrintDataWithPatternMatching(student);
+            student = null;
+            personHelper.PrintDataWithPatternMatching(student);
 
             var professor = new Professor
             {
@@ -33,6 +35,8 @@ namespace FirstConsoleApp
                 TeachesSubject = new List<string> { "Mobile Development", "Cryptography" }
             };
             personHelper.PrintData(professor);
+            personHelper.PrintDataWithPatternMatching(professor);
+            professor = null;
             personHelper.PrintDataWithPatternMatching(professor);
 
             WriteLine("\n\nPress any key...");

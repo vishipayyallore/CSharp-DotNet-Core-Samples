@@ -35,6 +35,11 @@ namespace FirstConsoleApp
 
         public void PrintDataWithPatternMatching(object person)
         {
+            if (person is null)
+            {
+                WriteLine($" Object {nameof(person)} is null");
+            }
+
             if (person is Student studentObject)
             {
                 WriteLine($"\nStudent {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join<int>(", ", studentObject.CourseCodes)}");
