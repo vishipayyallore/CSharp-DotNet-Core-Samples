@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using static System.Console;
 
 namespace FirstConsoleApp
 {
@@ -14,6 +15,16 @@ namespace FirstConsoleApp
         }
 
 
+        public void PrintData(object person)
+        {
+            if(person is Student)
+            {
+                var studentObject = (Student) person;
+                WriteLine($" Student {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join<int>(", ", studentObject.CourseCodes)}");
+            }
+
+
+        }
 
     }
 

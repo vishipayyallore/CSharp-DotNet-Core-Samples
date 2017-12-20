@@ -6,6 +6,6 @@ namespace FirstConsoleApp
     {
         public string Name { get; set; }
         public string LastName { get; set; }
-        public List<int> CouseCodes { get; set; }
+        public List<int> CourseCodes { get; set; }
     }
 }
