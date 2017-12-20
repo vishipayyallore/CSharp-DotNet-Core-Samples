@@ -23,6 +23,15 @@ namespace FirstConsoleApp
                 LastName = "Strauss",
                 CourseCodes = new List<int> {203, 202, 101}
             };
+            personHelper.PrintData(student);
+
+            var professor = new Professor
+            {
+                Name = "Reinhardt",
+                LastName = "Botha",
+                TeachesSubject = new List<string> { "Mobile Development", "Cryptography" }
+            };
+            personHelper.PrintData(professor);
 
             WriteLine("\n\nPress any key...");
             ReadKey();

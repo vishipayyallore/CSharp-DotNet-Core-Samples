@@ -17,18 +17,17 @@ namespace FirstConsoleApp
 
         public void PrintData(object person)
         {
-            if(person is Student)
+            switch (person)
             {
-                var studentObject = (Student) person;
-                WriteLine($" Student {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join<int>(", ", studentObject.CourseCodes)}");
+                case Student _:
+                    var studentObject = (Student) person;
+                    WriteLine($"\nStudent {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join<int>(", ", studentObject.CourseCodes)}");
+                    break;
+                case Professor _:
+                    var professorObject = (Professor)person;
+                    WriteLine($"\nProfessor {professorObject.Name} {professorObject.LastName} teaches {string.Join<string>(", ", professorObject.TeachesSubject)}");
+                    break;
             }
-            if (person is Professor)
-            {
-                var professorObject = (Professor)person;
-                WriteLine($" Student {professorObject.Name} {professorObject.LastName} teaches {string.Join<string>(", ", professorObject.TeachesSubject)}");
-            }
-
-
         }
 
     }
