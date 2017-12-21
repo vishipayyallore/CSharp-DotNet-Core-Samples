@@ -37,7 +37,28 @@ namespace FirstConsoleApp
         /// Pattern Matching with "is" keyword
         /// </summary>
         /// <param name="person"></param>
-        public void PrintDataWithPatternMatching(object person)
+        public void PrintDataWithIsKeyword(object person)
+        {
+            if (person is null)
+            {
+                WriteLine($" Object {nameof(person)} is null");
+            }
+
+            if (person is Student studentObject)
+            {
+                WriteLine($"\nStudent {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join(", ", studentObject.CourseCodes)}");
+            }
+            if (person is Professor professorObject)
+            {
+                WriteLine($"\nProfessor {professorObject.Name} {professorObject.LastName} teaches {string.Join<string>(", ", professorObject.TeachesSubject)}");
+            }
+        }
+
+        /// <summary>
+        /// Pattern Matching with Swtich case
+        /// </summary>
+        /// <param name="person"></param>
+        public void PrintDataWithSwitchCase(object person)
         {
             if (person is null)
             {
