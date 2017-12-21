@@ -60,20 +60,20 @@ namespace FirstConsoleApp
         /// <param name="person"></param>
         public void PrintDataWithSwitchCase(object person)
         {
-            if (person is null)
+            switch (person)
             {
-                WriteLine($" Object {nameof(person)} is null");
-            }
-
-            if (person is Student )
-            {
-                var studentObject = (Student) person;
-                WriteLine($"\nStudent {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join(", ", studentObject.CourseCodes)}");
-            }
-            if (person is Professor )
-            {
-                var professorObject = (Professor) person;
-                WriteLine($"\nProfessor {professorObject.Name} {professorObject.LastName} teaches {string.Join<string>(", ", professorObject.TeachesSubject)}");
+                case null:
+                    WriteLine($" Object {nameof(person)} is null");
+                    break;
+                case Student studentObject:
+                    WriteLine($"\nStudent {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join(", ", studentObject.CourseCodes)}");
+                    break;
+                case Professor professorObject:
+                    WriteLine($"\nProfessor {professorObject.Name} {professorObject.LastName} teaches {string.Join<string>(", ", professorObject.TeachesSubject)}");
+                    break;
+                default:
+                    WriteLine("\nUnknown object detected");
+                    break;
             }
         }
 
