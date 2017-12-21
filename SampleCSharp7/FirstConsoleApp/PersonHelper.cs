@@ -65,12 +65,14 @@ namespace FirstConsoleApp
                 WriteLine($" Object {nameof(person)} is null");
             }
 
-            if (person is Student studentObject)
+            if (person is Student )
             {
+                var studentObject = (Student) person;
                 WriteLine($"\nStudent {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join(", ", studentObject.CourseCodes)}");
             }
-            if (person is Professor professorObject)
+            if (person is Professor )
             {
+                var professorObject = (Professor) person;
                 WriteLine($"\nProfessor {professorObject.Name} {professorObject.LastName} teaches {string.Join<string>(", ", professorObject.TeachesSubject)}");
             }
         }
