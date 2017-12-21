@@ -65,6 +65,9 @@ namespace FirstConsoleApp
                 case null:
                     WriteLine($" Object {nameof(person)} is null");
                     break;
+                case Student studentObject when(studentObject.CourseCodes.Contains(203)):
+                    WriteLine($" Student {studentObject.Name} {studentObject.LastName} is enrolled for course 203.");
+                    break;
                 case Student studentObject:
                     WriteLine($"\nStudent {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join(", ", studentObject.CourseCodes)}");
                     break;
