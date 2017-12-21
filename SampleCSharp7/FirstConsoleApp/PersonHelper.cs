@@ -24,7 +24,7 @@ namespace FirstConsoleApp
             {
                 case Student _:
                     var studentObject = (Student) person;
-                    WriteLine($"\nStudent {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join<int>(", ", studentObject.CourseCodes)}");
+                    WriteLine($"\nStudent {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join(", ", studentObject.CourseCodes)}");
                     break;
                 case Professor _:
                     var professorObject = (Professor)person;
@@ -33,6 +33,10 @@ namespace FirstConsoleApp
             }
         }
 
+        /// <summary>
+        /// Pattern Matching with "is" keyword
+        /// </summary>
+        /// <param name="person"></param>
         public void PrintDataWithPatternMatching(object person)
         {
             if (person is null)
@@ -42,7 +46,7 @@ namespace FirstConsoleApp
 
             if (person is Student studentObject)
             {
-                WriteLine($"\nStudent {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join<int>(", ", studentObject.CourseCodes)}");
+                WriteLine($"\nStudent {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join(", ", studentObject.CourseCodes)}");
             }
             if (person is Professor professorObject)
             {
