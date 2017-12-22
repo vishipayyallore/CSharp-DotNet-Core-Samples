@@ -23,6 +23,10 @@ namespace FirstConsoleApp
                 LastName = "Strauss",
                 CourseCodes = new List<int> {203, 202, 101}
             };
+            // Using Deconstruct
+            var (firstName, surname) = student;
+            WriteLine($"[Deconstruct] The student name is {firstName} {surname}");
+
             personHelper.PrintData(student);
             personHelper.PrintDataWithIsKeyword(student);
             personHelper.PrintDataWithIsKeyword(null);
@@ -54,6 +58,7 @@ namespace FirstConsoleApp
                 WriteLine($"{number1} is a valid integer");
             }
 
+            //Extension Method, Tuple, and out variables.
             const string value2 = "500A";
             var (originalValue, number2, isInteger) = value2.ToInt();
             WriteLine(isInteger ? $"{number2} is a valid integer" : $"{originalValue} is NOT a valid integer");
