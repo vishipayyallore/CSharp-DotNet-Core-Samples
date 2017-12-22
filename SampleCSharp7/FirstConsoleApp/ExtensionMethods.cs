@@ -7,10 +7,13 @@
             return (classAverage < threshold);
         }
 
-        public static (string originalValue, int number, bool isInteger)
-            ToInt(this string value)
+        public static (string originalValue, int number, bool isInteger) ToInt(this string value)
         {
-            return null;
+            var result = (originalValue: value, number: 0, isInteger: false);
+            if (!int.TryParse(value, out var number)) return result;
+            result.number = number;
+            result.isInteger = true;
+            return result;
         }
 
     }

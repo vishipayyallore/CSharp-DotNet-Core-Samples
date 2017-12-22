@@ -53,7 +53,11 @@ namespace FirstConsoleApp
             {
                 WriteLine($"{number1} is a valid integer");
             }
-            
+
+            const string value2 = "500A";
+            var (originalValue, number2, isInteger) = value2.ToInt();
+            WriteLine(isInteger ? $"{number2} is a valid integer" : $"{originalValue} is NOT a valid integer");
+
             WriteLine("\n\nPress any key...");
             ReadKey();
         }
