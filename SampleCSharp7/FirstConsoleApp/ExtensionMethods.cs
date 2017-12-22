@@ -16,5 +16,11 @@
             return result;
         }
 
+        public static void Deconstruct(this Student student, out string name, out string lastName)
+        {
+            name = student.Name;
+            lastName = student.LastName;
+        }
+
     }
 }

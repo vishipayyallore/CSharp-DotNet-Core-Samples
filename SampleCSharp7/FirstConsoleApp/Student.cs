@@ -8,11 +8,11 @@ namespace FirstConsoleApp
         public string LastName { get; set; }
         public List<int> CourseCodes { get; set; }
 
-        public void Deconstruct(out string name, out string lastName)
-        {
-            name = Name;
-            lastName = LastName;
-        }
+        //public void Deconstruct(out string name, out string lastName)
+        //{
+        //    name = Name;
+        //    lastName = LastName;
+        //}
 
     }
 }

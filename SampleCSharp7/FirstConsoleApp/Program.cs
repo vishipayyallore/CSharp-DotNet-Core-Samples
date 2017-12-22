@@ -23,9 +23,10 @@ namespace FirstConsoleApp
                 LastName = "Strauss",
                 CourseCodes = new List<int> {203, 202, 101}
             };
-            // Using Deconstruct
+
+            // Using Deconstruct [As Extension Method]
             var (firstName, surname) = student;
-            WriteLine($"[Deconstruct] The student name is {firstName} {surname}");
+            WriteLine($"[Deconstruct -> As Extension Method] The student name is {firstName} {surname}");
 
             personHelper.PrintData(student);
             personHelper.PrintDataWithIsKeyword(student);
