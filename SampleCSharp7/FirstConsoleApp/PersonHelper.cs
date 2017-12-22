@@ -24,11 +24,11 @@ namespace FirstConsoleApp
             {
                 case Student _:
                     var studentObject = (Student) person;
-                    WriteLine($"\nStudent {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join(", ", studentObject.CourseCodes)}");
+                    WriteLine($"Student {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join(", ", studentObject.CourseCodes)}");
                     break;
                 case Professor _:
                     var professorObject = (Professor)person;
-                    WriteLine($"\nProfessor {professorObject.Name} {professorObject.LastName} teaches {string.Join<string>(", ", professorObject.TeachesSubject)}");
+                    WriteLine($"Professor {professorObject.Name} {professorObject.LastName} teaches {string.Join<string>(", ", professorObject.TeachesSubject)}");
                     break;
             }
         }
@@ -46,11 +46,11 @@ namespace FirstConsoleApp
 
             if (person is Student studentObject)
             {
-                WriteLine($"\nStudent {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join(", ", studentObject.CourseCodes)}");
+                WriteLine($"Student {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join(", ", studentObject.CourseCodes)}");
             }
             if (person is Professor professorObject)
             {
-                WriteLine($"\nProfessor {professorObject.Name} {professorObject.LastName} teaches {string.Join<string>(", ", professorObject.TeachesSubject)}");
+                WriteLine($"Professor {professorObject.Name} {professorObject.LastName} teaches {string.Join<string>(", ", professorObject.TeachesSubject)}");
             }
         }
 
@@ -66,13 +66,13 @@ namespace FirstConsoleApp
                     WriteLine($" Object {nameof(person)} is null");
                     break;
                 case Student studentObject when(studentObject.CourseCodes.Contains(203)):
-                    WriteLine($" Student {studentObject.Name} {studentObject.LastName} is enrolled for course 203.");
+                    WriteLine($"Student {studentObject.Name} {studentObject.LastName} is enrolled for course 203.");
                     break;
                 case Student studentObject:
-                    WriteLine($"\nStudent {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join(", ", studentObject.CourseCodes)}");
+                    WriteLine($"Student {studentObject.Name} {studentObject.LastName} is enrolled for courses {string.Join(", ", studentObject.CourseCodes)}");
                     break;
                 case Professor professorObject:
-                    WriteLine($"\nProfessor {professorObject.Name} {professorObject.LastName} teaches {string.Join<string>(", ", professorObject.TeachesSubject)}");
+                    WriteLine($"Professor {professorObject.Name} {professorObject.LastName} teaches {string.Join<string>(", ", professorObject.TeachesSubject)}");
                     break;
                 default:
                     WriteLine("\nUnknown object detected");
