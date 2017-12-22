@@ -39,7 +39,7 @@ namespace FirstConsoleApp
             personHelper.PrintDataWithIsKeyword(null);
             personHelper.PrintDataWithSwitchCase(professor);
 
-            //Out Parameter Demo
+            //Out Variables Demo
             string value = "500";
             if(int.TryParse(value, out int number))
             {
