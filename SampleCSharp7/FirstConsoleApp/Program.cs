@@ -39,13 +39,21 @@ namespace FirstConsoleApp
             personHelper.PrintDataWithIsKeyword(null);
             personHelper.PrintDataWithSwitchCase(professor);
 
-            //Out Variables Demo
+            //Out Variables V1 Demo
             string value = "500";
             if(int.TryParse(value, out int number))
             {
                 WriteLine($"{number} is a valid integer");
             }
             WriteLine($"{number} is a valid integer");
+
+            //Out Variables V2 Demo
+            string value1 = "1500";
+            if (int.TryParse(value1, out var number1))
+            {
+                WriteLine($"{number1} is a valid integer");
+            }
+            WriteLine($"{number1} is a valid integer");
 
             WriteLine("\n\nPress any key...");
             ReadKey();
