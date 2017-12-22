@@ -7,5 +7,11 @@
             return (classAverage < threshold);
         }
 
+        public static (string originalValue, int number, bool isInteger)
+            ToInt(this string value)
+        {
+            return null;
+        }
+
     }
 }
