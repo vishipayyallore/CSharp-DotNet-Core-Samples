@@ -68,6 +68,10 @@ namespace FirstConsoleApp
             var (firstNameV2, surName) = studentV2;
             WriteLine($"The student V2 name is {firstNameV2} {surName}");
 
+            var building = new Building(200, 35, 100);
+            building.CalculateShopFloorSpace();
+            WriteLine($" The total space for shops is {building.TotalShopFloorSpace} square meters");
+
             WriteLine("\n\nPress any key...");
             ReadKey();
         }
