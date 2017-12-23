@@ -65,8 +65,8 @@ namespace FirstConsoleApp
             WriteLine(isInteger ? $"{number2} is a valid integer" : $"{originalValue} is NOT a valid integer");
 
             var studentV2 = new StudentV2("S20323742");
-            var (FirstName, SurName) = studentV2;
-            WriteLine($"The student V2 name is {FirstName} {SurName}");
+            var (firstNameV2, surName) = studentV2;
+            WriteLine($"The student V2 name is {firstNameV2} {surName}");
 
             WriteLine("\n\nPress any key...");
             ReadKey();

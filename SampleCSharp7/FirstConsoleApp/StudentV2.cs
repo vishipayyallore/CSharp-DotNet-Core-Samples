@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System;
 
 namespace FirstConsoleApp
 {
@@ -10,9 +10,8 @@ namespace FirstConsoleApp
             (Name, LastName) = GetStudentDetails(studentNumber);
         }
 
-        public string Name { get; private set; }
-        public string LastName { get; private set; }
-        public List<int> CourseCodes { get; private set; }
+        private string Name { get; }
+        private string LastName { get; }
 
         public void Deconstruct(out string name, out string lastName)
         {
@@ -22,7 +21,9 @@ namespace FirstConsoleApp
 
         private (string name, string surname) GetStudentDetails(string studentNumber)
         {
-            var studentDetails = (name: "Dirk", surname: "Strauss");
+            if (studentNumber == null) throw new ArgumentNullException(nameof(studentNumber));
+            studentNumber = string.Empty;
+            var studentDetails = (name: $"{studentNumber}Dirk", surname: "Strauss");
             return studentDetails;
         }
 
