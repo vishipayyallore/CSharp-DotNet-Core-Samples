@@ -64,6 +64,10 @@ namespace FirstConsoleApp
             var (originalValue, number2, isInteger) = value2.ToInt();
             WriteLine(isInteger ? $"{number2} is a valid integer" : $"{originalValue} is NOT a valid integer");
 
+            var studentV2 = new StudentV2("S20323742");
+            var (FirstName, SurName) = studentV2;
+            WriteLine($"The student V2 name is {FirstName} {SurName}");
+
             WriteLine("\n\nPress any key...");
             ReadKey();
         }
