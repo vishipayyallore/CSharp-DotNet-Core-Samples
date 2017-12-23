@@ -2,7 +2,6 @@
 {
     public class Building
     {
-
         public int TotalShopFloorSpace { get; private set; }
         private int FloorCommonArea { get; }
         private int BuildingWidth { get; }
@@ -15,15 +14,15 @@
             BuildingLength = buildingLength;
         }
 
-
         public void CalculateShopFloorSpace()
         {
-            TotalShopFloorSpace = ShopFloorSpace();
-
             int ShopFloorSpace()
             {
                 return (BuildingWidth * BuildingLength) - FloorCommonArea;
             }
+
+            //Local function can be invoked from anywhere within the method it contains.
+            TotalShopFloorSpace = ShopFloorSpace();
         }
 
     }

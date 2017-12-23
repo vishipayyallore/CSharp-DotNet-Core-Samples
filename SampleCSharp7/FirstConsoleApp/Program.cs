@@ -72,6 +72,25 @@ namespace FirstConsoleApp
             building.CalculateShopFloorSpace();
             WriteLine($" The total space for shops is {building.TotalShopFloorSpace} square meters");
 
+            const long oldNumber = 342057239127493;
+            const long newNumber = 342_057_239_127_493;
+            WriteLine($" Old Number = {oldNumber} and New Number = {newNumber}");
+
+            const int binaryaLiteral = 0b1010_1100_0011_0010_0001_0000;
+            WriteLine($"Bit Literal = {binaryaLiteral}!");
+
+            var number3 = 10;
+            var number4 = 10;
+            var output = MathHelper.GetLargest(number3, number4);
+            WriteLine($" Output = {output} Number 3 = {number3} Number 4 = {number4} ");
+            output += 25;
+            WriteLine($" Output = {output} Number 3 = {number3} Number 4 = {number4} ");
+
+            ref var output1 = ref MathHelper.GetLargest(ref number3, ref number4);
+            WriteLine($" Output = {output1} Number 3 = {number3} Number 4 = {number4} ");
+            output1 += 25;
+            WriteLine($" Output = {output1} Number 3 = {number3} Number 4 = {number4} ");
+
             WriteLine("\n\nPress any key...");
             ReadKey();
         }
