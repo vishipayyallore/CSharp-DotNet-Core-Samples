@@ -9,4 +9,8 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="codecracker.CSharp" Version="1.0.3" />
+  </ItemGroup>
+
 </Project>
