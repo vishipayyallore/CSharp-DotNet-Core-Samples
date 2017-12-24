@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.btnTestAsync = new System.Windows.Forms.Button();
             this.lblTimer = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtOutput = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
@@ -43,6 +43,7 @@
             this.btnTestAsync.TabIndex = 0;
             this.btnTestAsync.Text = "Test Async";
             this.btnTestAsync.UseVisualStyleBackColor = true;
+            this.btnTestAsync.Click += new System.EventHandler(this.btnTestAsync_Click);
             // 
             // lblTimer
             // 
@@ -53,12 +54,12 @@
             this.lblTimer.TabIndex = 1;
             this.lblTimer.Text = "label1";
             // 
-            // textBox1
+            // txtOutput
             // 
-            this.textBox1.Location = new System.Drawing.Point(150, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(381, 26);
-            this.textBox1.TabIndex = 2;
+            this.txtOutput.Location = new System.Drawing.Point(150, 25);
+            this.txtOutput.Name = "txtOutput";
+            this.txtOutput.Size = new System.Drawing.Size(381, 26);
+            this.txtOutput.TabIndex = 2;
             // 
             // timer1
             // 
@@ -69,7 +70,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 149);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtOutput);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.btnTestAsync);
             this.Name = "Form1";
@@ -84,7 +85,7 @@
 
         private System.Windows.Forms.Button btnTestAsync;
         private System.Windows.Forms.Label lblTimer;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtOutput;
         private System.Windows.Forms.Timer timer1;
     }
 }

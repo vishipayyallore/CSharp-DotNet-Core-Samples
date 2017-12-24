@@ -7,9 +7,9 @@ namespace AsyncReturnDemo
 {
     public partial class Form1 : Form
     {
-        private double timerTtl = 10.0D;
-        private DateTime timeToLive;
-        private int cacheValue;
+        private double _timerTtl = 10.0D;
+        private DateTime _timeToLive;
+        private int _cacheValue;
 
         public Form1()
         {
@@ -18,45 +18,51 @@ namespace AsyncReturnDemo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lblTimer.Text = $"Timer TTL {timerTtl} sec (STOPPED)";
+            lblTimer.Text = $@"Timer TTL {_timerTtl} sec (STOPPED)";
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (timerTtl == 0)
+            // ReSharper disable once CompareOfFloatsByEqualityOperator
+            if (_timerTtl == 0)
             {
-                timerTtl = 5;
+                _timerTtl = 5;
             }
             else
             {
-                timerTtl -= 1;
+                _timerTtl -= 1;
             }
-            lblTimer.Text = $"Timer TTL {timerTtl} sec (RUNNING)";
+            lblTimer.Text = $@"Timer TTL {_timerTtl} sec (RUNNING)";
         }
 
 
-        public async Task<int> GetValue()
+        private async Task<int> GetValue()
         {
             await Task.Delay(1000);
 
             var random = new Random();
-            cacheValue = random.Next();
-            timeToLive = DateTime.Now.AddSeconds(timerTtl);
+            _cacheValue = random.Next();
+            _timeToLive = DateTime.Now.AddSeconds(_timerTtl);
 
             timer1.Start();
-            return cacheValue;
+            return _cacheValue;
         }
 
-        public ValueTask<int> LoadReadCache(out bool isValueCached)
+        private ValueTask<int> LoadReadCache(out bool isValueCached)
         {
-            if (timeToLive < DateTime.Now)
+            if (_timeToLive < DateTime.Now)
             {
                 isValueCached = false;
                 return new ValueTask<int>(GetValue());
             }
             isValueCached = true;
-            return new ValueTask<int>(cacheValue);
+            return new ValueTask<int>(_cacheValue);
         }
-        
+
+        private async void btnTestAsync_Click(object sender, EventArgs e)
+        {
+            var returnValue = await LoadReadCache(out bool isCachedValue);
+            txtOutput.Text = isCachedValue ? $"Cached value {returnValue} read." : $"New value {returnValue} read.";
+        }
     }
 }
