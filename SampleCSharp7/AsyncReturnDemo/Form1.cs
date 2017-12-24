@@ -26,7 +26,7 @@ namespace AsyncReturnDemo
             // ReSharper disable once CompareOfFloatsByEqualityOperator
             if (_timerTtl == 0)
             {
-                _timerTtl = 5;
+                _timerTtl = 10;
             }
             else
             {
