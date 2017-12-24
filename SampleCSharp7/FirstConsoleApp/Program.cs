@@ -94,10 +94,8 @@ namespace FirstConsoleApp
             ForegroundColor = ConsoleColor.Green;
             unsafe
             {
-                IntPtr number4MemoryAddress = (IntPtr)(&number4);
-                IntPtr outputVarMemoryAddress = (IntPtr)(&output);
-                WriteLine($" The memory address of number4 is {number4MemoryAddress}");
-                WriteLine($" The memory address of output is {outputVarMemoryAddress}");
+                WriteLine($" The memory address of number4 is {(IntPtr)(&number4)}");
+                WriteLine($" The memory address of output is {(IntPtr)(&output)}");
                 fixed (int* refValVar = &output1)
                 {
                     IntPtr output1MemoryAddress = (IntPtr)(refValVar);
