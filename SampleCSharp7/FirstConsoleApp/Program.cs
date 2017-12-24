@@ -91,6 +91,20 @@ namespace FirstConsoleApp
             output1 += 25;
             WriteLine($" Output = {output1} Number 3 = {number3} Number 4 = {number4} ");
 
+            ForegroundColor = ConsoleColor.Green;
+            unsafe
+            {
+                IntPtr number4MemoryAddress = (IntPtr)(&number4);
+                IntPtr outputVarMemoryAddress = (IntPtr)(&output);
+                WriteLine($" The memory address of number4 is {number4MemoryAddress}");
+                WriteLine($" The memory address of output is {outputVarMemoryAddress}");
+                fixed (int* refValVar = &output1)
+                {
+                    IntPtr output1MemoryAddress = (IntPtr)(refValVar);
+                    WriteLine($" The memory address of output1 (Ref) is {output1MemoryAddress}");
+                }
+            }
+
             WriteLine("\n\nPress any key...");
             ReadKey();
         }
