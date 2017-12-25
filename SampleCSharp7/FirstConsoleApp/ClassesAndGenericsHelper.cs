@@ -4,20 +4,26 @@ namespace FirstConsoleApp
 {
     public class ClassesAndGenericsHelper
     {
-        public void CreateLion(LionColorSpectrum lionColor)
+
+        public Cat CreateCat(CatType catType)
         {
-            var lion = new Lion(lionColor);
-            lion.Hunt()
+            switch (catType)
+            {
+                case CatType.Lion:
+                    return new Lion(LionColorSpectrum.White);
+                case CatType.Tiger:
+                    return new Tiger(TigerColorSpectrum.Blue);
+                default:
+                    return new NullCat();
+            }
+        }
+
+        public void PerformCatLife(Cat cat)
+        {
+            cat.Hunt()
                 .Eat()
                 .Sleep();
         }
 
-        public void CreateTiger(TigerColorSpectrum tigerColor)
-        {
-            var tiger = new Tiger(tigerColor);
-            tiger.Hunt()
-                .Eat()
-                .Sleep();
-        }
     }
 }
