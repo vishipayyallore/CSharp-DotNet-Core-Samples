@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ClassesAndGenerics;
 using static System.Console;
 using static System.Math;
 
@@ -119,6 +120,10 @@ namespace FirstConsoleApp
                 WriteLine($"Error: {error.Message}");
             }
             ForegroundColor = ConsoleColor.Green;
+
+            var classesAndGenericsHelper = new ClassesAndGenericsHelper();
+            classesAndGenericsHelper.CreateLion(LionColorSpectrum.White);
+            classesAndGenericsHelper.CreateTiger(TigerColorSpectrum.Blue);
 
             WriteLine("\n\nPress any key...");
             ReadKey();
