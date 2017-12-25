@@ -122,9 +122,9 @@ namespace FirstConsoleApp
             ForegroundColor = ConsoleColor.Green;
 
             var classesAndGenericsHelper = new ClassesAndGenericsHelper();
-            classesAndGenericsHelper.PerformCatLife(classesAndGenericsHelper.CreateCat(CatType.Lion));
-            classesAndGenericsHelper.PerformCatLife(classesAndGenericsHelper.CreateCat(CatType.Tiger));
-            classesAndGenericsHelper.PerformCatLife(classesAndGenericsHelper.CreateCat(CatType.Unknown));
+            classesAndGenericsHelper.PerformCatLife(classesAndGenericsHelper.CreateCat(CatType.Lion, LionColorSpectrum.White));
+            classesAndGenericsHelper.PerformCatLife(classesAndGenericsHelper.CreateCat(CatType.Tiger, TigerColorSpectrum.Blue));
+            classesAndGenericsHelper.PerformCatLife(classesAndGenericsHelper.CreateCat(CatType.Unknown, null));
 
             WriteLine("\n\nPress any key...");
             ReadKey();
