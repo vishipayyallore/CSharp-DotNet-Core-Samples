@@ -103,6 +103,23 @@ namespace FirstConsoleApp
                 }
             }
 
+            var studentWithoutEb = new StudentWithoutEb(25);
+            WriteLine($"Student Expression Body {studentWithoutEb.Age}");
+            var studentWithEb = new StudentWithEb(25);
+            WriteLine($"Student Expression Body {studentWithEb.Age}");
+
+            var student1 = new Student();
+            try
+            {
+                WriteLine($"Name Length: {student1.GetNameLength()}");
+            }
+            catch (Exception error)
+            {
+                ForegroundColor = ConsoleColor.Red;
+                WriteLine($"Error: {error.Message}");
+            }
+            ForegroundColor = ConsoleColor.Green;
+
             WriteLine("\n\nPress any key...");
             ReadKey();
         }
