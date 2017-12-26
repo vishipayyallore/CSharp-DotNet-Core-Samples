@@ -5,7 +5,10 @@ namespace ClassesAndGenerics
     public class Cheetah : Cat, IPurrable
     {
 
-        public int SoftPurr { get; set; }
+        public void SoftPurr(int decibel)
+        {
+            WriteLine($" The {nameof(Cheetah)} purrs at {decibel} decibels.");
+        }
 
         public override Cat Eat()
         {
@@ -24,10 +27,6 @@ namespace ClassesAndGenerics
             WriteLine($" The cheetah sleeps.");
             return this;
         }
-
-        void IPurrable.SoftPurr(int decibel)
-        {
-            throw new System.NotImplementedException();
-        }
+        
     }
 }

@@ -126,6 +126,14 @@ namespace FirstConsoleApp
             classesAndGenericsHelper.PerformCatLife(classesAndGenericsHelper.CreateCat(CatType.Tiger, TigerColorSpectrum.Blue));
             classesAndGenericsHelper.PerformCatLife(classesAndGenericsHelper.CreateCat(CatType.Unknown, null));
 
+            var cheetah = new Cheetah();
+            cheetah
+                .Hunt()
+                .Eat()
+                .Sleep();
+            cheetah
+                .SoftPurr(40);
+
             WriteLine("\n\nPress any key...");
             ReadKey();
         }
