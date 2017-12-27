@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using ClassesAndGenerics;
+﻿using ClassesAndGenerics;
 
 namespace FirstConsoleApp
 {
@@ -28,5 +25,11 @@ namespace FirstConsoleApp
             return this;
         }
 
+        public PerformActionHelper PerformAction<T>(T value)
+        {
+            var performAction = new PerformAction<T>(value);
+            performAction.IdentityDataType();
+            return this;
+        }
     }
 }

@@ -140,6 +140,11 @@ namespace FirstConsoleApp
                 .PerformDecimalAction(23.45m)
                 .PerformStringAction("Shiva Sai");
 
+            performActionHelper
+                .PerformAction(50)
+                .PerformAction(23.45m)
+                .PerformAction("Sri Vari");
+
             WriteLine("\n\nPress any key...");
             ReadKey();
         }
