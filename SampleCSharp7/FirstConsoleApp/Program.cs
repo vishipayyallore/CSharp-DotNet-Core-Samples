@@ -9,7 +9,7 @@ namespace FirstConsoleApp
 {
     internal static class Program
     {
-        private enum Names { Shiva, Sai };
+        
 
         private static void Main()
         {
@@ -157,6 +157,7 @@ namespace FirstConsoleApp
             WriteLine($"An example of this type is {performActionHelper.InspectType(25)}");
             WriteLine($"An example of this type is {performActionHelper.InspectType(25.55m)}");
             WriteLine($"An example of this type is {performActionHelper.InspectType("Shiva Sai")}");
+            WriteLine($"An example of this type is {performActionHelper.InspectType(CatType.Tiger)}");
 
             WriteLine("\n\nPress any key...");
             ReadKey();
