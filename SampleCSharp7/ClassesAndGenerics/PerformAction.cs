@@ -2,6 +2,7 @@
 
 namespace ClassesAndGenerics
 {
+
     public class PerformAction<T>
     {
         private readonly T _value;
@@ -13,4 +14,5 @@ namespace ClassesAndGenerics
             WriteLine($" The data type of the supplied variable is {_value.GetType()}");
         }
     }
+
 }
