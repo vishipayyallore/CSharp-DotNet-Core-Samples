@@ -133,7 +133,7 @@ namespace FirstConsoleApp
                 .Sleep();
             cheetah
                 .SoftPurr(40);
-
+            
             WriteLine("\n\nPress any key...");
             ReadKey();
         }
