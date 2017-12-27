@@ -9,6 +9,8 @@ namespace FirstConsoleApp
 {
     internal static class Program
     {
+        private enum Names { Shiva, Sai };
+
         private static void Main()
         {
             ForegroundColor = ConsoleColor.Yellow;
@@ -136,6 +138,7 @@ namespace FirstConsoleApp
                 .SoftPurr(40);
             
             var performActionHelper = new PerformActionHelper();
+            // Without Generic Method Parameter.
             performActionHelper
                 .PerformIntAction(25)
                 .PerformDecimalAction(23.45m)
@@ -148,7 +151,12 @@ namespace FirstConsoleApp
                     .PerformAction(23.45m)
                     .PerformAction("Sri Vari")
                     .PerformActionV2(dataSet);
+                WriteLine($"An example of this type is {performActionHelper.InspectType(dataSet)}");
             }
+
+            WriteLine($"An example of this type is {performActionHelper.InspectType(25)}");
+            WriteLine($"An example of this type is {performActionHelper.InspectType(25.55m)}");
+            WriteLine($"An example of this type is {performActionHelper.InspectType("Shiva Sai")}");
 
             WriteLine("\n\nPress any key...");
             ReadKey();

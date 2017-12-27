@@ -1,5 +1,6 @@
 ﻿using System;
 using ClassesAndGenerics;
+using static System.Console;
 
 namespace FirstConsoleApp
 {
@@ -40,5 +41,10 @@ namespace FirstConsoleApp
             return this;
         }
 
+        public T InspectType<T>(T value)
+        {
+            WriteLine($"--The data type of the supplied variable is {value.GetType()}");
+            return value;
+        }
     }
 }
