@@ -1,4 +1,5 @@
-﻿using ClassesAndGenerics;
+﻿using System;
+using ClassesAndGenerics;
 
 namespace FirstConsoleApp
 {
@@ -31,5 +32,13 @@ namespace FirstConsoleApp
             performAction.IdentityDataType();
             return this;
         }
+
+        public PerformActionHelper PerformActionV2<T>(T value) where T : IDisposable
+        {
+            var performAction = new PerformActionV2<T>(value);
+            performAction.IdentityDataType();
+            return this;
+        }
+
     }
 }

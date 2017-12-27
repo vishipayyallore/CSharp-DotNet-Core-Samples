@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using ClassesAndGenerics;
 using static System.Console;
 using static System.Math;
@@ -140,10 +141,14 @@ namespace FirstConsoleApp
                 .PerformDecimalAction(23.45m)
                 .PerformStringAction("Shiva Sai");
 
-            performActionHelper
-                .PerformAction(50)
-                .PerformAction(23.45m)
-                .PerformAction("Sri Vari");
+            using (var dataSet = new DataSet())
+            {
+                performActionHelper
+                    .PerformAction(50)
+                    .PerformAction(23.45m)
+                    .PerformAction("Sri Vari")
+                    .PerformActionV2(dataSet);
+            }
 
             WriteLine("\n\nPress any key...");
             ReadKey();
