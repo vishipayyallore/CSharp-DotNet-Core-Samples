@@ -134,6 +134,15 @@ namespace FirstConsoleApp
             cheetah
                 .SoftPurr(40);
             
+            var performAction = new PerformAction<int>(21);
+            performAction.IdentityDataType();
+
+            var performAction1 = new PerformAction<decimal>(21.23m);
+            performAction1.IdentityDataType();
+
+            var performAction2 = new PerformAction<string>("Hello World");
+            performAction2.IdentityDataType();
+
             WriteLine("\n\nPress any key...");
             ReadKey();
         }
