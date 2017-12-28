@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace ClassesAndGenerics
 {
-    public class InspectClass<T> : IListClassProperties<T>
+    public class InspectClass<T> : IListClassProperties
     {
-        private T _classToInspect;
+        private readonly T _classToInspect;
 
         public InspectClass(T classToInspect)
         {
