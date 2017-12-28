@@ -3,8 +3,9 @@
 namespace ClassesAndGenerics
 {
 
-    public interface IListClassProperties<T>
+    public interface IListClassProperties
     {
         List<string> GetPropertyList();
     }
+
 }

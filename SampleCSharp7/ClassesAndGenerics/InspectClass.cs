@@ -1,12 +1,24 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace ClassesAndGenerics
 {
     public class InspectClass<T> : IListClassProperties<T>
     {
+        private T _classToInspect;
+
+        public InspectClass(T classToInspect)
+        {
+            _classToInspect = classToInspect;
+        }
+
         public List<string> GetPropertyList()
         {
-            throw new System.NotImplementedException();
+            return _classToInspect.GetType()
+                .GetProperties()
+                .Select(property => property.Name)
+                .ToList();
         }
+
     }
 }
