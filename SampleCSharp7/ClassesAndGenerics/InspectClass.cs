@@ -12,7 +12,7 @@ namespace ClassesAndGenerics
             _classToInspect = classToInspect;
         }
 
-        public List<string> GetPropertyList()
+        public IEnumerable<string> GetPropertyList()
         {
             return _classToInspect.GetType()
                 .GetProperties()
