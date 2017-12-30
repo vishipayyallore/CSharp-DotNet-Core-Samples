@@ -9,7 +9,6 @@ namespace FirstConsoleApp
 {
     internal static class Program
     {
-        
 
         private static void Main()
         {

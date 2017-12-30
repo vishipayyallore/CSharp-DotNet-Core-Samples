@@ -15,5 +15,6 @@ namespace FirstConsoleApp
                 WriteLine(property);
             }
         }
+
     }
 }
