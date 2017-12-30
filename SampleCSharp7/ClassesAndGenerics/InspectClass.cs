@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace ClassesAndGenerics
 {
-    public class InspectClass<T> : IListClassProperties where T: class 
+    public class InspectClass<T> : IListClassProperties where T: AcmeObject 
     {
         private readonly T _classToInspect;
 

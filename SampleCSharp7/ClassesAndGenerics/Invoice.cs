@@ -1,8 +1,8 @@
 ﻿namespace ClassesAndGenerics
 {
-    public class Invoice
+    public class Invoice : AcmeObject
     {
-        public int Id { get; set; }
+        public override int Id { get; set; }
         public decimal TotalValue { get; set; }
         public int LineNumber { get; set; }
         public string StockItem { get; set; }
