@@ -1,4 +1,5 @@
 ﻿using static System.Console;
+using static System.Reflection.MethodBase;
 
 namespace ClassesAndGenerics
 {
@@ -6,13 +7,13 @@ namespace ClassesAndGenerics
     {
         public Annihilator TractorBeam()
         {
-            WriteLine($"-----{this.GetType().Name}::{System.Reflection.MethodBase.GetCurrentMethod().Name}()-----");
+            WriteLine($"-----{GetType().Name}::{GetCurrentMethod().Name}()-----");
             return this;
         }
 
         public Annihilator PlanetDestructionCapability()
         {
-            WriteLine($"-----{this.GetType().Name}::{System.Reflection.MethodBase.GetCurrentMethod().Name}()-----");
+            WriteLine($"-----{GetType().Name}::{GetCurrentMethod().Name}()-----");
             return this;
         }
 
