@@ -16,5 +16,16 @@ namespace FirstConsoleApp
             return this;
         }
 
+        public InspectClassHelper DisplayPropertiesV1<T>(T acmeObject) where T: AcmeObject
+        {
+            var inspectClass = new InspectClass<T>(acmeObject);
+            WriteLine($"----Propertie V1 {acmeObject.GetType().Name}-----");
+            foreach (var property in inspectClass.GetPropertyList())
+            {
+                WriteLine(property);
+            }
+            return this;
+        }
+
     }
 }

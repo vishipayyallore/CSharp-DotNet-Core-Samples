@@ -164,6 +164,12 @@ namespace FirstConsoleApp
                 .DisplayProperties(new SalesOrder())
                 .DisplayProperties(new CreditNote());
 
+            //Invoking V1 version.
+            inspectClassHelper
+                .DisplayPropertiesV1(new Invoice())
+                .DisplayPropertiesV1(new SalesOrder())
+                .DisplayPropertiesV1(new CreditNote());
+
             WriteLine("\n\nPress any key...");
             ReadKey();
         }
