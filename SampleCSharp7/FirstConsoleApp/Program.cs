@@ -170,6 +170,12 @@ namespace FirstConsoleApp
                 .DisplayPropertiesV1(new SalesOrder())
                 .DisplayPropertiesV1(new CreditNote());
 
+            var spaceShipHelper = new SpaceShipHelper();
+            spaceShipHelper
+                .PerformSpaceShipActions()
+                .PerformDestroyerActions()
+                .PerformAnnihilatorActions();
+
             WriteLine("\n\nPress any key...");
             ReadKey();
         }
