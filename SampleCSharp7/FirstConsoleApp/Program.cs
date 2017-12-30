@@ -159,7 +159,10 @@ namespace FirstConsoleApp
             WriteLine($"An example of this type is {performActionHelper.InspectType(CatType.Tiger)}");
 
             var inspectClassHelper = new InspectClassHelper();
-            inspectClassHelper.DisplayProperties();
+            inspectClassHelper
+                .DisplayProperties(new Invoice())
+                .DisplayProperties(new SalesOrder())
+                .DisplayProperties(new CreditNote());
 
             WriteLine("\n\nPress any key...");
             ReadKey();

@@ -5,15 +5,15 @@ namespace FirstConsoleApp
 {
     public class InspectClassHelper
     {
-        public void DisplayProperties()
+        public InspectClassHelper DisplayProperties(AcmeObject acmeObject)
         {
-            var invoice1 = new Invoice();
-            var inspectClass = new InspectClass<Invoice>(invoice1);
-            WriteLine("----Properties-----");
+            var inspectClass = new InspectClass<AcmeObject>(acmeObject);
+            WriteLine($"----Propertie {acmeObject.GetType().Name}-----");
             foreach (var property in inspectClass.GetPropertyList())
             {
                 WriteLine(property);
             }
+            return this;
         }
 
     }
