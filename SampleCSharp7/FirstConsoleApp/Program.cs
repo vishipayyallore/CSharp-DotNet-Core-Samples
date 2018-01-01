@@ -49,7 +49,7 @@ namespace FirstConsoleApp
 
             //Out Variables V1 Demo
             const string value = "500";
-            if(int.TryParse(value, out int number))
+            if(int.TryParse(value, out var number))
             {
                 WriteLine($"{number} is a valid integer");
             }
@@ -101,7 +101,7 @@ namespace FirstConsoleApp
                 WriteLine($" The memory address of output is {(IntPtr)(&output)}");
                 fixed (int* refValVar = &output1)
                 {
-                    IntPtr output1MemoryAddress = (IntPtr)(refValVar);
+                    var output1MemoryAddress = (IntPtr)(refValVar);
                     WriteLine($" The memory address of output1 (Ref) is {output1MemoryAddress}");
                 }
             }

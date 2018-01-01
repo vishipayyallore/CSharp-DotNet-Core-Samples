@@ -61,7 +61,7 @@ namespace AsyncReturnDemo
 
         private async void btnTestAsync_Click(object sender, EventArgs e)
         {
-            var returnValue = await LoadReadCache(out bool isCachedValue);
+            var returnValue = await LoadReadCache(out var isCachedValue);
             txtOutput.Text = isCachedValue ? $"Cached value {returnValue} read." : $"New value {returnValue} read.";
         }
     }
