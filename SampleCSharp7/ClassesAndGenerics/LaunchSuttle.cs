@@ -34,22 +34,23 @@ namespace ClassesAndGenerics
             SetUniversalGravitationalConstant();
 
             _localGravitationalAccelaration =
-                Math.Round((double)CalculateGravitationalAcceleration(planetRadius, planetMass), 2);
+                Math.Round(CalculateGravitationalAcceleration(planetRadius, planetMass), 2);
         }
 
-        private decimal CalculateGravitationalAcceleration(double planetRadius, double planetMass)
+        private double CalculateThrustToWeightRatio()
         {
-            throw new NotImplementedException();
+            // TWR = Ft/ m.g > 1 
+            return _engineThrust / (_totalShuttleMass * _localGravitationalAccelaration);
         }
 
-        private decimal CalculateGravitationalAcceleration()
+        private double CalculateGravitationalAcceleration(double planetRadius, double planetMass)
         {
-            throw new NotImplementedException();
+            return (_universalGravitationalConstant * planetMass) / Math.Pow(planetRadius, 2);
         }
 
         private void SetUniversalGravitationalConstant()
         {
-            throw new System.NotImplementedException();
+            _universalGravitationalConstant = 6.6726 * Math.Pow(10, -11);
         }
 
         private void SetGraviationalAccelaration(Planet planet)
@@ -68,6 +69,11 @@ namespace ClassesAndGenerics
                 default:
                     throw new ArgumentOutOfRangeException(nameof(planet), planet, null);
             }
+        }
+
+        public double TWR()
+        {
+            return Math.Round(CalculateThrustToWeightRatio(), 2);
         }
 
     }
