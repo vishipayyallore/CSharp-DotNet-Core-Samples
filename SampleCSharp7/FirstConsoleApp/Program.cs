@@ -176,6 +176,9 @@ namespace FirstConsoleApp
                 .PerformDestroyerActions()
                 .PerformAnnihilatorActions();
 
+            var launchSuttleHelper = new LaunchSuttleHelper();
+            launchSuttleHelper.PerformLaunchShuttle();
+
             WriteLine("\n\nPress any key...");
             ReadKey();
         }

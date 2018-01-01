@@ -2,7 +2,7 @@
 
 namespace ClassesAndGenerics
 {
-    public class LaunchSuttle
+    public class LaunchShuttle
     {
         private double _engineThrust;
         private double _totalShuttleMass;
@@ -13,21 +13,21 @@ namespace ClassesAndGenerics
         private const double MoonGravity = 1.63;
         private const double MarsGravity = 3.75;
 
-        public LaunchSuttle(double engineThrust, double totalShuttleMass, double localGravitationalAccelaration)
+        public LaunchShuttle(double engineThrust, double totalShuttleMass, double localGravitationalAccelaration)
         {
             _engineThrust = engineThrust;
             _totalShuttleMass = totalShuttleMass;
             _localGravitationalAccelaration = localGravitationalAccelaration;
         }
 
-        public LaunchSuttle(double engineThrust, double totalShuttleMass, Planet planet)
+        public LaunchShuttle(double engineThrust, double totalShuttleMass, Planet planet)
         {
             _engineThrust = engineThrust;
             _totalShuttleMass = totalShuttleMass;
             SetGraviationalAccelaration(planet);
         }
 
-        public LaunchSuttle(double engineThrust, double totalShuttleMass, double planetMass, double planetRadius)
+        public LaunchShuttle(double engineThrust, double totalShuttleMass, double planetMass, double planetRadius)
         {
             _engineThrust = engineThrust;
             _totalShuttleMass = totalShuttleMass;
@@ -71,7 +71,7 @@ namespace ClassesAndGenerics
             }
         }
 
-        public double TWR()
+        public double Twr()
         {
             return Math.Round(CalculateThrustToWeightRatio(), 2);
         }
