@@ -1,10 +1,13 @@
-﻿namespace Polymorphism.Lib
+﻿using static System.Console;
+
+namespace Polymorphism.Lib
 {
     public class RoscosmosShuttle : Shuttle
     {
         public override double Twr()
         {
-            throw new System.NotImplementedException();
+            WriteLine($"-----{GetType().Name}::{System.Reflection.MethodBase.GetCurrentMethod().Name}()-----");
+            return 0.0;
         }
     }
 }
