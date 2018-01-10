@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Common.Enums
+﻿namespace Common.Enums
 {
 
     public enum TigerColorSpectrum

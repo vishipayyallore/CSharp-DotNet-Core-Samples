@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Polymorphism.Lib
+﻿namespace Polymorphism.Lib
 {
     public abstract class Shuttle
     {
