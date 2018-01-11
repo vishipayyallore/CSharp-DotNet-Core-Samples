@@ -1,4 +1,5 @@
 ﻿using static System.Console;
+using Common.Enums;
 
 namespace ClassesAndGenerics
 {

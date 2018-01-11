@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ClassesAndGenerics\ClassesAndGenerics.csproj" />
+    <ProjectReference Include="..\Common.Enums\Common.Enums.csproj" />
   </ItemGroup>
 
 </Project>
