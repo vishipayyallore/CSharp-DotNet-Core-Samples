@@ -1,24 +1,24 @@
-﻿using static System.Console;
+﻿using System;
 
-namespace ClassesAndGenerics
+namespace AbstractDemo.Lib
 {
     public class NullCat : Cat
     {
         public override Cat Eat()
         {
-            WriteLine($" The Unknown cat eats.");
+            Console.WriteLine($" The Unknown cat eats.");
             return this;
         }
 
         public override Cat Hunt()
         {
-            WriteLine($" The Unknown cat hunts.");
+            Console.WriteLine($" The Unknown cat hunts.");
             return this;
         }
 
         public override Cat Sleep()
         {
-            WriteLine($" The Unknown cat sleeps.");
+            Console.WriteLine($" The Unknown cat sleeps.");
             return this;
         }
 

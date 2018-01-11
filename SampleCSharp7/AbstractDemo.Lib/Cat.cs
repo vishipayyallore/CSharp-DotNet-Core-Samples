@@ -1,4 +1,4 @@
-﻿namespace ClassesAndGenerics
+﻿namespace AbstractDemo.Lib
 {
     public abstract class Cat
     {

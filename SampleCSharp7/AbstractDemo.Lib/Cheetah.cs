@@ -1,30 +1,30 @@
-﻿using static System.Console;
+﻿using System;
 
-namespace ClassesAndGenerics
+namespace AbstractDemo.Lib
 {
     public class Cheetah : Cat, IPurrable
     {
 
         public void SoftPurr(int decibel)
         {
-            WriteLine($" The {nameof(Cheetah)} purrs at {decibel} decibels.");
+            Console.WriteLine($" The {nameof(Cheetah)} purrs at {decibel} decibels.");
         }
 
         public override Cat Eat()
         {
-            WriteLine($" The cheetah eats.");
+            Console.WriteLine($" The cheetah eats.");
             return this;
         }
 
         public override Cat Hunt()
         {
-            WriteLine($" The cheetah hunts.");
+            Console.WriteLine($" The cheetah hunts.");
             return this;
         }
 
         public override Cat Sleep()
         {
-            WriteLine($" The cheetah sleeps.");
+            Console.WriteLine($" The cheetah sleeps.");
             return this;
         }
         

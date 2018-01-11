@@ -1,5 +1,5 @@
 ﻿using System;
-using ClassesAndGenerics;
+using AbstractDemo.Lib;
 using Common.Enums;
 
 namespace FirstConsoleApp

@@ -1,7 +1,7 @@
-using static System.Console;
+using System;
 using Common.Enums;
 
-namespace ClassesAndGenerics
+namespace AbstractDemo.Lib
 {
     public class Tiger : Cat
     {
@@ -14,19 +14,19 @@ namespace ClassesAndGenerics
 
         public override Cat Eat()
         {
-            WriteLine($" The {_bodyColor} tiger eats.");
+            Console.WriteLine($" The {_bodyColor} tiger eats.");
             return this;
         }
 
         public override Cat Hunt()
         {
-            WriteLine($" The {_bodyColor} tiger hunts.");
+            Console.WriteLine($" The {_bodyColor} tiger hunts.");
             return this;
         }
 
         public override Cat Sleep()
         {
-            WriteLine($" The {_bodyColor} tiger sleeps.");
+            Console.WriteLine($" The {_bodyColor} tiger sleeps.");
             return this;
         }
     }

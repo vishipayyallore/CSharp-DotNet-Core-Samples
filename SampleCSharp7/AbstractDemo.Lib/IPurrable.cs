@@ -1,5 +1,5 @@
 ﻿
-namespace ClassesAndGenerics
+namespace AbstractDemo.Lib
 {
 
     public interface IPurrable
