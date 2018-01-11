@@ -1,5 +1,6 @@
 ﻿using System;
 using ClassesAndGenerics;
+using Common.Enums;
 using static System.Console;
 
 namespace FirstConsoleApp
