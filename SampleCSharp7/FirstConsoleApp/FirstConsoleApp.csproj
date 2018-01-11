@@ -17,6 +17,7 @@
     <ProjectReference Include="..\AbstractDemo.Lib\AbstractDemo.Lib.csproj" />
     <ProjectReference Include="..\ClassesAndGenerics\ClassesAndGenerics.csproj" />
     <ProjectReference Include="..\Common.Enums\Common.Enums.csproj" />
+    <ProjectReference Include="..\InheritanceDemo.Lib\InheritanceDemo.Lib.csproj" />
   </ItemGroup>
 
 </Project>
