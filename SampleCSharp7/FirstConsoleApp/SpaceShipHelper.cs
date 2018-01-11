@@ -1,5 +1,4 @@
-﻿using ClassesAndGenerics;
-using InheritanceDemo.Lib;
+﻿using InheritanceDemo.Lib;
 
 namespace FirstConsoleApp
 {
