@@ -1,4 +1,6 @@
-﻿namespace FirstConsoleApp
+﻿using Chapter1.Lib;
+
+namespace Core.Lib
 {
     public static class ExtensionMethods
     {

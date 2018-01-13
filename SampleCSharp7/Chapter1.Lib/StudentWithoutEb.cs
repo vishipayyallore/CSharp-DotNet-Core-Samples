@@ -1,6 +1,6 @@
-﻿using static System.Console;
+﻿using System;
 
-namespace FirstConsoleApp
+namespace Chapter1.Lib
 {
     public class StudentWithoutEb
     {
@@ -20,7 +20,7 @@ namespace FirstConsoleApp
         //Finalizers
         ~StudentWithoutEb()
         {
-            WriteLine(" Release unmanaged code");
+            Console.WriteLine(" Release unmanaged code");
         }
 
     }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FirstConsoleApp
+namespace Chapter1.Lib
 {
     public class StudentV2
     {

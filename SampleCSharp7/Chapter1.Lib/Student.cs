@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FirstConsoleApp
+namespace Chapter1.Lib
 {
     public class Student
     {

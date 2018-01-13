@@ -1,6 +1,6 @@
-﻿using static System.Console;
+﻿using System;
 
-namespace FirstConsoleApp
+namespace Chapter1.Lib
 {
     public class StudentWithEb
     {
@@ -14,6 +14,6 @@ namespace FirstConsoleApp
             set => _age = value;
         }
 
-        ~StudentWithEb() => WriteLine(" Release unmanaged code");
+        ~StudentWithEb() => Console.WriteLine(" Release unmanaged code");
     }
 }

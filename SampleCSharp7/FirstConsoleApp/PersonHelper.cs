@@ -1,4 +1,6 @@
 ﻿using System.Linq;
+using Chapter1.Lib;
+using Core.Lib;
 using static System.Console;
 
 namespace FirstConsoleApp
