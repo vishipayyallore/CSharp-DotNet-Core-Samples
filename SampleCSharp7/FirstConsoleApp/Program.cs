@@ -7,6 +7,7 @@ using ClassesAndGenerics;
 using static System.Console;
 using static System.Math;
 using Common.Enums;
+using Core.Lib;
 
 namespace FirstConsoleApp
 {
