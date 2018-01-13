@@ -20,11 +20,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D65ED99B-F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Enums", "Common.Enums\Common.Enums.csproj", "{421898DF-1692-43C4-ABA7-89008296B7C7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reusables", "Reusables", "{67D69240-C058-4E57-A180-102497BFF111}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chaper2Reusables", "Chaper2Reusables", "{67D69240-C058-4E57-A180-102497BFF111}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractDemo.Lib", "AbstractDemo.Lib\AbstractDemo.Lib.csproj", "{E1ED6755-2C4F-4A55-BB5B-7D1A9058A3FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractDemo.Lib", "AbstractDemo.Lib\AbstractDemo.Lib.csproj", "{E1ED6755-2C4F-4A55-BB5B-7D1A9058A3FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritanceDemo.Lib", "InheritanceDemo.Lib\InheritanceDemo.Lib.csproj", "{4DDC2BD0-1D74-4089-A983-687C73AB1B2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InheritanceDemo.Lib", "InheritanceDemo.Lib\InheritanceDemo.Lib.csproj", "{4DDC2BD0-1D74-4089-A983-687C73AB1B2B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chaper1Reusables", "Chaper1Reusables", "{CB85D878-083E-4B35-9865-9392D962823F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
