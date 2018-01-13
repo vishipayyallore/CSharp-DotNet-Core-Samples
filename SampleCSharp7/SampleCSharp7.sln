@@ -28,6 +28,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InheritanceDemo.Lib", "Inhe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chaper1Reusables", "Chaper1Reusables", "{CB85D878-083E-4B35-9865-9392D962823F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{33FA2084-FC56-4C5B-9C74-818610622523}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,10 @@ Global
 		{4DDC2BD0-1D74-4089-A983-687C73AB1B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DDC2BD0-1D74-4089-A983-687C73AB1B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DDC2BD0-1D74-4089-A983-687C73AB1B2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33FA2084-FC56-4C5B-9C74-818610622523}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33FA2084-FC56-4C5B-9C74-818610622523}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33FA2084-FC56-4C5B-9C74-818610622523}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33FA2084-FC56-4C5B-9C74-818610622523}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,6 +77,7 @@ Global
 		{421898DF-1692-43C4-ABA7-89008296B7C7} = {D65ED99B-F945-48E8-8512-D8560C34AADA}
 		{E1ED6755-2C4F-4A55-BB5B-7D1A9058A3FF} = {67D69240-C058-4E57-A180-102497BFF111}
 		{4DDC2BD0-1D74-4089-A983-687C73AB1B2B} = {67D69240-C058-4E57-A180-102497BFF111}
+		{33FA2084-FC56-4C5B-9C74-818610622523} = {D65ED99B-F945-48E8-8512-D8560C34AADA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {33408B21-22AF-41B3-96D0-C900BB4E007D}
