@@ -28,9 +28,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InheritanceDemo.Lib", "Inhe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chaper1Reusables", "Chaper1Reusables", "{CB85D878-083E-4B35-9865-9392D962823F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Lib", "Core.Lib\Core.Lib.csproj", "{9E264D1B-4A48-456A-9498-7DF71982996E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Lib", "Core.Lib\Core.Lib.csproj", "{9E264D1B-4A48-456A-9498-7DF71982996E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter1.Lib", "Chapter1.Lib\Chapter1.Lib.csproj", "{7843A2D9-350B-4B6B-9BCE-64F29DDF6427}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter1.Lib", "Chapter1.Lib\Chapter1.Lib.csproj", "{7843A2D9-350B-4B6B-9BCE-64F29DDF6427}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
