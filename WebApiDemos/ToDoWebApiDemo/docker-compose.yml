@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  todowebapidemo:
+    image: todowebapidemo
+    build:
+      context: .
+      dockerfile: ToDoWebApiDemo\Dockerfile
