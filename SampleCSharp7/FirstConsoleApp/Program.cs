@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using AbstractDemo.Lib;
+﻿using AbstractDemo.Lib;
 using Chapter1.Lib;
 using ClassesAndGenerics;
-using static System.Console;
-using static System.Math;
 using Common.Enums;
 using Core.Lib;
+using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using static System.Console;
+using static System.Math;
 
 namespace FirstConsoleApp
 {
