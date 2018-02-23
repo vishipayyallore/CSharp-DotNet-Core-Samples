@@ -8,6 +8,7 @@ using static System.Console;
 using static System.Math;
 using Common.Enums;
 using Core.Lib;
+using System.Linq;
 
 namespace FirstConsoleApp
 {
@@ -17,6 +18,18 @@ namespace FirstConsoleApp
         private static void Main()
         {
             ForegroundColor = ConsoleColor.Yellow;
+
+            int[] grades = { 59, 82, 70, 56, 92, 98, 85 };
+
+            // Wanted to check if we exceed the skip and take
+            IEnumerable<int> lowerGrades =
+                grades.AsQueryable().OrderByDescending(g => g)
+                .Skip(13).Take(4);
+
+            Console.WriteLine("All grades except the top three are:");
+            foreach (int grade in lowerGrades)
+                Console.WriteLine(grade);
+
             var personHelper = new PersonHelper();
             var scores = new[] { 17, 46, 39, 62, 81, 79, 52, 24, 49 };
             const int threshold = 40;
