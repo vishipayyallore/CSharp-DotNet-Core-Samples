@@ -2,7 +2,9 @@
 
 namespace TupulesDemo.Library
 {
-    public class Class1
+
+    public class Person
     {
     }
+
 }

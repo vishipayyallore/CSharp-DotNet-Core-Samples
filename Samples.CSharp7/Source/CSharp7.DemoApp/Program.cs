@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace CSharp7.DemoApp
 {
@@ -6,10 +7,12 @@ namespace CSharp7.DemoApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
 
-            Console.WriteLine("\n\nPress any key ...");
-            Console.Read();
+            ForegroundColor = ConsoleColor.Yellow;
+            WriteLine("Hello World!");
+
+            WriteLine("\n\nPress any key ...");
+            Read();
         }
     }
 }
