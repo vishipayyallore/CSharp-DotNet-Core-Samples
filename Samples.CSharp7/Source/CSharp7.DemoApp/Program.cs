@@ -14,6 +14,13 @@ namespace CSharp7.DemoApp
                 var output = filterCriteria(number);
                 WriteLine($"{number} = {output} ");
             }
+
+            numbers.ForEach(number =>
+            {
+                var output = filterCriteria(number);
+                WriteLine($"2. {number} = {output} ");
+            });
+
         }
 
         static void Main(string[] args)
