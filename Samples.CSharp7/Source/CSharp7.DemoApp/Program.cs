@@ -24,9 +24,9 @@ namespace CSharp7.DemoApp
             });
         }
 
-        static void SelectValues(List<int> numbers, Func<int, bool> predicate)
+        static void SelectValues(List<int> numbers, Func<int, bool> filterCriteria)
         {
-            numbers.Where(predicate)
+            numbers.Where(filterCriteria)
                     .ToList()
                     .ForEach(WriteLine);
         }
