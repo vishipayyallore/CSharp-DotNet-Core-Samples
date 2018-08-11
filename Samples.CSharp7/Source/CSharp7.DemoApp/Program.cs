@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 using static System.Console;
 
 namespace CSharp7.DemoApp
@@ -20,7 +22,13 @@ namespace CSharp7.DemoApp
                 var output = filterCriteria(number);
                 WriteLine($"2. {number} = {output} ");
             });
+        }
 
+        static void SelectValues(List<int> numbers, Func<int, bool> predicate)
+        {
+            numbers.Where(predicate)
+                    .ToList()
+                    .ForEach(WriteLine);
         }
 
         static void Main(string[] args)
@@ -31,6 +39,12 @@ namespace CSharp7.DemoApp
             WriteLine("Hello World!");
 
             SelectNumbers(numbers, x => (x%2 == 0));
+
+            WriteLine($"Selecting number which are divided by 2");
+            SelectValues(numbers, e => e % 2 == 0);
+
+            WriteLine($"Selecting number which are divided by 3");
+            SelectValues(numbers, e => e % 3 == 0);
 
             WriteLine("\n\nPress any key ...");
             Read();
