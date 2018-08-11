@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Functional.Programs.Demo\Functional.Programs.Demo.csproj" />
+  </ItemGroup>
+
 </Project>

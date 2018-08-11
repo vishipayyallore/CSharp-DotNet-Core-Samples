@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Functional.Programs.Demo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -33,7 +34,7 @@ namespace CSharp7.DemoApp
 
         static void Main(string[] args)
         {
-            var numbers = new List<int> { 3, 8, 4, 6, 1, 7, 9, 2, 4, 8, 0 };
+            var numbers = new List<int> { 3, 8, 4, 6, 1, 7, 5, 2, 9, 10 };
 
             ForegroundColor = ConsoleColor.Yellow;
             WriteLine("Hello World!");
@@ -45,6 +46,11 @@ namespace CSharp7.DemoApp
 
             WriteLine($"Selecting number which are divided by 3");
             SelectValues(numbers, e => e % 3 == 0);
+
+            WriteLine($"Using Filter Data for generating Even Numbers");
+            var filterData = new FilterData();
+            filterData.SelectValues(numbers, e => e % 2 == 0)
+                .ForEach(WriteLine);
 
             WriteLine("\n\nPress any key ...");
             Read();

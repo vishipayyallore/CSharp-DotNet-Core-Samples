@@ -10,6 +10,8 @@ namespace TupulesDemo.Library
         public string Name { get; set; }
 
         public int Age { get; set; }
+
+        public float Salary { get; set; }
     }
 
 }
