@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Source\Functional.Programs.Demo\Functional.Programs.Library.csproj" />
+    <ProjectReference Include="..\..\Source\Functional.Programs.Library\Functional.Programs.Library.csproj" />
   </ItemGroup>
 
 </Project>

@@ -6,4 +6,8 @@
     <RootNamespace>Functional.Programs.Library</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CSharp7.Demo.Common\CSharp7.Demo.Common.csproj" />
+  </ItemGroup>
+
 </Project>

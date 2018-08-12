@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Functional.Programs.Demo\Functional.Programs.Library.csproj" />
+    <ProjectReference Include="..\Functional.Programs.Library\Functional.Programs.Library.csproj" />
   </ItemGroup>
 
 </Project>
