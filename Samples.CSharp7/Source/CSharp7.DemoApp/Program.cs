@@ -51,6 +51,18 @@ namespace CSharp7.DemoApp
             filterData.SelectValues(numbers, e => e % 2 == 0)
                 .ForEach(WriteLine);
 
+            WriteLine($"Using Filter Data for generating Even Numbers Using OrderBy");
+            filterData
+                .SelectValues(numbers, e => e % 2 == 0)
+                .OrderBy(e => e)
+                .ToList()
+                .ForEach(WriteLine);
+
+            WriteLine($"Using Filter Data for SelectValuesWithOrderBy");
+            filterData
+                .SelectValuesWithOrderBy(numbers, e => e % 2 == 0, e => e)
+                .ForEach(WriteLine);
+
             WriteLine("\n\nPress any key ...");
             Read();
         }

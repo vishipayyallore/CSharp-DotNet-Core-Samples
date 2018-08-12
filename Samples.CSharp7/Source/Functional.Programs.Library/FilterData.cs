@@ -14,6 +14,15 @@ namespace Functional.Programs.Library
                     .ToList();
         }
 
+        public List<int> SelectValuesWithOrderBy<TKey>(List<int> numbers, Func<int, bool> filterCriteria
+            , Func<int, TKey> selector)
+        {
+            return numbers
+                    .Where(filterCriteria)
+                    .OrderBy(selector)
+                    .ToList();
+        }
+
     }
 
 }
