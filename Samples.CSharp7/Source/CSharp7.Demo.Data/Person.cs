@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TupulesDemo.Library
+namespace CSharp7.Demo.Data
 {
 
     public class Person

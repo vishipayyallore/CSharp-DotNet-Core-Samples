@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Functional.Programs.Demo
+namespace Functional.Programs.Library
 {
     public class FilterData
     {

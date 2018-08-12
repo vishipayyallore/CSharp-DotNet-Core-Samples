@@ -1,4 +1,4 @@
-﻿using Functional.Programs.Demo;
+﻿using Functional.Programs.Library;
 using System;
 using System.Collections.Generic;
 using System.Linq;
