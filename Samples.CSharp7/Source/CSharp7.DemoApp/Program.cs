@@ -36,7 +36,6 @@ namespace CSharp7.DemoApp
             var numbers = new List<int> { 3, 8, 4, 6, 1, 7, 5, 2, 9, 10 };
 
             ForegroundColor = ConsoleColor.Yellow;
-            WriteLine("Hello World!");
 
             SelectNumbers(numbers, x => (x%2 == 0));
 
