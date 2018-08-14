@@ -1,3 +1,4 @@
+using CSharp7.Demo.Common;
 using Functional.Programs.Library;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ namespace Functional.Programs.Tests
     public class FilterDataTests
     {
         readonly List<int> _numbers = new List<int> { 3, 8, 4, 6, 1, 7, 5, 2, 9, 10 };
-        readonly FilterData _filterData;
+        readonly IFilterData _filterData;
 
         public FilterDataTests()
         {

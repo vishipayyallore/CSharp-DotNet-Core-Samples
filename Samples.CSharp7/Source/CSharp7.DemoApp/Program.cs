@@ -38,11 +38,12 @@ namespace CSharp7.DemoApp
 
             ForegroundColor = ConsoleColor.Yellow;
 
-            Person person = new Person
-            {
-                Id = Guid.NewGuid()
-            };
-            WriteLine($"Person: {person.Id}");
+            Person person = new Person("Shiva", 20_000);
+            WriteLine("Person Details");
+            WriteLine($"Id: {person.Id}");
+            WriteLine($"Name: {person.Name}");
+            WriteLine($"Age: {person.Age}");
+            WriteLine($"Salary: {person.Salary}");
 
             SelectNumbers(numbers, x => (x%2 == 0));
 

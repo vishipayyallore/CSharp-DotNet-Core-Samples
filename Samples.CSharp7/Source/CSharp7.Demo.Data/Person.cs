@@ -5,11 +5,20 @@ namespace CSharp7.Demo.Data
 
     public class Person
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
+
+        public Person(string name, float salary)
+        {
+            Name = name;
+            Salary = salary;
+        }
+
+        // Read only auto property
+        public Guid Id { get; private set; } = Guid.NewGuid();
 
         public string Name { get; set; }
 
-        public int Age { get; set; }
+        // Auto-Property Initializers
+        public int Age { get; } = 18;
 
         public float Salary { get; set; }
     }
