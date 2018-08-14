@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CSharp7.Demo.Data
 {
@@ -22,8 +24,13 @@ namespace CSharp7.Demo.Data
 
         public float Salary { get; set; }
 
+        Dictionary<string, string> Languages { get; } = new Dictionary<string, string>
+        {
+            {"first", "English" }
+        };
+
         // Expression-bodied function
-        public override string ToString() => $"{Id}, {Name} {Age} {Salary}";
+        public override string ToString() => $"{Id}, {Name} {Age} {Salary} {Languages.Values.Select(v => v)}";
     }
 
 }
