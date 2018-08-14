@@ -21,6 +21,9 @@ namespace CSharp7.Demo.Data
         public int Age { get; } = 18;
 
         public float Salary { get; set; }
+
+        // Expression-bodied function
+        public override string ToString() => $"{Id}, {Name} {Age} {Salary}";
     }
 
 }

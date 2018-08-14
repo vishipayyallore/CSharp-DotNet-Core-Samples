@@ -45,6 +45,8 @@ namespace CSharp7.DemoApp
             WriteLine($"Age: {person.Age}");
             WriteLine($"Salary: {person.Salary}");
 
+            WriteLine($"Person.ToString() = {person}");
+
             SelectNumbers(numbers, x => (x%2 == 0));
 
             WriteLine($"Selecting number which are divided by 2");
