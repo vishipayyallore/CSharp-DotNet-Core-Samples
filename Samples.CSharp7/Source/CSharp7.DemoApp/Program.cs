@@ -1,4 +1,5 @@
-﻿using Functional.Programs.Library;
+﻿using CSharp7.Demo.Data;
+using Functional.Programs.Library;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,6 +37,12 @@ namespace CSharp7.DemoApp
             var numbers = new List<int> { 3, 8, 4, 6, 1, 7, 5, 2, 9, 10 };
 
             ForegroundColor = ConsoleColor.Yellow;
+
+            Person person = new Person
+            {
+                Id = Guid.NewGuid()
+            };
+            WriteLine($"Person: {person.Id}");
 
             SelectNumbers(numbers, x => (x%2 == 0));
 
