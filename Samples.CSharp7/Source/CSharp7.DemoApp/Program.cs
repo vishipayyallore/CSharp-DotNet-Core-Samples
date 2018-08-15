@@ -71,6 +71,10 @@ namespace CSharp7.DemoApp
 
             WriteLine($"Person.ToString() = {person}");
 
+            // Tuple is Deconstructed
+            var (Id, Name) = person.PersonInformation;
+            WriteLine($"From Tuple = {Id} {Name}");
+
             SelectNumbers(numbers, x => (x%2 == 0));
 
             WriteLine($"Selecting number which are divided by 2");

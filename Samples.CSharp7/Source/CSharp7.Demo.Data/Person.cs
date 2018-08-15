@@ -31,6 +31,10 @@ namespace CSharp7.Demo.Data
             {"3", "French" }
         };
 
+        // Property returning Tuple
+        public (Guid Id, string Name) PersonInformation => (Id, Name);
+        
+
         // Expression-bodied function
         public override string ToString() => $"{Id}, {Name} {Age} {Salary} {string.Join(" ", Languages.Values.ToArray())}";
     }
