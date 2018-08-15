@@ -38,6 +38,30 @@ namespace CSharp7.DemoApp
 
             ForegroundColor = ConsoleColor.Yellow;
 
+            WriteLine($"Using Filter Data for generating Even Numbers");
+            var filterData = new FilterData();
+            filterData.SelectValues(numbers, e => e % 2 == 0)
+                .ForEach(WriteLine);
+
+            WriteLine($"Using Filter Data for generating Even Numbers Using OrderBy");
+            filterData
+                .SelectValues(numbers, e => e % 2 == 0)
+                .OrderBy(e => e)
+                .ToList()
+                .ForEach(WriteLine);
+
+            // Order by Ascending
+            WriteLine($"Using Filter Data for SelectValuesWithOrderBy");
+            filterData
+                .SelectValuesWithOrderBy(numbers, e => e % 2 == 0, e => e)
+                .ForEach(WriteLine);
+
+            // Order by Decending
+            WriteLine($"Using Filter Data for SelectValuesWithOrderBy");
+            filterData
+                .SelectValuesWithOrderBy(numbers, e => e % 2 == 0, e => -e)
+                .ForEach(WriteLine);
+
             Person person = new Person("Shiva", 20_000);
             WriteLine("Person Details");
             WriteLine($"Id: {person.Id}");
@@ -55,22 +79,7 @@ namespace CSharp7.DemoApp
             WriteLine($"Selecting number which are divided by 3");
             SelectValues(numbers, e => e % 3 == 0);
 
-            WriteLine($"Using Filter Data for generating Even Numbers");
-            var filterData = new FilterData();
-            filterData.SelectValues(numbers, e => e % 2 == 0)
-                .ForEach(WriteLine);
-
-            WriteLine($"Using Filter Data for generating Even Numbers Using OrderBy");
-            filterData
-                .SelectValues(numbers, e => e % 2 == 0)
-                .OrderBy(e => e)
-                .ToList()
-                .ForEach(WriteLine);
-
-            WriteLine($"Using Filter Data for SelectValuesWithOrderBy");
-            filterData
-                .SelectValuesWithOrderBy(numbers, e => e % 2 == 0, e => e)
-                .ForEach(WriteLine);
+            
 
             WriteLine("\n\nPress any key ...");
             Read();
