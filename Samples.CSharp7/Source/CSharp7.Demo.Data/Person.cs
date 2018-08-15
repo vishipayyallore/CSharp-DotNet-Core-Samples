@@ -26,11 +26,13 @@ namespace CSharp7.Demo.Data
 
         Dictionary<string, string> Languages { get; } = new Dictionary<string, string>
         {
-            {"first", "English" }
+            {"1", "English" },
+            {"2", "Hindi" },
+            {"3", "French" }
         };
 
         // Expression-bodied function
-        public override string ToString() => $"{Id}, {Name} {Age} {Salary} {Languages.Values.Select(v => v)}";
+        public override string ToString() => $"{Id}, {Name} {Age} {Salary} {string.Join(" ", Languages.Values.ToArray())}";
     }
 
 }
