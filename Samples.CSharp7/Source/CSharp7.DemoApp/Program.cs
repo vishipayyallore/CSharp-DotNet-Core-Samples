@@ -23,6 +23,7 @@ namespace CSharp7.DemoApp
                 var output = filterCriteria(number);
                 WriteLine($"2. {number} = {output} ");
             });
+
         }
 
         static void SelectValues(List<int> numbers, Func<int, bool> filterCriteria)
