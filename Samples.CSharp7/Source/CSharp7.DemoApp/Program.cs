@@ -7,6 +7,7 @@ using static System.Console;
 
 namespace CSharp7.DemoApp
 {
+
     class Program
     {
 
@@ -63,7 +64,10 @@ namespace CSharp7.DemoApp
                 .SelectValuesWithOrderBy(numbers, e => e % 2 == 0, e => -e)
                 .ForEach(WriteLine);
 
-            Person person = new Person("Shiva", 20_000);
+            Person person = new Person("Shiva", 20_000)
+            {
+                // Age = 25 // Illegal as it is readonly
+            };
             WriteLine("Person Details");
             WriteLine($"Id: {person.Id}");
             WriteLine($"Name: {person.Name}");
@@ -75,6 +79,12 @@ namespace CSharp7.DemoApp
             // Tuple is Deconstructed
             var (Id, Name) = person.PersonInformation;
             WriteLine($"From Tuple = {Id} {Name}");
+
+            person.Name = null;
+            WriteLine($"Name [null coalescing]: {person.Name ?? "No Name"}");
+
+            person = null;
+            WriteLine($"Name [Null-Condition and null coalescing]: {person?.Name ?? "No Name"}");
 
             SelectNumbers(numbers, x => (x%2 == 0));
 
