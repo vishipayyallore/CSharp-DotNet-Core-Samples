@@ -3,6 +3,7 @@ using Functional.Programs.Library;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using static System.Console;
 
 namespace CSharp7.DemoApp
@@ -39,6 +40,23 @@ namespace CSharp7.DemoApp
             var numbers = new List<int> { 3, 8, 4, 6, 1, 7, 5, 2, 9, 10 };
 
             ForegroundColor = ConsoleColor.Yellow;
+
+            List<int> generalVariable = new List<int>()
+            {
+                45
+            };
+
+            var dataType = generalVariable[0].GetType();
+            var tryParseMethod = dataType.GetMember("TryParse");
+            // var output = tryParseMethod[0].in
+            int outNumber = 0;
+            object[] parametersArray = new object[] { "12", null };
+            var output = ((MethodInfo)tryParseMethod[0]).Invoke(dataType, parametersArray);
+            if((bool)output)
+            {
+                WriteLine($"Parsed Number: {parametersArray[1]}");
+            }
+
 
             WriteLine($"Using Filter Data for generating Even Numbers");
             var filterData = new FilterData();
