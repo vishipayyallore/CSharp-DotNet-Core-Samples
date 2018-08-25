@@ -55,12 +55,7 @@ namespace CSharp7.DemoApp
             var tryParseMethod = dataType.GetMember("TryParse");
             object[] parametersArray = new object[] { value, null };
             var output = ((MethodInfo)tryParseMethod[0]).Invoke(dataType, parametersArray);
-            if ((bool)output)
-            {
-                WriteLine($"Parsed Number: {parametersArray[1]}");
-            }
-
-            inputType = (T)parametersArray[1];
+            inputType = ((bool)output) ? (T)parametersArray[1] : inputType;
         }
 
 
@@ -74,11 +69,11 @@ namespace CSharp7.DemoApp
             WriteLine($"Parsed in Generic Method: {parsedData}");
 
             int getNumber = 0;
-            TryParseV2<int>(ref getNumber, "2468");
+            TryParseV2(ref getNumber, "2468");
             WriteLine($"Parsed in Generic Method: {getNumber}");
 
             DateTime dateTime = DateTime.Now;
-            TryParseV2<DateTime>(ref dateTime, "01-Aug-2016");
+            TryParseV2(ref dateTime, "01-Aug-2016");
             WriteLine($"DateTime Parsed in Generic Method: {dateTime}");
 
             List<int> generalVariable = new List<int>()
