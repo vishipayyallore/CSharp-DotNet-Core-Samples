@@ -35,11 +35,30 @@ namespace CSharp7.DemoApp
                     .ForEach(WriteLine);
         }
 
+        static T TryParse<T>(T inputType, string value)
+        {
+            var dataType = inputType.GetType();
+            var tryParseMethod = dataType.GetMember("TryParse");
+            object[] parametersArray = new object[] { value, null };
+            var output = ((MethodInfo)tryParseMethod[0]).Invoke(dataType, parametersArray);
+            if ((bool)output)
+            {
+                WriteLine($"Parsed Number: {parametersArray[1]}");
+            }
+
+            return (T)parametersArray[1];
+        }
+
+
+
         static void Main(string[] args)
         {
             var numbers = new List<int> { 3, 8, 4, 6, 1, 7, 5, 2, 9, 10 };
 
             ForegroundColor = ConsoleColor.Yellow;
+
+            var parsedData = TryParse<int>(numbers[0], "125");
+            WriteLine($"Parsed in Generic Method: {parsedData}");
 
             List<int> generalVariable = new List<int>()
             {
