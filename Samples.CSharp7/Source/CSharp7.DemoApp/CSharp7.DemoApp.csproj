@@ -8,6 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CSharp7.Demo.Data\CSharp7.Demo.Data.csproj" />
     <ProjectReference Include="..\Functional.Programs.Library\Functional.Programs.Library.csproj" />
+    <ProjectReference Include="..\GenericsDemo.Library\GenericsDemo.Library.csproj" />
   </ItemGroup>
 
 </Project>

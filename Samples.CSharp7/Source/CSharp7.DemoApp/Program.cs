@@ -1,5 +1,6 @@
 ﻿using CSharp7.Demo.Data;
 using Functional.Programs.Library;
+using GenericsDemo.Library;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -75,6 +76,20 @@ namespace CSharp7.DemoApp
             DateTime dateTime = DateTime.Now;
             TryParseV2(ref dateTime, "01-Aug-2016");
             WriteLine($"DateTime Parsed in Generic Method: {dateTime}");
+
+            bool results = false;
+            TryParseV2(ref results, "true");
+            WriteLine($"Bool Parsed in Generic Method: {results}");
+
+
+            var genericTryParse = new GenericTryParse();
+            getNumber = 0;
+            genericTryParse.TryParse(ref getNumber, "2468");
+            WriteLine($"GenericTryParse::TryParse Int: {getNumber}");
+
+            dateTime = DateTime.Now;
+            genericTryParse.TryParse(ref dateTime, "01-Aug-2016");
+            WriteLine($"GenericTryParse::TryParse DateTime: {dateTime}");
 
             List<int> generalVariable = new List<int>()
             {

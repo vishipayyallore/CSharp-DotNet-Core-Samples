@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Reflection;
 
 namespace GenericsDemo.Library
 {
@@ -6,11 +6,13 @@ namespace GenericsDemo.Library
     public class GenericTryParse
     {
 
-        public int TryParse(string value)
+        public void TryParse<T>(ref T inputType, string value)
         {
-            // Inline out variable declaration
-            int.TryParse(value, out int parsedValue);
-            return parsedValue;
+            var dataType = inputType.GetType();
+            var tryParseMethod = dataType.GetMember("TryParse");
+            object[] parametersArray = new object[] { value, null };
+            var output = ((MethodInfo)tryParseMethod[0]).Invoke(dataType, parametersArray);
+            inputType = ((bool)output) ? (T)parametersArray[1] : inputType;
         }
 
     }
