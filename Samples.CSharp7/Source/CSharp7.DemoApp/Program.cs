@@ -91,6 +91,14 @@ namespace CSharp7.DemoApp
             genericTryParse.TryParse(ref dateTime, "01-Aug-2016");
             WriteLine($"GenericTryParse::TryParse DateTime: {dateTime}");
 
+            results = false;
+            genericTryParse.TryParse(ref results, "true");
+            WriteLine($"GenericTryParse::TryParse Bool: {results}");
+
+            float salary = 0.0f;
+            genericTryParse.TryParse(ref salary, "125.67");
+            WriteLine($"GenericTryParse::TryParse Float: {salary}");
+
             List<int> generalVariable = new List<int>()
             {
                 45
