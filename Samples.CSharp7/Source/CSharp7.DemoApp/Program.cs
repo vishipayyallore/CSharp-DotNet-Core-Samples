@@ -59,31 +59,12 @@ namespace CSharp7.DemoApp
             inputType = ((bool)output) ? (T)parametersArray[1] : inputType;
         }
 
-        static void PrintData<T>(Action<T> printData, T input)
-        {
-            printData(input);
-        }
 
         static void Main(string[] args)
         {
             var numbers = new List<int> { 3, 8, 4, 6, 1, 7, 5, 2, 9, 10 };
 
             ForegroundColor = ConsoleColor.Yellow;
-
-            Action<int> printAction = data => WriteLine(data);
-            Action<string> printAction1 = data => WriteLine(data);
-
-            printAction(10);
-            PrintData(printAction, 125);
-            PrintData(printAction1, "Shiva Sai");
-
-            PrintData(data => {
-                WriteLine(data);
-            }, 123.56f);
-
-            PrintData(data => {
-                WriteLine(data);
-            }, true);
 
             var parsedData = TryParse<int>(numbers[0], "125");
             WriteLine($"Parsed in Generic Method: {parsedData}");
