@@ -70,8 +70,18 @@ namespace CSharp7.DemoApp
              
             ForegroundColor = ConsoleColor.Yellow;
 
-            Action<int> printAction = data => WriteLine(data);
-            Action<string> printAction1 = data => WriteLine(data);
+            // Local functions
+            void printAction(int data) => WriteLine(data);
+            void printAction1(string data) => WriteLine(data);
+
+            void printActionGeneric<T>(T data) => WriteLine(data);
+
+            PrintData(printActionGeneric, "Shiva Sai");
+            PrintData(printActionGeneric, 125);
+            PrintData(printActionGeneric, 123.45f);
+            PrintData(printActionGeneric, 123.45M);
+            PrintData(printActionGeneric, 'A');
+            PrintData(printActionGeneric, DateTime.Now);
 
             printAction(10);
             PrintData(printAction, 125);
@@ -84,6 +94,14 @@ namespace CSharp7.DemoApp
             PrintData(data => {
                 WriteLine(data);
             }, true);
+
+            PrintData(data => {
+                WriteLine(data);
+            }, 'A');
+
+            PrintData(data => {
+                WriteLine(data);
+            }, DateTime.Now);
 
             var parsedData = TryParse<int>(numbers[0], "125");
             WriteLine($"Parsed in Generic Method: {parsedData}");
