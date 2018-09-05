@@ -15,7 +15,7 @@ namespace CSharp7.DemoApp
 
         static void SelectNumbers(List<int> numbers, Func<int, bool> filterCriteria)
         {
-            foreach(var number in numbers)
+            foreach (var number in numbers)
             {
                 var output = filterCriteria(number);
                 WriteLine($"{number} = {output} ");
@@ -67,14 +67,17 @@ namespace CSharp7.DemoApp
         static void Main(string[] args)
         {
             var numbers = new List<int> { 3, 8, 4, 6, 1, 7, 5, 2, 9, 10 };
-             
+
             ForegroundColor = ConsoleColor.Yellow;
 
             // Local functions
             void printAction(int data) => WriteLine(data);
             void printAction1(string data) => WriteLine(data);
 
-            void printActionGeneric<T>(T data) => WriteLine(data);
+            void printActionGeneric<T>(T data)
+            {
+                WriteLine(data);
+            }
 
             PrintData(printActionGeneric, "Shiva Sai");
             PrintData(printActionGeneric, 125);
@@ -87,19 +90,23 @@ namespace CSharp7.DemoApp
             PrintData(printAction, 125);
             PrintData(printAction1, "Shiva Sai");
 
-            PrintData(data => {
+            PrintData(data =>
+            {
                 WriteLine(data);
             }, 123.56f);
 
-            PrintData(data => {
+            PrintData(data =>
+            {
                 WriteLine(data);
             }, true);
 
-            PrintData(data => {
+            PrintData(data =>
+            {
                 WriteLine(data);
             }, 'A');
 
-            PrintData(data => {
+            PrintData(data =>
+            {
                 WriteLine(data);
             }, DateTime.Now);
 
@@ -147,7 +154,7 @@ namespace CSharp7.DemoApp
             int outNumber = 0;
             object[] parametersArray = new object[] { "12", null };
             var output = ((MethodInfo)tryParseMethod[0]).Invoke(dataType, parametersArray);
-            if((bool)output)
+            if ((bool)output)
             {
                 WriteLine($"Parsed Number: {parametersArray[1]}");
             }
@@ -199,7 +206,7 @@ namespace CSharp7.DemoApp
             person = null;
             WriteLine($"Name [Null-Condition and null coalescing]: {person?.Name ?? "No Name"}");
 
-            SelectNumbers(numbers, x => (x%2 == 0));
+            SelectNumbers(numbers, x => (x % 2 == 0));
 
             WriteLine($"Selecting number which are divided by 2");
             SelectValues(numbers, e => e % 2 == 0);
@@ -207,7 +214,7 @@ namespace CSharp7.DemoApp
             WriteLine($"Selecting number which are divided by 3");
             SelectValues(numbers, e => e % 3 == 0);
 
-            
+
 
             WriteLine("\n\nPress any key ...");
             Read();
