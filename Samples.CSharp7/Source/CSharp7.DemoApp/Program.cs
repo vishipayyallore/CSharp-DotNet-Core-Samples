@@ -64,6 +64,11 @@ namespace CSharp7.DemoApp
             printData(input);
         }
 
+        static void printActionGeneric<T>(T data)
+        {
+            WriteLine(data);
+        }
+
         static void Main(string[] args)
         {
             var numbers = new List<int> { 3, 8, 4, 6, 1, 7, 5, 2, 9, 10 };
@@ -73,11 +78,6 @@ namespace CSharp7.DemoApp
             // Local functions
             void printAction(int data) => WriteLine(data);
             void printAction1(string data) => WriteLine(data);
-
-            void printActionGeneric<T>(T data)
-            {
-                WriteLine(data);
-            }
 
             PrintData(printActionGeneric, "Shiva Sai");
             PrintData(printActionGeneric, 125);
