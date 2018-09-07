@@ -64,7 +64,7 @@ namespace CSharp7.DemoApp
             printData(input);
         }
 
-        static void printActionGeneric<T>(T data)
+        static void PrintActionGeneric<T>(T data)
         {
             WriteLine(data);
         }
@@ -76,15 +76,21 @@ namespace CSharp7.DemoApp
             ForegroundColor = ConsoleColor.Yellow;
 
             // Local functions
-            void printAction(int data) => WriteLine(data);
+            void printAction(int data)
+            {
+                WriteLine("Multiplying by 2");
+                data *= 2;
+                WriteLine(data);
+            }
+                
             void printAction1(string data) => WriteLine(data);
 
-            PrintData(printActionGeneric, "Shiva Sai");
-            PrintData(printActionGeneric, 125);
-            PrintData(printActionGeneric, 123.45f);
-            PrintData(printActionGeneric, 123.45M);
-            PrintData(printActionGeneric, 'A');
-            PrintData(printActionGeneric, DateTime.Now);
+            PrintData(PrintActionGeneric, "Shiva Sai");
+            PrintData(PrintActionGeneric, 125);
+            PrintData(PrintActionGeneric, 123.45f);
+            PrintData(PrintActionGeneric, 123.45M);
+            PrintData(PrintActionGeneric, 'A');
+            PrintData(PrintActionGeneric, DateTime.Now);
 
             printAction(10);
             PrintData(printAction, 125);
@@ -92,6 +98,8 @@ namespace CSharp7.DemoApp
 
             PrintData(data =>
             {
+                WriteLine("Adding Data to Data!!!");
+                data += data;
                 WriteLine(data);
             }, 123.56f);
 
