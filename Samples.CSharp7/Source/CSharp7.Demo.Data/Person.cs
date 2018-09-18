@@ -46,8 +46,8 @@ namespace CSharp7.Demo.Data
         
 
         // Expression-bodied function
-        public override string ToString() => $"{Id}, {Name} {Age} {Salary} {string.Join(" ", Languages.Values.ToArray())} " +
-            $"{string.Join(" ", SpecializedIn.Values.ToArray())} ";
+        public override string ToString() => 
+            $"{Id}, {Name} {Age} {Salary} {string.Join(" ", Languages.Values.ToArray())}  {string.Join(" ", SpecializedIn.Values.ToArray())} ";
     }
 
 }

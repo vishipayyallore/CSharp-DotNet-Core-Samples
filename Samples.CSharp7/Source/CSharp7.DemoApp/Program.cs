@@ -158,8 +158,6 @@ namespace CSharp7.DemoApp
 
             var dataType = generalVariable[0].GetType();
             var tryParseMethod = dataType.GetMember("TryParse");
-            // var output = tryParseMethod[0].in
-            int outNumber = 0;
             object[] parametersArray = new object[] { "12", null };
             var output = ((MethodInfo)tryParseMethod[0]).Invoke(dataType, parametersArray);
             if ((bool)output)
