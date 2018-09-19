@@ -75,6 +75,9 @@ namespace CSharp7.DemoApp
 
             ForegroundColor = ConsoleColor.Yellow;
 
+            var unnamedPerson = (Guid.NewGuid(), "Shiva Sai", 25);
+            WriteLine($"Unnamed Person: {unnamedPerson.Item1} {unnamedPerson.Item2} {unnamedPerson.Item2}");
+
             // Local functions
             void printAction(int data)
             {
