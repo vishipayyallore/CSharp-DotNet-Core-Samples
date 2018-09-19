@@ -78,6 +78,10 @@ namespace CSharp7.DemoApp
             var unnamedPerson = (Guid.NewGuid(), "Shiva Sai", 25);
             WriteLine($"Unnamed Person: {unnamedPerson.Item1} {unnamedPerson.Item2} {unnamedPerson.Item2}");
 
+
+            var namedPerson = (Id:Guid.NewGuid(), Name:"Shiva Sai", Age:25);
+            WriteLine($"Named Person: {namedPerson.Id} {namedPerson.Name} {namedPerson.Age}");
+
             // Local functions
             void printAction(int data)
             {
