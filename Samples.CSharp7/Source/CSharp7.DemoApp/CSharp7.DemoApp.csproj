@@ -9,6 +9,7 @@
     <ProjectReference Include="..\CSharp7.Demo.Data\CSharp7.Demo.Data.csproj" />
     <ProjectReference Include="..\Functional.Programs.Library\Functional.Programs.Library.csproj" />
     <ProjectReference Include="..\GenericsDemo.Library\GenericsDemo.Library.csproj" />
+    <ProjectReference Include="..\TupulesDemo.Library\TupulesDemo.Library.csproj" />
   </ItemGroup>
 
 </Project>

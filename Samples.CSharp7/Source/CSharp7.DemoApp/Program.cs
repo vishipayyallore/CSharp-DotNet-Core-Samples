@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using TupulesDemo.Library;
 using static System.Console;
 
 namespace CSharp7.DemoApp
@@ -82,6 +83,8 @@ namespace CSharp7.DemoApp
             var namedPerson = (Id:Guid.NewGuid(), Name:"Shiva Sai", Age:25);
             WriteLine($"Named Person: {namedPerson.Id} {namedPerson.Name} {namedPerson.Age}");
 
+            namedPerson = new BasicTuplesDemo().GetNamedPerson();
+            WriteLine($"GetNamedPerson::Named Person: {namedPerson.Id} {namedPerson.Name} {namedPerson.Age}");
             // Local functions
             void printAction(int data)
             {
