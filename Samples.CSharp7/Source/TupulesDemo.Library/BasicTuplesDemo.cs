@@ -1,9 +1,14 @@
-﻿namespace TupulesDemo.Library
+﻿using System;
+
+namespace TupulesDemo.Library
 {
-    class BasicTuplesDemo
+    public class BasicTuplesDemo
     {
 
-
+        public (Guid Id, string Name, int Age) GetNamedPerson()
+        {
+            return (Guid.NewGuid(), "Shiva Sai", 25);
+        }
 
     }
 }
