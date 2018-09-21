@@ -10,5 +10,10 @@ namespace TupulesDemo.Library
             return (Guid.NewGuid(), "Shiva Sai", 25);
         }
 
+        public (Guid, string, int) GetUnnamedPerson()
+        {
+            return (Guid.NewGuid(), "Shiva Sai", 25);
+        }
+
     }
 }
