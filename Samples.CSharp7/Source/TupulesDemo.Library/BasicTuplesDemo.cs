@@ -7,12 +7,12 @@ namespace TupulesDemo.Library
 
         public (Guid Id, string Name, int Age) GetNamedPerson()
         {
-            return (Guid.NewGuid(), "Shiva Sai", 25);
+            return (Guid.NewGuid(), "Named Person", 18);
         }
 
         public (Guid, string, int) GetUnnamedPerson()
         {
-            return (Guid.NewGuid(), "Shiva Sai", 25);
+            return (Guid.NewGuid(), "Unnamed Person", 21);
         }
 
     }
