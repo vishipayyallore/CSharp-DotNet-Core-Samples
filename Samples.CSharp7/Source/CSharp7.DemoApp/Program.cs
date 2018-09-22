@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using TupulesDemo.Library;
 using static System.Console;
 
 namespace CSharp7.DemoApp
@@ -224,8 +223,6 @@ namespace CSharp7.DemoApp
 
             WriteLine($"Selecting number which are divided by 3");
             SelectValues(numbers, e => e % 3 == 0);
-
-
 
             WriteLine("\n\nPress any key ...");
             Read();

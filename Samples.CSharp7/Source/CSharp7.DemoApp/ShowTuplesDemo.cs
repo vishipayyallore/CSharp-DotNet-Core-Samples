@@ -10,6 +10,8 @@ namespace CSharp7.DemoApp
         {
             var tuplesDemo = new BasicTuplesDemo();
 
+            ShowHeader("ShowTuplesDemo::Execute Named Unnamed Tuples Demo");
+
             // Deconstruct the Tuple
             var (Id, Name, Age) = tuplesDemo.GetNamedPerson();
             WriteLine($"ShowTuplesDemo::GetNamedPerson => Named Person: {Id} {Name} {Age}");
@@ -23,6 +25,8 @@ namespace CSharp7.DemoApp
 
         public ShowTuplesDemo ShowSimpleTuplesDemo()
         {
+            ShowHeader("ShowTuplesDemo::Show Simple Tuples Demo");
+
             (Guid, string, int) unnamedPerson = (Guid.NewGuid(), "Shiva Sai", 25);
             WriteLine($"Unnamed Person: {unnamedPerson.Item1} {unnamedPerson.Item2} {unnamedPerson.Item3}");
 
@@ -32,7 +36,10 @@ namespace CSharp7.DemoApp
             return this;
         }
 
-        // private void ShowHeader
+        private void ShowHeader(string title)
+        {
+            WriteLine($"***** {title} *****");
+        }
 
     }
 
