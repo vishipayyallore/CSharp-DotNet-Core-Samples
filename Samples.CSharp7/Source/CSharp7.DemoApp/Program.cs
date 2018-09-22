@@ -76,18 +76,9 @@ namespace CSharp7.DemoApp
 
             ForegroundColor = ConsoleColor.Yellow;
 
-            (Guid, string, int) unnamedPerson = (Guid.NewGuid(), "Shiva Sai", 25);
-            WriteLine($"Unnamed Person: {unnamedPerson.Item1} {unnamedPerson.Item2} {unnamedPerson.Item3}");
-
-            (Guid Id, string Name, int Age) namedPerson = (Id:Guid.NewGuid(), Name:"Shiva Sai", Age:25);
-            WriteLine($"Named Person: {namedPerson.Id} {namedPerson.Name} {namedPerson.Age}");
-
-            var tuplesDemo = new BasicTuplesDemo();
-            namedPerson = tuplesDemo.GetNamedPerson();
-            WriteLine($"GetNamedPerson::Named Person: {namedPerson.Id} {namedPerson.Name} {namedPerson.Age}");
-
-            unnamedPerson = tuplesDemo.GetUnnamedPerson();
-            WriteLine($"GetUnnamedPerson::Unnamed Person: {unnamedPerson.Item1} {unnamedPerson.Item2} {unnamedPerson.Item3}");
+            new ShowTuplesDemo()
+                .ShowSimpleTuplesDemo()
+                .ExecuteNamedUnnamedTuplesDemo();
 
             // Local functions
             void printAction(int data)
