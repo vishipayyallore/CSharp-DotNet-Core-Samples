@@ -2,7 +2,7 @@
 using TupulesDemo.Library;
 using static System.Console;
 
-namespace CSharp7.DemoApp
+namespace CSharp7.DemoApp.ExecuteMethods
 {
     public class ShowTuplesDemo
     {

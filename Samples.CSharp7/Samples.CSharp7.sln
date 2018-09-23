@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp7.Demo.Data", "Source
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Functional.Programs.Library", "Source\Functional.Programs.Library\Functional.Programs.Library.csproj", "{7EAFEA58-C861-4751-BFEA-CF13164A890A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericsDemo.Library", "Source\GenericsDemo.Library\GenericsDemo.Library.csproj", "{783B0EED-DC67-4239-BBB0-08340E471191}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericsDemo.Library", "Source\GenericsDemo.Library\GenericsDemo.Library.csproj", "{783B0EED-DC67-4239-BBB0-08340E471191}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaDemo.Library", "LambdaDemo.Library\LambdaDemo.Library.csproj", "{BEAB2B86-FEB3-411B-B013-2CF458A007B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,10 @@ Global
 		{783B0EED-DC67-4239-BBB0-08340E471191}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{783B0EED-DC67-4239-BBB0-08340E471191}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{783B0EED-DC67-4239-BBB0-08340E471191}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEAB2B86-FEB3-411B-B013-2CF458A007B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEAB2B86-FEB3-411B-B013-2CF458A007B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEAB2B86-FEB3-411B-B013-2CF458A007B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEAB2B86-FEB3-411B-B013-2CF458A007B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{60DC351E-5A56-4263-A1B4-E72D424B71CD} = {A688EBBE-B785-4387-B6D8-375A4355FC26}
 		{7EAFEA58-C861-4751-BFEA-CF13164A890A} = {A688EBBE-B785-4387-B6D8-375A4355FC26}
 		{783B0EED-DC67-4239-BBB0-08340E471191} = {A688EBBE-B785-4387-B6D8-375A4355FC26}
+		{BEAB2B86-FEB3-411B-B013-2CF458A007B9} = {A688EBBE-B785-4387-B6D8-375A4355FC26}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D9F10D9-A669-4ECE-9957-BBFF782EAB3B}

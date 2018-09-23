@@ -1,6 +1,8 @@
 ﻿using CSharp7.Demo.Data;
+using CSharp7.DemoApp.ExecuteMethods;
 using Functional.Programs.Library;
 using GenericsDemo.Library;
+using LambdaDemo.Library;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,10 +61,10 @@ namespace CSharp7.DemoApp
             inputType = ((bool)output) ? (T)parametersArray[1] : inputType;
         }
 
-        static void PrintData<T>(Action<T> printData, T input)
-        {
-            printData(input);
-        }
+        //static void PrintData<T>(Action<T> printData, T input)
+        //{
+        //    printData(input);
+        //}
 
         static void PrintActionGeneric<T>(T data)
         {
@@ -89,35 +91,36 @@ namespace CSharp7.DemoApp
                 
             void printAction1(string data) => WriteLine(data);
 
-            PrintData(PrintActionGeneric, "Shiva Sai");
-            PrintData(PrintActionGeneric, 125);
-            PrintData(PrintActionGeneric, 123.45f);
-            PrintData(PrintActionGeneric, 123.45M);
-            PrintData(PrintActionGeneric, 'A');
-            PrintData(PrintActionGeneric, DateTime.Now);
+            var basicLambdaDemo = new BasicLambdaDemo();
+            basicLambdaDemo.PrintData(PrintActionGeneric, "Shiva Sai");
+            basicLambdaDemo.PrintData(PrintActionGeneric, 125);
+            basicLambdaDemo.PrintData(PrintActionGeneric, 123.45f);
+            basicLambdaDemo.PrintData(PrintActionGeneric, 123.45M);
+            basicLambdaDemo.PrintData(PrintActionGeneric, 'A');
+            basicLambdaDemo.PrintData(PrintActionGeneric, DateTime.Now);
 
             printAction(10);
-            PrintData(printAction, 125);
-            PrintData(printAction1, "Shiva Sai");
+            basicLambdaDemo.PrintData(printAction, 125);
+            basicLambdaDemo.PrintData(printAction1, "Shiva Sai");
 
-            PrintData(data =>
+            basicLambdaDemo.PrintData(data =>
             {
                 WriteLine("Adding Data to Data!!!");
                 data += data;
                 WriteLine(data);
             }, 123.56f);
 
-            PrintData(data =>
+            basicLambdaDemo.PrintData(data =>
             {
                 WriteLine(data);
             }, true);
 
-            PrintData(data =>
+            basicLambdaDemo.PrintData(data =>
             {
                 WriteLine(data);
             }, 'A');
 
-            PrintData(data =>
+            basicLambdaDemo.PrintData(data =>
             {
                 WriteLine(data);
             }, DateTime.Now);
