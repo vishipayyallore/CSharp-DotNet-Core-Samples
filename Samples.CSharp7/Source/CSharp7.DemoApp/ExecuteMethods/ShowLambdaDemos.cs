@@ -7,10 +7,18 @@ namespace CSharp7.DemoApp.ExecuteMethods
 
     public class ShowLambdaDemos
     {
+        private readonly ExecuteMethodsHelper _executeMethodsHelper;
+
+        public ShowLambdaDemos()
+        {
+            _executeMethodsHelper = new ExecuteMethodsHelper();
+        }
 
         public ShowLambdaDemos ShowSimpleLambdaDemo()
         {
             var basicLambdaDemo = new BasicLambdaDemo();
+
+            _executeMethodsHelper.ShowHeader("ShowLambdaDemos::Show Simple Lambda Demo");
 
             basicLambdaDemo.PrintData(data =>
             {
@@ -33,6 +41,13 @@ namespace CSharp7.DemoApp.ExecuteMethods
             {
                 WriteLine(data);
             }, DateTime.Now);
+
+            basicLambdaDemo.PrintData(data =>
+            {
+                WriteLine("Adding Data to Data!!!");
+                data += data;
+                WriteLine(data);
+            }, 123.56f);
 
             return this;
         }

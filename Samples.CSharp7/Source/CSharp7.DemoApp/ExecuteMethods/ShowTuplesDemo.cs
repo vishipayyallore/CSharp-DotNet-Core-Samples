@@ -6,11 +6,19 @@ namespace CSharp7.DemoApp.ExecuteMethods
 {
     public class ShowTuplesDemo
     {
+
+        private readonly ExecuteMethodsHelper _executeMethodsHelper;
+
+        public ShowTuplesDemo()
+        {
+            _executeMethodsHelper = new ExecuteMethodsHelper();
+        }
+
         public ShowTuplesDemo ExecuteNamedUnnamedTuplesDemo()
         {
             var tuplesDemo = new BasicTuplesDemo();
 
-            ShowHeader("ShowTuplesDemo::Execute Named Unnamed Tuples Demo");
+            _executeMethodsHelper.ShowHeader("ShowTuplesDemo::Execute Named Unnamed Tuples Demo");
 
             var namedPerson = tuplesDemo.GetNamedPerson();
             WriteLine($"ShowTuplesDemo::GetNamedPerson => Named Person: {namedPerson.Id} {namedPerson.Name} {namedPerson.Age}");
@@ -31,7 +39,7 @@ namespace CSharp7.DemoApp.ExecuteMethods
 
         public ShowTuplesDemo ShowSimpleTuplesDemo()
         {
-            ShowHeader("ShowTuplesDemo::Show Simple Tuples Demo");
+            _executeMethodsHelper.ShowHeader("ShowTuplesDemo::Show Simple Tuples Demo");
 
             (Guid, string, int) unnamedPerson = (Guid.NewGuid(), "Shiva Sai", 25);
             WriteLine($"Unnamed Person: {unnamedPerson.Item1} {unnamedPerson.Item2} {unnamedPerson.Item3}");
@@ -46,7 +54,7 @@ namespace CSharp7.DemoApp.ExecuteMethods
         {
             var tuplesDemo = new BasicTuplesDemo();
 
-            ShowHeader("ShowTuplesDemo::Execute Named Unnamed Tuples Demo With Discards");
+            _executeMethodsHelper.ShowHeader("ShowTuplesDemo::Execute Named Unnamed Tuples Demo With Discards");
 
             var (Id, Name, _) = tuplesDemo.GetNamedPerson();
             WriteLine($"ShowTuplesDemo::ExecuteNamedUnnamedTuplesDemoWithDiscards => Named Person: {Id} {Name} No Age");
@@ -55,11 +63,6 @@ namespace CSharp7.DemoApp.ExecuteMethods
             WriteLine($"ShowTuplesDemo::ExecuteNamedUnnamedTuplesDemoWithDiscards => Named Person: {Id} {Name}  No Age");
 
             return this;
-        }
-
-        private void ShowHeader(string title)
-        {
-            WriteLine($"***** {title} *****");
         }
 
     }

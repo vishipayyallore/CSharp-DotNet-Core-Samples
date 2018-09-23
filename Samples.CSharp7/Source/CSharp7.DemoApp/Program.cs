@@ -92,6 +92,9 @@ namespace CSharp7.DemoApp
                 
             void printAction1(string data) => WriteLine(data);
 
+            new ShowLambdaDemos()
+                .ShowSimpleLambdaDemo();
+
             var basicLambdaDemo = new BasicLambdaDemo();
             basicLambdaDemo.PrintData(PrintActionGeneric, "Shiva Sai");
             basicLambdaDemo.PrintData(PrintActionGeneric, 125);
@@ -103,28 +106,6 @@ namespace CSharp7.DemoApp
             printAction(10);
             basicLambdaDemo.PrintData(printAction, 125);
             basicLambdaDemo.PrintData(printAction1, "Shiva Sai");
-
-            basicLambdaDemo.PrintData(data =>
-            {
-                WriteLine("Adding Data to Data!!!");
-                data += data;
-                WriteLine(data);
-            }, 123.56f);
-
-            basicLambdaDemo.PrintData(data =>
-            {
-                WriteLine(data);
-            }, true);
-
-            basicLambdaDemo.PrintData(data =>
-            {
-                WriteLine(data);
-            }, 'A');
-
-            basicLambdaDemo.PrintData(data =>
-            {
-                WriteLine(data);
-            }, DateTime.Now);
 
             var parsedData = TryParse<int>(numbers[0], "125");
             WriteLine($"Parsed in Generic Method: {parsedData}");
@@ -140,7 +121,6 @@ namespace CSharp7.DemoApp
             bool results = false;
             TryParseV2(ref results, "true");
             WriteLine($"Bool Parsed in Generic Method: {results}");
-
 
             var genericTryParse = new GenericTryParse();
             getNumber = 0;
