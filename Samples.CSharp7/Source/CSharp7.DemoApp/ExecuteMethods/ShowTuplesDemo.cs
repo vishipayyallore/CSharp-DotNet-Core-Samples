@@ -12,12 +12,18 @@ namespace CSharp7.DemoApp.ExecuteMethods
 
             ShowHeader("ShowTuplesDemo::Execute Named Unnamed Tuples Demo");
 
+            var namedPerson = tuplesDemo.GetNamedPerson();
+            WriteLine($"ShowTuplesDemo::GetNamedPerson => Named Person: {namedPerson.Id} {namedPerson.Name} {namedPerson.Age}");
+
             // Deconstruct the Tuple
             var (Id, Name, Age) = tuplesDemo.GetNamedPerson();
             WriteLine($"ShowTuplesDemo::GetNamedPerson => Named Person: {Id} {Name} {Age}");
 
             var unnamedPerson = tuplesDemo.GetUnnamedPerson();
             WriteLine($"ShowTuplesDemo::GetUnnamedPerson => Unnamed Person: {unnamedPerson.Item1} {unnamedPerson.Item2} {unnamedPerson.Item3}");
+
+            (Id, Name, Age) = tuplesDemo.GetUnnamedPerson();
+            WriteLine($"ShowTuplesDemo::GetUnnamedPerson => Named Person: {Id} {Name} {Age}");
 
             return this;
         }
@@ -32,6 +38,21 @@ namespace CSharp7.DemoApp.ExecuteMethods
 
             (Guid Id, string Name, int Age) namedPerson = (Id: Guid.NewGuid(), Name: "Shiva Sai", Age: 25);
             WriteLine($"Named Person: {namedPerson.Id} {namedPerson.Name} {namedPerson.Age}");
+
+            return this;
+        }
+
+        public ShowTuplesDemo ExecuteNamedUnnamedTuplesDemoWithDiscards()
+        {
+            var tuplesDemo = new BasicTuplesDemo();
+
+            ShowHeader("ShowTuplesDemo::Execute Named Unnamed Tuples Demo With Discards");
+
+            var (Id, Name, _) = tuplesDemo.GetNamedPerson();
+            WriteLine($"ShowTuplesDemo::ExecuteNamedUnnamedTuplesDemoWithDiscards => Named Person: {Id} {Name} No Age");
+
+            (Id, Name, _) = tuplesDemo.GetUnnamedPerson();
+            WriteLine($"ShowTuplesDemo::ExecuteNamedUnnamedTuplesDemoWithDiscards => Named Person: {Id} {Name}  No Age");
 
             return this;
         }

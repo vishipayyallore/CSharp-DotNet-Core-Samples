@@ -79,7 +79,8 @@ namespace CSharp7.DemoApp
 
             new ShowTuplesDemo()
                 .ShowSimpleTuplesDemo()
-                .ExecuteNamedUnnamedTuplesDemo();
+                .ExecuteNamedUnnamedTuplesDemo()
+                .ExecuteNamedUnnamedTuplesDemoWithDiscards();
 
             // Local functions
             void printAction(int data)
