@@ -61,11 +61,6 @@ namespace CSharp7.DemoApp
             inputType = ((bool)output) ? (T)parametersArray[1] : inputType;
         }
 
-        //static void PrintData<T>(Action<T> printData, T input)
-        //{
-        //    printData(input);
-        //}
-
         static void PrintActionGeneric<T>(T data)
         {
             WriteLine(data);
