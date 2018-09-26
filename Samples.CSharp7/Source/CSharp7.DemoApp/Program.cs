@@ -84,7 +84,7 @@ namespace CSharp7.DemoApp
                 data *= 2;
                 WriteLine(data);
             }
-                
+
             void printAction1(string data) => WriteLine(data);
 
             new ShowLambdaDemos()
