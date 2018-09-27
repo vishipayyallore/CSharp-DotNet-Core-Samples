@@ -93,8 +93,12 @@ namespace CSharp7.DemoApp
 
             Func<List<int>, List<int>> doubleNumbers = (nums) =>
             {
-                return nums;
+                List<int> doubles = new List<int>();
+                nums.ForEach(number => { doubles.Add(number * 2); });
+                return doubles;
             };
+
+            doubleNumbers(numbers).ForEach(value => WriteLine(value));
 
             var basicLambdaDemo = new BasicLambdaDemo();
             basicLambdaDemo.PrintData(PrintActionGeneric, "Shiva Sai");
