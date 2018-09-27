@@ -90,13 +90,13 @@ namespace CSharp7.DemoApp
             new ShowLambdaDemos()
                 .ShowSimpleLambdaDemo();
 
-
-            Func<List<int>, List<int>> doubleNumbers = (nums) =>
+            // Converted into Local Function
+            List<int> doubleNumbers(List<int> nums)
             {
                 List<int> doubles = new List<int>();
                 nums.ForEach(number => { doubles.Add(number * 2); });
                 return doubles;
-            };
+            }
 
             doubleNumbers(numbers).ForEach(value => WriteLine(value));
 
