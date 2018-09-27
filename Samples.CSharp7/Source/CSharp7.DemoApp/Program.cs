@@ -100,6 +100,10 @@ namespace CSharp7.DemoApp
 
             doubleNumbers(numbers).ForEach(value => WriteLine(value));
 
+
+            FilterData filterDataObject = new FilterData();
+            filterDataObject.GetNumbersDouble(doubleNumbers, numbers).ForEach(value => WriteLine(value));
+
             var basicLambdaDemo = new BasicLambdaDemo();
             basicLambdaDemo.PrintData(PrintActionGeneric, "Shiva Sai");
             basicLambdaDemo.PrintData(PrintActionGeneric, 125);

@@ -25,7 +25,7 @@ namespace Functional.Programs.Library
 
         public List<int> GetNumbersDouble(Func<List<int>, List<int>> doubleNumbers, List<int> numbers)
         {
-            return null;
+            return doubleNumbers(numbers);
         }
 
     }
