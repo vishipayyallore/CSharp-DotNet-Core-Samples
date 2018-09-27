@@ -90,6 +90,12 @@ namespace CSharp7.DemoApp
             new ShowLambdaDemos()
                 .ShowSimpleLambdaDemo();
 
+
+            Func<List<int>, List<int>> doubleNumbers = (nums) =>
+            {
+                return nums;
+            };
+
             var basicLambdaDemo = new BasicLambdaDemo();
             basicLambdaDemo.PrintData(PrintActionGeneric, "Shiva Sai");
             basicLambdaDemo.PrintData(PrintActionGeneric, 125);
