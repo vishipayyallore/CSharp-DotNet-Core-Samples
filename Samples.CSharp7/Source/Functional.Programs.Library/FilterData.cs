@@ -23,6 +23,11 @@ namespace Functional.Programs.Library
                     .ToList();
         }
 
+        public List<int> GetNumbersDouble(Func<List<int>, List<int>> doubleNumbers, List<int> numbers)
+        {
+            return null;
+        }
+
     }
 
 }
