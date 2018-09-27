@@ -100,7 +100,6 @@ namespace CSharp7.DemoApp
 
             doubleNumbers(numbers).ForEach(value => WriteLine(value));
 
-
             FilterData filterDataObject = new FilterData();
             filterDataObject.GetNumbersDouble(doubleNumbers, numbers).ForEach(value => WriteLine(value));
 
