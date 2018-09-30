@@ -30,12 +30,17 @@ namespace Functional.Programs.Library
         }
 
 
-        public void CalculateAndShowValues(List<int> numbers, Func<int, int> performAction)
+        public void CalculateAndShowValues(List<int> numbers, bool avoidZeroValues, Func<int, int> performAction)
         {
             WriteLine($"");
             numbers.ForEach(number =>
             {
-                Write( $"{number} => {performAction(number)} ");
+                var returnValue = performAction(number);
+                if(avoidZeroValues && returnValue == 0)
+                {
+                    return;
+                }
+                Write( $"{number} => {returnValue} ");
             });
         }
 
