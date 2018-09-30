@@ -34,7 +34,7 @@ namespace Functional.Programs.Library
         {
             numbers.ForEach(number =>
             {
-                WriteLine(performAction(number));
+                Write( $"{number} => {performAction(number)} ");
             });
         }
 
