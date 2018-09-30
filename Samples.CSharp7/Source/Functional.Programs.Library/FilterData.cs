@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using static System.Console;
 
 namespace Functional.Programs.Library
 {
@@ -26,6 +27,15 @@ namespace Functional.Programs.Library
         public List<int> GetNumbersDouble(Func<List<int>, List<int>> doubleNumbers, List<int> numbers)
         {
             return doubleNumbers(numbers);
+        }
+
+
+        public void CalculateAndShowValues(List<int> numbers, Func<int, int> performAction)
+        {
+            numbers.ForEach(number =>
+            {
+                WriteLine(performAction(number));
+            });
         }
 
     }

@@ -103,6 +103,8 @@ namespace CSharp7.DemoApp
             FilterData filterDataObject = new FilterData();
             filterDataObject.GetNumbersDouble(doubleNumbers, numbers).ForEach(value => WriteLine(value));
 
+            filterDataObject.CalculateAndShowValues(numbers, x => x + 2);
+
             var basicLambdaDemo = new BasicLambdaDemo();
             basicLambdaDemo.PrintData(PrintActionGeneric, "Shiva Sai");
             basicLambdaDemo.PrintData(PrintActionGeneric, 125);
