@@ -32,6 +32,7 @@ namespace Functional.Programs.Library
 
         public void CalculateAndShowValues(List<int> numbers, Func<int, int> performAction)
         {
+            WriteLine($"");
             numbers.ForEach(number =>
             {
                 Write( $"{number} => {performAction(number)} ");

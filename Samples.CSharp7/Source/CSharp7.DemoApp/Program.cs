@@ -104,6 +104,8 @@ namespace CSharp7.DemoApp
             filterDataObject.GetNumbersDouble(doubleNumbers, numbers).ForEach(value => WriteLine(value));
 
             filterDataObject.CalculateAndShowValues(numbers, x => x + 2);
+            filterDataObject.CalculateAndShowValues(numbers, x => x * x);
+            filterDataObject.CalculateAndShowValues(numbers, x => (x * x * x));
 
             var basicLambdaDemo = new BasicLambdaDemo();
             basicLambdaDemo.PrintData(PrintActionGeneric, "Shiva Sai");
