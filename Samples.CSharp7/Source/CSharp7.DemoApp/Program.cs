@@ -90,6 +90,9 @@ namespace CSharp7.DemoApp
             new ShowLambdaDemos()
                 .ShowSimpleLambdaDemo();
 
+            new ShowFilteredDataDemo()
+                .ShowSimpleFilteredDataDemo();
+
             // Converted into Local Function
             List<int> doubleNumbers(List<int> nums)
             {
