@@ -103,20 +103,6 @@ namespace CSharp7.DemoApp
             FilterData filterDataObject = new FilterData();
             filterDataObject.GetNumbersDouble(doubleNumbers, numbers).ForEach(value => WriteLine(value));
 
-            filterDataObject.CalculateAndShowValues(numbers, false, x => x + 2);
-            filterDataObject.CalculateAndShowValues(numbers, false, x => x * x);
-            filterDataObject.CalculateAndShowValues(numbers, false, x => (x * x * x));
-            // Odd Numbers
-            filterDataObject.CalculateAndShowValues(numbers, true, x =>
-            {
-                return (x % 2 == 1) ? x : 0;
-            });
-            // Even Numbers
-            filterDataObject.CalculateAndShowValues(numbers, true, x =>
-            {
-                return (x % 2 == 0) ? x : 0;
-            });
-
             var basicLambdaDemo = new BasicLambdaDemo();
             basicLambdaDemo.PrintData(PrintActionGeneric, "Shiva Sai");
             basicLambdaDemo.PrintData(PrintActionGeneric, 125);
