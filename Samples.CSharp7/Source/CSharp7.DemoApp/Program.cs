@@ -106,17 +106,15 @@ namespace CSharp7.DemoApp
             FilterData filterDataObject = new FilterData();
             filterDataObject.GetNumbersDouble(doubleNumbers, numbers).ForEach(value => WriteLine(value));
 
-            var basicLambdaDemo = new BasicLambdaDemo();
-            basicLambdaDemo.PrintData(PrintActionGeneric, "Shiva Sai");
-            basicLambdaDemo.PrintData(PrintActionGeneric, 125);
-            basicLambdaDemo.PrintData(PrintActionGeneric, 123.45f);
-            basicLambdaDemo.PrintData(PrintActionGeneric, 123.45M);
-            basicLambdaDemo.PrintData(PrintActionGeneric, 'A');
-            basicLambdaDemo.PrintData(PrintActionGeneric, DateTime.Now);
+            new BasicLambdaDemo()
+                .PrintData(PrintActionGeneric, "Shiva Sai")
+                .PrintData(PrintActionGeneric, 125)
+                .PrintData(PrintActionGeneric, 123.45f)
+                .PrintData(PrintActionGeneric, 123.45M)
+                .PrintData(PrintActionGeneric, 'A')
+                .PrintData(PrintActionGeneric, DateTime.Now);
 
             printAction(10);
-            basicLambdaDemo.PrintData(printAction, 125);
-            basicLambdaDemo.PrintData(printAction1, "Shiva Sai");
 
             var parsedData = TryParse<int>(numbers[0], "125");
             WriteLine($"Parsed in Generic Method: {parsedData}");

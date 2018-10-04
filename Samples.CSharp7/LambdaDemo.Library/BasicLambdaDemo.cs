@@ -5,9 +5,12 @@ namespace LambdaDemo.Library
 
     public class BasicLambdaDemo
     {
-        public void PrintData<T>(Action<T> printData, T input)
+
+        public BasicLambdaDemo PrintData<T>(Action<T> printData, T input)
         {
             printData(input);
+
+            return this;
         }
 
     }
