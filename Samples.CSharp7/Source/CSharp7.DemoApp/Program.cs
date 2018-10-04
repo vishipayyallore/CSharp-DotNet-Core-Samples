@@ -66,6 +66,12 @@ namespace CSharp7.DemoApp
             WriteLine(data);
         }
 
+        static List<int> SelectArrayValues(int[] numbers, Func<int, bool> filterCriteria)
+        {
+            return numbers.Where(filterCriteria)
+                    .ToList();
+        }
+
         static void Main(string[] args)
         {
             var numbers = new List<int> { 3, 8, 4, 6, 1, 7, 5, 2, 9, 10 };
@@ -74,8 +80,15 @@ namespace CSharp7.DemoApp
 
             var numberOfItems = int.Parse(ReadLine().Trim());
             var arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
-            var numberOfZeros = arrayValues.Where(e => e > 0);
-            WriteLine($"{numberOfZeros.Count()/(numberOfItems*1.0)}");
+            var values = SelectArrayValues(arrayValues, e => e > 0);
+            WriteLine(string.Format("{0:F6}", (values.Count / (numberOfItems * 1.0))));
+
+            values = SelectArrayValues(arrayValues, e => e < 0);
+            WriteLine(string.Format("{0:F6}", (values.Count / (numberOfItems * 1.0))));
+
+            values = SelectArrayValues(arrayValues, e => e == 0);
+            WriteLine(string.Format("{0:F6}", (values.Count / (numberOfItems * 1.0))));
+
             // To be continued ....
 
             new ShowTuplesDemo()
