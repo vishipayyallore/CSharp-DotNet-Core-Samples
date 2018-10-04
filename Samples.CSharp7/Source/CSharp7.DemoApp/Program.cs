@@ -75,6 +75,7 @@ namespace CSharp7.DemoApp
             var numberOfItems = int.Parse(ReadLine().Trim());
             var arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
             var numberOfZeros = arrayValues.Where(e => e > 0);
+            WriteLine($"{numberOfZeros.Count()/(numberOfItems*1.0)}");
             // To be continued ....
 
             new ShowTuplesDemo()
