@@ -72,6 +72,11 @@ namespace CSharp7.DemoApp
 
             ForegroundColor = ConsoleColor.Yellow;
 
+            var numberOfItems = int.Parse(ReadLine().Trim());
+            var arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
+            var numberOfZeros = arrayValues.Where(e => e > 0);
+            // To be continued ....
+
             new ShowTuplesDemo()
                 .ShowSimpleTuplesDemo()
                 .ExecuteNamedUnnamedTuplesDemo()
