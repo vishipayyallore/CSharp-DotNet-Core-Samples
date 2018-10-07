@@ -79,6 +79,9 @@ namespace CSharp7.DemoApp
 
             ForegroundColor = ConsoleColor.Yellow;
 
+            new SampleSort()
+                .Execute();
+
             new PlusMinus()
                 .Execute();
 

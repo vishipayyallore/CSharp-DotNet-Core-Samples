@@ -9,6 +9,7 @@ namespace CSharp7.Logic.Programs
 
         public void Execute()
         {
+            WriteLine($"Sample Sort Proram!");
             Write($"Please Enter Number of Items: ");
             var numberOfItems = int.Parse(ReadLine().Trim());
             Write($"Please Enter Array of Values: ");
@@ -26,6 +27,14 @@ namespace CSharp7.Logic.Programs
                     numbersAndCount.Add(number, 1);
                 }
             });
+
+            foreach(var number in numbersAndCount.Keys.OrderBy(x => x))
+            {
+                for(int iCtr=1; iCtr <=numbersAndCount[number]; iCtr++)
+                {
+                    Write($"{number} ");
+                }
+            }
         }
 
     }

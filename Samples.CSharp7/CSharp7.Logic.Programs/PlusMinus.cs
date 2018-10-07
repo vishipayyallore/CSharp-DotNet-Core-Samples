@@ -17,6 +17,7 @@ namespace CSharp7.Logic.Programs
 
         public void Execute()
         {
+
             Write($"Please Enter Number of Items: ");
             var numberOfItems = int.Parse(ReadLine().Trim());
             Write($"Please Enter Array of Values: ");
