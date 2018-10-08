@@ -9,7 +9,7 @@ namespace CSharp7.Logic.Programs
 
         public void Execute()
         {
-            WriteLine($"Sample Sort Proram!");
+            WriteLine($"Sample Sort Program!");
             Write($"Please Enter Number of Items: ");
             var numberOfItems = int.Parse(ReadLine().Trim());
             Write($"Please Enter Array of Values: ");
