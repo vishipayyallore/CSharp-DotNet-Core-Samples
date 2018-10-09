@@ -3,7 +3,7 @@ using static System.Console;
 
 namespace CSharp7.Logic.Programs
 {
-    public class SockMerchant
+    public class ValleyCount
     {
 
         public void Execute()
@@ -11,6 +11,8 @@ namespace CSharp7.Logic.Programs
 
             int iCtr = 0;
             int valleyCount = 0;
+            bool isClimbing = false;
+
             WriteLine($"Moutain - Valley Program!");
             Write($"Please Enter Number of Items: ");
             var numberOfItems = int.Parse(ReadLine().Trim());
@@ -21,19 +23,28 @@ namespace CSharp7.Logic.Programs
             {
                 if(path == 'U')
                 {
+                    if(iCtr == 0)
+                    {
+                        isClimbing = true;
+                    }
                     iCtr++;
                 }
                 else if(path == 'D')
                 {
+                    if (iCtr == 0)
+                    {
+                        isClimbing = false;
+                    }
                     iCtr--;
                 }
 
-                if(iCtr == 0)
+                if (iCtr == 0 && !isClimbing)
                 {
-                    valleyCount++;
+                        valleyCount++;
                 }
             }
 
+            Write($"{valleyCount}");
         }
 
     }
