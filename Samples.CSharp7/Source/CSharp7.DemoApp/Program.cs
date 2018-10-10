@@ -79,8 +79,14 @@ namespace CSharp7.DemoApp
 
             ForegroundColor = ConsoleColor.Yellow;
 
+            WriteLine($"Sample Sort Program!");
+            Write($"Please Enter Number of Items: ");
+            var numberOfItems = int.Parse(ReadLine().Trim());
+            Write($"Please Enter Array of Values: ");
+            var arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
+
             new SampleSort()
-                .Execute();
+                .Execute(arrayValues);
 
             new PlusMinus()
                 .Execute();

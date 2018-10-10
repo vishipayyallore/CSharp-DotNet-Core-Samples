@@ -7,13 +7,8 @@ namespace CSharp7.Logic.Programs
     public class SampleSort
     {
 
-        public void Execute()
+        public void Execute(int[] arrayValues)
         {
-            WriteLine($"Sample Sort Program!");
-            Write($"Please Enter Number of Items: ");
-            var numberOfItems = int.Parse(ReadLine().Trim());
-            Write($"Please Enter Array of Values: ");
-            var arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
             var numbersAndCount = new Dictionary<int, int>();
 
             arrayValues.ToList().ForEach( number =>
