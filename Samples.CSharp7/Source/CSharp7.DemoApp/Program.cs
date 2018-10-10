@@ -91,8 +91,8 @@ namespace CSharp7.DemoApp
             new PlusMinus()
                 .Execute();
 
-            var numberOfItems = int.Parse(ReadLine().Trim());
-            var arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
+            numberOfItems = int.Parse(ReadLine().Trim());
+            arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
             var values = SelectArrayValues(arrayValues, e => e > 0);
             WriteLine(string.Format("{0:F6}", (values.Count / (numberOfItems * 1.0))));
 
