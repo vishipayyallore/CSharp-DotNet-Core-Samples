@@ -88,8 +88,14 @@ namespace CSharp7.DemoApp
             new SampleSort()
                 .Execute(arrayValues);
 
+            WriteLine($"\n\nPlus Minus Program!");
+            Write($"Please Enter Number of Items: ");
+            numberOfItems = int.Parse(ReadLine().Trim());
+            Write($"Please Enter Array of Values: ");
+            arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
+
             new PlusMinus()
-                .Execute();
+                .Execute(numberOfItems, arrayValues);
 
             numberOfItems = int.Parse(ReadLine().Trim());
             arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
