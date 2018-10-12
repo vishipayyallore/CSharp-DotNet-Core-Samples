@@ -79,6 +79,9 @@ namespace CSharp7.DemoApp
 
             ForegroundColor = ConsoleColor.Yellow;
 
+            new ShowLogicDemos()
+                .ShowPlusMinusDemo();
+
             WriteLine($"Sample Sort Program!");
             Write($"Please Enter Number of Items: ");
             var numberOfItems = int.Parse(ReadLine().Trim());
@@ -88,14 +91,6 @@ namespace CSharp7.DemoApp
             new SampleSort()
                 .Execute(arrayValues);
 
-            WriteLine($"\n\nPlus Minus Program!");
-            Write($"Please Enter Number of Items: ");
-            numberOfItems = int.Parse(ReadLine().Trim());
-            Write($"Please Enter Array of Values: ");
-            arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
-
-            new PlusMinus()
-                .Execute(numberOfItems, arrayValues);
 
             numberOfItems = int.Parse(ReadLine().Trim());
             arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
