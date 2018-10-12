@@ -80,20 +80,11 @@ namespace CSharp7.DemoApp
             ForegroundColor = ConsoleColor.Yellow;
 
             new ShowLogicDemos()
+                .SampleSortDemo()
                 .ShowPlusMinusDemo();
 
-            WriteLine($"Sample Sort Program!");
-            Write($"Please Enter Number of Items: ");
             var numberOfItems = int.Parse(ReadLine().Trim());
-            Write($"Please Enter Array of Values: ");
             var arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
-
-            new SampleSort()
-                .Execute(arrayValues);
-
-
-            numberOfItems = int.Parse(ReadLine().Trim());
-            arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
             var values = SelectArrayValues(arrayValues, e => e > 0);
             WriteLine(string.Format("{0:F6}", (values.Count / (numberOfItems * 1.0))));
 

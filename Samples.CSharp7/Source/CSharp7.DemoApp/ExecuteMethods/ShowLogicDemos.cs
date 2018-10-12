@@ -26,7 +26,15 @@ namespace CSharp7.DemoApp.ExecuteMethods
 
         public ShowLogicDemos SampleSortDemo()
         {
+            WriteLine($"Sample Sort Program!");
+            Write($"Please Enter Number of Items: ");
+            var numberOfItems = int.Parse(ReadLine().Trim());
+            Write($"Please Enter Array of Values: ");
+            var arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
 
+            new SampleSort().Execute(arrayValues);
+
+            return this;
         }
 
     }
