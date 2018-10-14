@@ -185,7 +185,6 @@ namespace CSharp7.DemoApp
                 WriteLine($"Parsed Number: {parametersArray[1]}");
             }
 
-
             WriteLine($"Using Filter Data for generating Even Numbers");
             var filterData = new FilterData();
             filterData.SelectValues(numbers, e => e % 2 == 0)
