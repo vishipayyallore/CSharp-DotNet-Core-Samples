@@ -173,7 +173,7 @@ namespace CSharp7.DemoApp
 
             List<int> generalVariable = new List<int>()
             {
-                45, 55
+                45, 55, 56
             };
 
             var dataType = generalVariable[0].GetType();
