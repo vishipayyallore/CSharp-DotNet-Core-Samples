@@ -15,7 +15,7 @@ namespace CSharp7.DemoApp.ExecuteMethods
             Write($"Please Enter Number of Items: ");
             var numberOfItems = int.Parse(ReadLine().Trim());
 
-            Write($"Please Enter Array of Values: ");
+            Write($"Please Enter Array of {numberOfItems} Values [Ex: -1 8 0 3 -8 0]: ");
             var arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
 
             new PlusMinus().Execute(numberOfItems, arrayValues);
@@ -28,7 +28,7 @@ namespace CSharp7.DemoApp.ExecuteMethods
             WriteLine($"Sample Sort Program!");
             Write($"Please Enter Number of Items: ");
             var numberOfItems = int.Parse(ReadLine().Trim());
-            Write($"Please Enter Array of {numberOfItems} Values: ");
+            Write($"Please Enter Array of {numberOfItems} Values [Ex: -1 2 0 1 -1]: ");
             var arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
 
             new SampleSort().Execute(arrayValues);
