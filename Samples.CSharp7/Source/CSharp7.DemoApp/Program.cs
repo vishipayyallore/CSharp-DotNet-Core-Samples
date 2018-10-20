@@ -80,7 +80,8 @@ namespace CSharp7.DemoApp
 
             new ShowLogicDemos()
                 .SampleSortDemo()
-                .ShowPlusMinusDemo();
+                .ShowPlusMinusDemo()
+                .ValleyCountDemo();
 
             var numberOfItems = int.Parse(ReadLine().Trim());
             var arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();

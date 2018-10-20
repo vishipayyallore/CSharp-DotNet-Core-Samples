@@ -23,16 +23,28 @@ namespace CSharp7.DemoApp.ExecuteMethods
             return this;
         }
 
-
         public ShowLogicDemos SampleSortDemo()
         {
             WriteLine($"Sample Sort Program!");
             Write($"Please Enter Number of Items: ");
             var numberOfItems = int.Parse(ReadLine().Trim());
-            Write($"Please Enter Array of Values: ");
+            Write($"Please Enter Array of {numberOfItems} Values: ");
             var arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
 
             new SampleSort().Execute(arrayValues);
+
+            return this;
+        }
+
+        public ShowLogicDemos ValleyCountDemo()
+        {
+            WriteLine($"Moutain - Valley Program!");
+            Write($"Please Enter Number of Items: ");
+            var numberOfItems = int.Parse(ReadLine().Trim());
+            Write($"Please Enter Array of {numberOfItems} Values [Ex: UDDDUDUU]: ");
+            var valleyPath = ReadLine().Trim();
+
+            new ValleyCount().Execute(valleyPath);
 
             return this;
         }

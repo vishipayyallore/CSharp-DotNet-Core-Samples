@@ -1,23 +1,15 @@
-﻿using System.Linq;
-using static System.Console;
+﻿using static System.Console;
 
 namespace CSharp7.Logic.Programs
 {
     public class ValleyCount
     {
 
-        public void Execute()
+        public void Execute(string valleyPath)
         {
-
             int iCtr = 0;
             int valleyCount = 0;
             bool isClimbing = false;
-
-            WriteLine($"Moutain - Valley Program!");
-            Write($"Please Enter Number of Items: ");
-            var numberOfItems = int.Parse(ReadLine().Trim());
-            Write($"Please Enter Array of Values: ");
-            var valleyPath = ReadLine().Trim();
 
             foreach(var path in valleyPath)
             {
