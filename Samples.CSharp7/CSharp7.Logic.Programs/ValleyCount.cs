@@ -40,7 +40,7 @@ namespace CSharp7.Logic.Programs
 
                 if (iCtr == 0 && !isClimbing)
                 {
-                        valleyCount++;
+                    valleyCount++;
                 }
             }
 

@@ -17,7 +17,6 @@ namespace CSharp7.Logic.Programs
 
         public void Execute(int numberOfItems, int[] arrayValues)
         {
-
             var values = SelectArrayValues(arrayValues, e => e > 0);
             WriteLine(string.Format("{0:F6}", (values.Count / (numberOfItems * 1.0))));
 
