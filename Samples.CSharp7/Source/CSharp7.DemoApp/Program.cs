@@ -86,7 +86,25 @@ namespace CSharp7.DemoApp
             Write($"Please Enter Array of {numberOfItemsNew} Values [Ex: 0 0 0 0 1 0]: ");
             var arrayValuesNew = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
 
+            var jumps = 0;
+            for(int iCtr=0; iCtr<numberOfItemsNew-2; iCtr++)
+            {
+                if(arrayValuesNew[iCtr + 1] == 0 && arrayValuesNew[iCtr + 2] == 0)
+                {
+                    iCtr += 1;
+                    jumps++;
+                }
+                else if (arrayValuesNew[iCtr + 1] == 0 && arrayValuesNew[iCtr + 2] == 1)
+                {
+                    jumps++;
+                }
+                else if (arrayValuesNew[iCtr + 1] == 1 && arrayValuesNew[iCtr + 2] == 0)
+                {
+                    jumps++;
+                }
+            }
 
+            WriteLine($"Number Of Jumps: {jumps}");
 
             new ShowLogicDemos()
                 .SampleSortDemo()
