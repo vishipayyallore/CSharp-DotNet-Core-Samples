@@ -78,6 +78,16 @@ namespace CSharp7.DemoApp
 
             ForegroundColor = ConsoleColor.Yellow;
 
+            WriteLine($"\n\nJumping On The Clouds Program!");
+
+            Write($"Please Enter Number of Items: ");
+            var numberOfItemsNew = int.Parse(ReadLine().Trim());
+
+            Write($"Please Enter Array of {numberOfItemsNew} Values [Ex: 0 0 0 0 1 0]: ");
+            var arrayValuesNew = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
+
+
+
             new ShowLogicDemos()
                 .SampleSortDemo()
                 .ShowPlusMinusDemo()
