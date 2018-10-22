@@ -49,6 +49,18 @@ namespace CSharp7.DemoApp.ExecuteMethods
             return this;
         }
 
+        public ShowLogicDemos JumpingOnTheCloudsDemo()
+        {
+            WriteLine($"\n\nJumping On The Clouds Program!");
+            Write($"Please Enter Number of Items: ");
+            var numberOfItems = int.Parse(ReadLine().Trim());
+            Write($"Please Enter Array of {numberOfItems} Values [Ex: 0 0 0 0 1 0]: ");
+            var arrayValues = ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
+
+            new JumpingOnTheClouds().Execute(arrayValues);
+
+            return this;
+        }
     }
 
 }
