@@ -89,16 +89,12 @@ namespace CSharp7.DemoApp
             var jumps = 0;
             for(int iCtr=0; iCtr<numberOfItemsNew-2; iCtr++)
             {
-                if(arrayValuesNew[iCtr + 1] == 0 && arrayValuesNew[iCtr + 2] == 0)
+                if ((iCtr + 2 < arrayValuesNew.Length) && arrayValuesNew[iCtr + 2] == 0)
                 {
                     iCtr += 1;
                     jumps++;
                 }
-                else if (arrayValuesNew[iCtr + 1] == 0 && arrayValuesNew[iCtr + 2] == 1)
-                {
-                    jumps++;
-                }
-                else if (arrayValuesNew[iCtr + 1] == 1 && arrayValuesNew[iCtr + 2] == 0)
+                else if (arrayValuesNew[iCtr + 1] != 1 || arrayValuesNew[iCtr + 2] != 1)
                 {
                     jumps++;
                 }
