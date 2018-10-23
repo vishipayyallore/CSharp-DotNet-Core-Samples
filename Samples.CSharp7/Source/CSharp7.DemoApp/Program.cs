@@ -96,8 +96,6 @@ namespace CSharp7.DemoApp
             values = SelectArrayValues(arrayValues, e => e == 0);
             WriteLine(string.Format("{0:F6}", (values.Count / (numberOfItems * 1.0))));
 
-            // To be continued ....
-
             new ShowTuplesDemo()
                 .ShowSimpleTuplesDemo()
                 .ExecuteNamedUnnamedTuplesDemo()
