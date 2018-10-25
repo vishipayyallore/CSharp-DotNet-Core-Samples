@@ -80,8 +80,29 @@ namespace CSharp7.DemoApp
             ForegroundColor = ConsoleColor.Yellow;
 
             WriteLine($"Reapted String");
+
+            Write($"Enter a String [For searching a]");
             var inputString = ReadLine();
-            WriteLine($"{inputString.Count(f => f == 'a')}");
+            Write($"Enter The Length: ");
+            long n = Convert.ToInt64(Console.ReadLine());
+            bool charFound = false;
+            long count = 0;
+
+            // WriteLine($"{inputString.Count(f => f == 'a')}");
+            long toTraverse = (inputString.Length <= n) ? inputString.Length : n;
+            for(int iCtr=0; iCtr<toTraverse; iCtr++)
+            {
+                if(inputString[iCtr] == 'a')
+                {
+                    count++;
+                }
+            }
+
+            if(inputString.Length <= n)
+            {
+                count = (n / inputString.Length) * count;
+            }
+            WriteLine($"a found {count} times");
 
             new ShowLogicDemos()
                 .JumpingOnTheCloudsDemo()
