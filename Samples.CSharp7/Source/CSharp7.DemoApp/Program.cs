@@ -85,10 +85,9 @@ namespace CSharp7.DemoApp
             var inputString = ReadLine();
             Write($"Enter The Length: ");
             long n = Convert.ToInt64(Console.ReadLine());
-            bool charFound = false;
             long count = 0;
+            long remaining = 0;
 
-            // WriteLine($"{inputString.Count(f => f == 'a')}");
             long toTraverse = (inputString.Length <= n) ? inputString.Length : n;
             for(int iCtr=0; iCtr<toTraverse; iCtr++)
             {
@@ -101,6 +100,15 @@ namespace CSharp7.DemoApp
             if(inputString.Length <= n)
             {
                 count = (n / inputString.Length) * count;
+                remaining = (n % inputString.Length);
+
+                for (int iCtr = 0; iCtr < remaining; iCtr++)
+                {
+                    if (inputString[iCtr] == 'a')
+                    {
+                        count++;
+                    }
+                }
             }
             WriteLine($"a found {count} times");
 
