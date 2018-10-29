@@ -1,6 +1,7 @@
 ﻿using CSharp7.Demo.Data;
 using CSharp7.DemoApp.ExecuteMethods;
 using CSharp7.Logic.Programs;
+using CSharp7.Logic.Programs.StringsDemo;
 using Functional.Programs.Library;
 using GenericsDemo.Library;
 using LambdaDemo.Library;
@@ -78,6 +79,12 @@ namespace CSharp7.DemoApp
             var numbers = new List<int> { 3, 8, 4, 6, 1, 7, 5, 2, 9, 10 };
 
             ForegroundColor = ConsoleColor.Yellow;
+
+            WriteLine($"***** Make Anagrams *****");
+            var a = "fcrxzwscanmligyxyvym";
+            var b = "jxwtrhvujlmrpdoqbisbwhmgpmeoke";
+            var tobeRemoved = new MakeAnagrams().Execute(a, b);
+            Write($"We have to remove {tobeRemoved} characters for ");
 
             WriteLine($"***** Reapted String *****");
             Write($"Enter a String [For searching a]");
