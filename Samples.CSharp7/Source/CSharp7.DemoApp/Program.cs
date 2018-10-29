@@ -79,8 +79,7 @@ namespace CSharp7.DemoApp
 
             ForegroundColor = ConsoleColor.Yellow;
 
-            WriteLine($"Reapted String");
-
+            WriteLine($"***** Reapted String *****");
             Write($"Enter a String [For searching a]");
             var inputString = ReadLine();
             Write($"Enter The Length: ");
