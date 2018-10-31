@@ -1,6 +1,5 @@
 ﻿using CSharp7.Demo.Data;
 using CSharp7.DemoApp.ExecuteMethods;
-using CSharp7.Logic.Programs;
 using CSharp7.Logic.Programs.StringsDemo;
 using Functional.Programs.Library;
 using GenericsDemo.Library;
