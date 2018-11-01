@@ -6,10 +6,9 @@
         private int GetRemoveCount(string firstData, string secondData)
         {
             var count = 0;
-            for (int iCtr = 0; iCtr < firstData.Length; iCtr++)
+            foreach(var current in firstData)
             {
-                // Characters to be Removed
-                if (secondData.IndexOf(firstData[iCtr]) < 0)
+                if(secondData.IndexOf(current) < 0)
                 {
                     count++;
                 }
