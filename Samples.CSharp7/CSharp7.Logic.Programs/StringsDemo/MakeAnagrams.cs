@@ -1,26 +1,17 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace CSharp7.Logic.Programs.StringsDemo
 {
     public class MakeAnagrams
     {
 
-        private int[] charcterCount = new int[26];
-
-        //private void GetRemoveCount(string firstData, string secondData)
-        //{
-        //    var count = 0;
-        //    foreach(var current in firstData)
-        //    {
-        //        charcterCount[current - 'a']++;
-        //    }
-
-        //    return count;
-        //}
-
         public int Execute(string firstData, string secondData)
         {
+            int[] charcterCount = new int[26];
             var tobeRemoved = 0;
+            Stopwatch stopwatch = Stopwatch.StartNew();
+
             foreach (var current in firstData)
             {
                 charcterCount[current - 'a']++;
@@ -35,6 +26,9 @@ namespace CSharp7.Logic.Programs.StringsDemo
             {
                 tobeRemoved += Math.Abs(current);
             }
+
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.ElapsedMilliseconds);
 
             return tobeRemoved;
         }
