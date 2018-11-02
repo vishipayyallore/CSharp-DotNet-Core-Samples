@@ -80,6 +80,18 @@ namespace CSharp7.DemoApp
 
             ForegroundColor = ConsoleColor.Yellow;
 
+            WriteLine($"***** Alternating Characters *****");
+            var alerts = "AAABBB";
+            var remove = 0;
+            for(var iCtr=0; iCtr < alerts.Length-1; iCtr++)
+            {
+                if( alerts[iCtr] == alerts[iCtr+1])
+                {
+                    remove++;
+                }
+            }
+            Write($"We have to remove {remove} characters for ");
+
             WriteLine($"***** Make Anagrams *****");
             var a = "fcrxzwscanmligyxyvym";
             var b = "jxwtrhvujlmrpdoqbisbwhmgpmeoke";
