@@ -87,40 +87,13 @@ namespace CSharp7.DemoApp
             Write($"We have to remove {tobeRemoved} characters for ");
 
             WriteLine($"***** Reapted String *****");
-            Write($"Enter a String [For searching a]");
+            Write($"Enter a String [For searching (a)]");
             var inputString = ReadLine();
             Write($"Enter The Length: ");
             long n = Convert.ToInt64(Console.ReadLine());
 
             var count = new RepeatedString().Execute(inputString, n);
             WriteLine($"a found {count} times");
-
-            //long count = 0;
-            //long remaining = 0;
-
-            //long toTraverse = (inputString.Length <= n) ? inputString.Length : n;
-            //for(int iCtr=0; iCtr<toTraverse; iCtr++)
-            //{
-            //    if(inputString[iCtr] == 'a')
-            //    {
-            //        count++;
-            //    }
-            //}
-
-            //if(inputString.Length <= n)
-            //{
-            //    count = (n / inputString.Length) * count;
-            //    remaining = (n % inputString.Length);
-
-            //    for (int iCtr = 0; iCtr < remaining; iCtr++)
-            //    {
-            //        if (inputString[iCtr] == 'a')
-            //        {
-            //            count++;
-            //        }
-            //    }
-            //}
-
 
             new ShowLogicDemos()
                 .JumpingOnTheCloudsDemo()
