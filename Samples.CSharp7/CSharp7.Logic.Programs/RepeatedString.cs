@@ -7,7 +7,7 @@ namespace CSharp7.Logic.Programs
     public class RepeatedString
     {
 
-        public long Execute(string inputString, int n)
+        public long Execute(string inputString, long n)
         {
             long count = 0;
             long remaining = 0;

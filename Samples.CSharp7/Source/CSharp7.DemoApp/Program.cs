@@ -1,5 +1,6 @@
 ﻿using CSharp7.Demo.Data;
 using CSharp7.DemoApp.ExecuteMethods;
+using CSharp7.Logic.Programs;
 using CSharp7.Logic.Programs.StringsDemo;
 using Functional.Programs.Library;
 using GenericsDemo.Library;
@@ -90,32 +91,36 @@ namespace CSharp7.DemoApp
             var inputString = ReadLine();
             Write($"Enter The Length: ");
             long n = Convert.ToInt64(Console.ReadLine());
-            long count = 0;
-            long remaining = 0;
 
-            long toTraverse = (inputString.Length <= n) ? inputString.Length : n;
-            for(int iCtr=0; iCtr<toTraverse; iCtr++)
-            {
-                if(inputString[iCtr] == 'a')
-                {
-                    count++;
-                }
-            }
-
-            if(inputString.Length <= n)
-            {
-                count = (n / inputString.Length) * count;
-                remaining = (n % inputString.Length);
-
-                for (int iCtr = 0; iCtr < remaining; iCtr++)
-                {
-                    if (inputString[iCtr] == 'a')
-                    {
-                        count++;
-                    }
-                }
-            }
+            var count = new RepeatedString().Execute(inputString, n);
             WriteLine($"a found {count} times");
+
+            //long count = 0;
+            //long remaining = 0;
+
+            //long toTraverse = (inputString.Length <= n) ? inputString.Length : n;
+            //for(int iCtr=0; iCtr<toTraverse; iCtr++)
+            //{
+            //    if(inputString[iCtr] == 'a')
+            //    {
+            //        count++;
+            //    }
+            //}
+
+            //if(inputString.Length <= n)
+            //{
+            //    count = (n / inputString.Length) * count;
+            //    remaining = (n % inputString.Length);
+
+            //    for (int iCtr = 0; iCtr < remaining; iCtr++)
+            //    {
+            //        if (inputString[iCtr] == 'a')
+            //        {
+            //            count++;
+            //        }
+            //    }
+            //}
+
 
             new ShowLogicDemos()
                 .JumpingOnTheCloudsDemo()
