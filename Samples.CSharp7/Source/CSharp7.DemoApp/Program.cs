@@ -81,8 +81,8 @@ namespace CSharp7.DemoApp
             ForegroundColor = ConsoleColor.Yellow;
 
             int[] charcterCount = new int[26];
-            // var inputData = "abcdefghhgfedecba";
-            var inputData = "aabbccddeefghi";
+            // var inputData = "abcdefghhgfedecba"; // YES
+            var inputData = "aabbccddeefghi"; // NO
             var characterRemoved = 0;
             foreach (var current in inputData)
             {
