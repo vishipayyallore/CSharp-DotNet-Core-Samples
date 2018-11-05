@@ -91,10 +91,10 @@ namespace CSharp7.DemoApp
 
             foreach (var current in charcterCount)
             {
-                if(current%2 == 1)
+                if (current % 2 == 1)
                 {
                     characterRemoved++;
-                    if(characterRemoved >= 2)
+                    if (characterRemoved >= 2)
                     {
                         break;
                     }
@@ -107,9 +107,9 @@ namespace CSharp7.DemoApp
             WriteLine($"***** Alternating Characters *****");
             var alerts = "AAABBB";
             var remove = 0;
-            for(var iCtr=0; iCtr < alerts.Length-1; iCtr++)
+            for (var iCtr = 0; iCtr < alerts.Length - 1; iCtr++)
             {
-                if( alerts[iCtr] == alerts[iCtr+1])
+                if (alerts[iCtr] == alerts[iCtr + 1])
                 {
                     remove++;
                 }
