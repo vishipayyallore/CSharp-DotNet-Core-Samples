@@ -81,27 +81,40 @@ namespace CSharp7.DemoApp
             ForegroundColor = ConsoleColor.Yellow;
 
             int[] charcterCount = new int[26];
-            // var inputData = "abcdefghhgfedecba"; // YES
-            var inputData = "aabbccddeefghi"; // NO
+            var inputData = "abcdefghhgfedecba"; // YES
+            // var inputData = "aabbccddeefghi"; // NO
             var characterRemoved = 0;
             foreach (var current in inputData)
             {
                 charcterCount[current - 'a']++;
             }
 
+            int count1 = 0, y = 0;
             foreach (var current in charcterCount)
             {
-                if (current % 2 == 1)
+                if(current == 0 )
                 {
-                    characterRemoved++;
-                    if (characterRemoved >= 2)
-                    {
-                        break;
-                    }
+                    continue;
                 }
+                if (current > count1)
+                {
+                    count1 = current;
+                }
+                if (current != count1 && count1 > 0)
+                {
+                    y += current;
+                }
+                //if (current % 2 == 1)
+                //{
+                //    characterRemoved++;
+                //    if (characterRemoved >= 2)
+                //    {
+                //        break;
+                //    }
+                //}
             }
 
-            var validString = (characterRemoved == 2) ? "NO" : "YES";
+            var validString = ((y - 1) - count1 == 0 || y == 0 || y - 1 == 0) ? "YES" : "NO";
             Write($"Valid String: {validString} ");
 
             WriteLine($"***** Alternating Characters *****");
