@@ -89,33 +89,21 @@ namespace CSharp7.DemoApp
                 charcterCount[current - 'a']++;
             }
 
-            int count1 = 0, y = 0;
+            int count1 = charcterCount.Where(nn => nn != 0).Min(), y = 0;
             foreach (var current in charcterCount)
             {
                 if(current == 0 )
                 {
                     continue;
                 }
-                if (current > count1)
+
+                if (current != count1)
                 {
-                    count1 = current;
-                }
-                if (current != count1 && count1 > 0)
-                {
-                    y += current;
+                    y++;
                 }
             }
 
-            //if (current % 2 == 1)
-            //{
-            //    characterRemoved++;
-            //    if (characterRemoved >= 2)
-            //    {
-            //        break;
-            //    }
-            //}
-
-            var validString = ((y - 1) - count1 == 0 || y == 0 || y - 1 == 0) ? "YES" : "NO";
+            var validString = (y == 1) ? "YES" : "NO";
             Write($"Valid String: {validString} ");
 
             WriteLine($"***** Alternating Characters *****");
