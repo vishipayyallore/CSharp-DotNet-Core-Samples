@@ -104,15 +104,16 @@ namespace CSharp7.DemoApp
                 {
                     y += current;
                 }
-                //if (current % 2 == 1)
-                //{
-                //    characterRemoved++;
-                //    if (characterRemoved >= 2)
-                //    {
-                //        break;
-                //    }
-                //}
             }
+
+            //if (current % 2 == 1)
+            //{
+            //    characterRemoved++;
+            //    if (characterRemoved >= 2)
+            //    {
+            //        break;
+            //    }
+            //}
 
             var validString = ((y - 1) - count1 == 0 || y == 0 || y - 1 == 0) ? "YES" : "NO";
             Write($"Valid String: {validString} ");
