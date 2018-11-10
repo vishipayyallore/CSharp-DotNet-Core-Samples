@@ -6,12 +6,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json.Schema" Version="3.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\CSharp7.Logic.Programs\CSharp7.Logic.Programs.csproj" />
     <ProjectReference Include="..\..\LambdaDemo.Library\LambdaDemo.Library.csproj" />
     <ProjectReference Include="..\CSharp7.Demo.Data\CSharp7.Demo.Data.csproj" />
     <ProjectReference Include="..\Functional.Programs.Library\Functional.Programs.Library.csproj" />
     <ProjectReference Include="..\GenericsDemo.Library\GenericsDemo.Library.csproj" />
     <ProjectReference Include="..\TupulesDemo.Library\TupulesDemo.Library.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Classes\" />
   </ItemGroup>
 
 </Project>

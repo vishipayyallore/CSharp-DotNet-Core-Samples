@@ -5,6 +5,8 @@ using CSharp7.Logic.Programs.StringsDemo;
 using Functional.Programs.Library;
 using GenericsDemo.Library;
 using LambdaDemo.Library;
+using Newtonsoft.Json.Schema;
+using Newtonsoft.Json.Schema.Generation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -79,6 +81,11 @@ namespace CSharp7.DemoApp
             var numbers = new List<int> { 3, 8, 4, 6, 1, 7, 5, 2, 9, 10 };
 
             ForegroundColor = ConsoleColor.Yellow;
+
+            // For JSON schema creation
+            JSchemaGenerator generator = new JSchemaGenerator();
+            JSchema schema = generator.Generate(typeof(Person));
+            WriteLine($"JSON Schema for Person Class: {schema}");
 
             int[] charcterCount = new int[26];
             var inputData = "abcdefghhgfedecba"; // YES
