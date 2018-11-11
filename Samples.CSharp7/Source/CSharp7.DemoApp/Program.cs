@@ -89,8 +89,6 @@ namespace CSharp7.DemoApp
 
             int[] charcterCount = new int[26];
             var inputData = "abcdefghhgfedecba"; // YES
-            // var inputData = "aabbccddeefghi"; // NO
-            var characterRemoved = 0;
             foreach (var current in inputData)
             {
                 charcterCount[current - 'a']++;
@@ -99,7 +97,7 @@ namespace CSharp7.DemoApp
             int count1 = charcterCount.Where(nn => nn != 0).Min(), y = 0;
             foreach (var current in charcterCount)
             {
-                if(current == 0 )
+                if (current == 0)
                 {
                     continue;
                 }
