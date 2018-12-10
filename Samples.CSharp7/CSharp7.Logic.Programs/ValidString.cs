@@ -1,7 +1,34 @@
 ﻿namespace CSharp7.Logic.Programs
 {
-    public class ValidString
+    public static class ValidString
     {
+
+        static string isValid(string inputData)
+        {
+            int[] charcterCount = new int[26];
+            var characterRemoved = 0;
+
+            foreach (var current in inputData)
+            {
+                charcterCount[current - 'a']++;
+            }
+
+            foreach (var current in charcterCount)
+            {
+                if (current % 2 == 1)
+                {
+                    characterRemoved++;
+                    if (characterRemoved >= 2)
+                    {
+                        break;
+                    }
+                }
+            }
+
+            return (characterRemoved == 2) ? "NO" : "YES";
+
+        }
+
     }
 
 }
