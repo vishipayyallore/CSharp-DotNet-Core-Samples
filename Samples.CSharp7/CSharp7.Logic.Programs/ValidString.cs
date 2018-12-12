@@ -25,6 +25,7 @@
                 }
             }
 
+            // If the Character Count contains only 1 alphabet series it should return "YES"
             return (characterRemoved == 2) ? "NO" : "YES";
 
         }
