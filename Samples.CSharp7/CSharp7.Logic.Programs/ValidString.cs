@@ -13,6 +13,8 @@
                 charcterCount[current - 'a']++;
             }
 
+            // charcterCount.so
+
             foreach (var current in charcterCount)
             {
                 if (current % 2 == 1)
