@@ -3,6 +3,7 @@
     public static class ValidString
     {
 
+        // Need to change the logic to have array instead of dictionary.
         static string isValid(string inputData)
         {
             int[] charcterCount = new int[26];
