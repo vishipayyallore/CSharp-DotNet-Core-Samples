@@ -1,4 +1,6 @@
-﻿namespace CSharp7.Logic.Programs
+﻿using System;
+
+namespace CSharp7.Logic.Programs
 {
     public static class ValidString
     {
@@ -14,7 +16,7 @@
                 charcterCount[current - 'a']++;
             }
 
-            // charcterCount.so
+            Array.Sort(charcterCount);
 
             foreach (var current in charcterCount)
             {
