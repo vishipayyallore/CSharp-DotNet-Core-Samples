@@ -87,6 +87,8 @@ namespace CSharp7.DemoApp
             JSchema schema = generator.Generate(typeof(Person));
             WriteLine($"JSON Schema for Person Class: {schema}");
 
+            ValidString.IsValid("aaabab");
+
             int[] charcterCount = new int[26];
             var inputData = "abcdefghhgfedecba"; // YES
             foreach (var current in inputData)

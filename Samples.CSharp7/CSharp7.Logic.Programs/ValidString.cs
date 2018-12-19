@@ -6,7 +6,7 @@ namespace CSharp7.Logic.Programs
     {
 
         // Need to change the logic to have array instead of dictionary.
-        static string isValid(string inputData)
+        public static string IsValid(string inputData)
         {
             int[] charcterCount = new int[26];
             var characterRemoved = 0;
