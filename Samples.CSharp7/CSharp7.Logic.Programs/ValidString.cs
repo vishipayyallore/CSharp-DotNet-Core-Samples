@@ -8,6 +8,14 @@ namespace CSharp7.Logic.Programs
         // Need to change the logic to have array instead of dictionary.
         public static string IsValid(string inputData)
         {
+            var returnNo = "NO";
+            var returnYes = "YES";
+
+            if (string.IsNullOrWhiteSpace(inputData) || inputData.Length <= 3)
+            {
+                return returnNo;
+            }
+
             int[] charcterCount = new int[26];
             var characterRemoved = 0;
 
@@ -31,7 +39,7 @@ namespace CSharp7.Logic.Programs
             }
 
             // If the Character Count contains only 1 alphabet series it should return "YES"
-            return (characterRemoved == 2) ? "NO" : "YES";
+            return (characterRemoved == 2) ? returnNo : returnYes;
 
         }
 
