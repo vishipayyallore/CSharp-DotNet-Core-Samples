@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace CSharp7.Logic.Programs
 {
@@ -26,20 +27,21 @@ namespace CSharp7.Logic.Programs
 
             Array.Sort(charcterCount);
 
-            foreach (var current in charcterCount)
-            {
-                if (current % 2 == 1)
-                {
-                    characterRemoved++;
-                    if (characterRemoved >= 2)
-                    {
-                        break;
-                    }
-                }
-            }
+            var minimum = charcterCount.Min(element => element != 0);
+            var maximum = charcterCount.Max(element => element != 0);
 
-            // If the Character Count contains only 1 alphabet series it should return "YES"
-            return (characterRemoved == 2) ? returnNo : returnYes;
+            if (minimum == maximum)
+            {
+                return returnYes;
+            }
+            else
+            {
+                // remove one letter at higher frequency or the lower frequency 
+                if (((maximum - minimum == 1) && (maximum > letters[24])) ||
+                    (minimum == 1) && (letters[i + 1] == maximum))
+                    return returnYes;
+            }
+            return returnNo;
 
         }
 
