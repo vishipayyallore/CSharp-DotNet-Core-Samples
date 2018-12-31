@@ -18,8 +18,6 @@ namespace CSharp7.Logic.Programs
             }
 
             int[] charcterCount = new int[26];
-            var characterRemoved = 0;
-
             foreach (var current in inputData)
             {
                 charcterCount[current - 'a']++;
@@ -37,8 +35,8 @@ namespace CSharp7.Logic.Programs
             else
             {
                 // remove one letter at higher frequency or the lower frequency 
-                if (((maximum - minimum == 1) && (maximum > letters[24])) ||
-                    (minimum == 1) && (letters[i + 1] == maximum))
+                if (((maximum - minimum == 1) && (maximum > charcterCount[24])) ||
+                    (minimum == 1) && (charcterCount[i + 1] == maximum))
                     return returnYes;
             }
             return returnNo;
