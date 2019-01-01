@@ -12,9 +12,14 @@ namespace CSharp7.Logic.Programs
             var returnNo = "NO";
             var returnYes = "YES";
 
-            if (string.IsNullOrWhiteSpace(inputData) || inputData.Length <= 3)
+            if (string.IsNullOrWhiteSpace(inputData))
             {
                 return returnNo;
+            }
+
+            if (inputData.Length <= 3)
+            {
+                return returnYes;
             }
 
             int[] charcterCount = new int[26];
@@ -24,9 +29,14 @@ namespace CSharp7.Logic.Programs
             }
 
             Array.Sort(charcterCount);
+            int i = 0;
+            while (charcterCount[i] == 0)
+            {
+                i++;
+            }
 
-            var minimum = charcterCount.Min(element => element != 0);
-            var maximum = charcterCount.Max(element => element != 0);
+            var minimum = charcterCount[i];
+            var maximum = charcterCount[25];
 
             if (minimum == maximum)
             {
