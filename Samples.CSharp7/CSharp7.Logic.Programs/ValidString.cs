@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace CSharp7.Logic.Programs
 {
@@ -47,7 +46,9 @@ namespace CSharp7.Logic.Programs
                 // remove one letter at higher frequency or the lower frequency 
                 if (((maximum - minimum == 1) && (maximum > charcterCount[24])) ||
                     (minimum == 1) && (charcterCount[i + 1] == maximum))
+                {
                     return returnYes;
+                }
             }
             return returnNo;
 
