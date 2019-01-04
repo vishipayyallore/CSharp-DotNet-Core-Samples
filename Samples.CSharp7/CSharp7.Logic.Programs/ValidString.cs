@@ -8,8 +8,9 @@ namespace CSharp7.Logic.Programs
         // Need to change the logic to have array instead of dictionary.
         public static string IsValid(string inputData)
         {
-            var returnNo = "NO";
-            var returnYes = "YES";
+            int[] charcterCount = new int[26];
+            const string returnNo = "NO";
+            const string returnYes = "YES";
 
             if (string.IsNullOrWhiteSpace(inputData))
             {
@@ -21,13 +22,13 @@ namespace CSharp7.Logic.Programs
                 return returnYes;
             }
 
-            int[] charcterCount = new int[26];
             foreach (var current in inputData)
             {
                 charcterCount[current - 'a']++;
             }
 
             Array.Sort(charcterCount);
+
             int i = 0;
             while (charcterCount[i] == 0)
             {
