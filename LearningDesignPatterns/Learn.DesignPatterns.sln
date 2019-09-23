@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{EB699A35-1CC0-4651-8937-C12EC1A29E70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{787E9BE0-EC73-4422-968A-D9DC29B66D31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BehavioralPatterns", "BehavioralPatterns", "{F6E352AE-9235-46AF-85E9-44F54F9EFBE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CreationalPatterns", "CreationalPatterns", "{A59B244C-DE42-419E-9386-79A02B3B2958}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StructuralPatterns", "StructuralPatterns", "{7E058D38-468D-4E1E-9FF7-662980845D97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StructuralPatterns", "StructuralPatterns", "{78C265BA-B380-4727-BB95-1E98CF6AE228}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CreationalPatterns", "CreationalPatterns", "{7B62E439-C3A8-403D-A262-5D9C982FA25E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BehavioralPatterns", "BehavioralPatterns", "{60EC8FD4-EF9C-4CEA-8B33-C11AA129F224}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7B8574F9-01D5-43F7-8ADE-0C186A7C848D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F6E352AE-9235-46AF-85E9-44F54F9EFBE2} = {EB699A35-1CC0-4651-8937-C12EC1A29E70}
+		{A59B244C-DE42-419E-9386-79A02B3B2958} = {EB699A35-1CC0-4651-8937-C12EC1A29E70}
+		{7E058D38-468D-4E1E-9FF7-662980845D97} = {EB699A35-1CC0-4651-8937-C12EC1A29E70}
+		{78C265BA-B380-4727-BB95-1E98CF6AE228} = {787E9BE0-EC73-4422-968A-D9DC29B66D31}
+		{7B62E439-C3A8-403D-A262-5D9C982FA25E} = {787E9BE0-EC73-4422-968A-D9DC29B66D31}
+		{60EC8FD4-EF9C-4CEA-8B33-C11AA129F224} = {787E9BE0-EC73-4422-968A-D9DC29B66D31}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2BF57513-B0DF-470E-A2B2-0565A3D18C43}
+	EndGlobalSection
+EndGlobal
