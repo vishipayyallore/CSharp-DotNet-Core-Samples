@@ -12,9 +12,16 @@
 
 ## Null Pattern
 
+Definition
+
+UML Diagram
+
+Participants
+
 Intent
 
 Applicability
+
 
 
 
