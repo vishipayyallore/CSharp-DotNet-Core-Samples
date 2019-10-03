@@ -15,6 +15,7 @@
 Definition
 
 UML Diagram
+![NULL Pattern](https://github.com/vishipayyallore/CSharp-DotNet-Core-Samples/blob/master/LearningDesignPatterns/Images/NullPattern.png)
 
 Participants
 
