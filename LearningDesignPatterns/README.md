@@ -1,6 +1,6 @@
 # CSharp-DotNet-Core-Samples
 
-## Learning Design Patterns using C# . Refering multiple books and web sites.
+## Learning Design Patterns using C# . Referring multiple books and web sites.
 
 ## Creational Patterns
 
