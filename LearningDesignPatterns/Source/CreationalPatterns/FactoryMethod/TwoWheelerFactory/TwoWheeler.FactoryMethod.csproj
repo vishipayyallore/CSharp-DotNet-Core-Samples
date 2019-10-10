@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>TwoWheeler.FactoryMethod</AssemblyName>
+    <RootNamespace>TwoWheeler.FactoryMethod</RootNamespace>
   </PropertyGroup>
 
 </Project>
