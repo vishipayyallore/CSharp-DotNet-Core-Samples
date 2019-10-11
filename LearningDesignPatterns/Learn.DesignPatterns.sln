@@ -39,11 +39,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{BD58EF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FactoryMethod", "FactoryMethod", "{051548D1-2433-4FBF-BB5F-F4E41E241082}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoWheelerFactory", "Source\CreationalPatterns\FactoryMethod\TwoWheelerFactory\TwoWheelerFactory.csproj", "{9535C76E-267B-4B27-AC32-CB8E3E6F661E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwoWheeler.FactoryMethod", "Source\CreationalPatterns\FactoryMethod\TwoWheelerFactory\TwoWheeler.FactoryMethod.csproj", "{9535C76E-267B-4B27-AC32-CB8E3E6F661E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FactoryMethod", "FactoryMethod", "{6CB7427E-01B8-491D-B1D5-69E17299AA86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoWheeler.Tests", "Tests\CreationalPatterns\FactoryMethod\TwoWheeler.Tests\TwoWheeler.Tests.csproj", "{D97E8C98-BA25-401B-AE8E-38B08B04E596}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwoWheeler.Tests", "Tests\CreationalPatterns\FactoryMethod\TwoWheeler.Tests\TwoWheeler.Tests.csproj", "{D97E8C98-BA25-401B-AE8E-38B08B04E596}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
