@@ -7,8 +7,6 @@ namespace Sample1
     {
         static void Main(string[] args)
         {
-            BigInteger bigInteger = new BigInteger(double.MaxValue);
-
             var output = GetFactorial(30);
             Console.WriteLine($"Factorial: {output}");
 
