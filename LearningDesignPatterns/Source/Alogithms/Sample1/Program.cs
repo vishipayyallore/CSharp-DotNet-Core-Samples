@@ -1,5 +1,5 @@
-﻿using System;
-using System.Numerics;
+﻿using System.Numerics;
+using static System.Console;
 
 namespace Sample1
 {
@@ -7,10 +7,15 @@ namespace Sample1
     {
         static void Main(string[] args)
         {
-            var output = GetFactorial(30);
-            Console.WriteLine($"Factorial: {output}");
 
-            Console.ReadLine();
+            Write("Enter a number for finding Factorial: ");
+            var value = ReadLine();
+
+            if (int.TryParse(value, out int number))
+            {
+                var factorial = GetFactorial(number);
+                WriteLine($"Factorial: {factorial}");
+            }
         }
 
         private static BigInteger GetFactorial(int number)
