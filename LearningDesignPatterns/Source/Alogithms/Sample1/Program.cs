@@ -1,7 +1,7 @@
 ﻿using System.Numerics;
 using static System.Console;
 
-namespace Sample1
+namespace LogicPrograms
 {
     class Program
     {

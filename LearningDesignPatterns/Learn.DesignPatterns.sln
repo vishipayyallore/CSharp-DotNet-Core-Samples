@@ -47,7 +47,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwoWheeler.Tests", "Tests\C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Algorithms", "Algorithms", "{346AEA68-9F7B-4318-9D70-494E069A312E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample1", "Source\Alogithms\Sample1\Sample1.csproj", "{F7CF943B-C021-4A41-A01F-4ACDAD36459A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogicPrograms", "Source\Alogithms\Sample1\LogicPrograms.csproj", "{F7CF943B-C021-4A41-A01F-4ACDAD36459A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
