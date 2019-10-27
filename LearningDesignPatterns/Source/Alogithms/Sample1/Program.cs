@@ -1,6 +1,5 @@
 ﻿using LogicPrograms.Interfaces;
 using LogicPrograms.Logics;
-using System.Numerics;
 using static System.Console;
 
 namespace LogicPrograms
@@ -21,16 +20,6 @@ namespace LogicPrograms
                 WriteLine($"Factorial: {factorial}");
             }
         }
-
-        //private static BigInteger GetFactorial(int number)
-        //{
-        //    if (number == 0)
-        //    {
-        //        return 1;
-        //    }
-
-        //    return number * GetFactorial(number - 1);
-        //}
 
     }
 
