@@ -25,6 +25,8 @@ namespace LogicPrograms.Logics
             {
                 Write($"1 ");
             }
+
+            WriteLine();
         }
 
     }
