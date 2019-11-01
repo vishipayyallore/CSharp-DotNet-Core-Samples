@@ -19,7 +19,7 @@ namespace LogicPrograms
             //------------------------------------------------------------------------------------------
             IMath math = new Math();
 
-            Write("\nEnter a number for finding Factorial: ");
+            Write("\n\nEnter a number for finding Factorial: ");
 
             if (int.TryParse(ReadLine(), out int number))
             {
