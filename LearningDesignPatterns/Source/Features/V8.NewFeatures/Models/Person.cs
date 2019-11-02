@@ -1,16 +1,7 @@
 ﻿using System;
 
-namespace NewFeatures
+namespace V8.NewFeatures.Models
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
-    }
-
-
     public struct Person
     {
         public Guid Id { get; set; }
