@@ -18,7 +18,7 @@ namespace LogicPrograms.Logics
                     oneCount++;
                     continue;
                 }
-                Write($"{item} ");
+                Write($"0 ");
             }
 
             for (var counter = 0; counter < oneCount; counter++)
