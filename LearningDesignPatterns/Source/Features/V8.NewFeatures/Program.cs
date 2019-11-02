@@ -9,8 +9,9 @@ namespace V8.NewFeatures
         static void Main(string[] args)
         {
 
-            Person person = new Person();
-            
+            Person person = new Person { Id = Guid.NewGuid(), Name = "Shiva Sai" };
+            WriteLine(person);
+
             WriteLine("\n\nPress any key ...");
             ReadKey();
         }
