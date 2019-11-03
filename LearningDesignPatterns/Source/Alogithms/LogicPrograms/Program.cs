@@ -12,6 +12,13 @@ namespace LogicPrograms
             //------------------------------------------------------------------------------------------
             var arrayItems = new int[] { 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0 };
 
+            var left = 0;
+            var right = arrayItems.Length - 1;
+            for(var index=0; index<arrayItems.Length; index++)
+            {
+
+            }
+
             ISortBinaryArray sortBinaryArray = new SortBinaryArray();
             sortBinaryArray.SortArray(arrayItems);
             //------------------------------------------------------------------------------------------
