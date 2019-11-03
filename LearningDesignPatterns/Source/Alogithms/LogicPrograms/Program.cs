@@ -16,7 +16,14 @@ namespace LogicPrograms
             var right = arrayItems.Length - 1;
             for(var index=0; index<arrayItems.Length; index++)
             {
-
+                if(arrayItems[left] > arrayItems[right])
+                {
+                    var temp = arrayItems[left];
+                    arrayItems[left] = arrayItems[right];
+                    arrayItems[right] = temp;
+                    left++;
+                    right--;
+                }
             }
 
             ISortBinaryArray sortBinaryArray = new SortBinaryArray();
