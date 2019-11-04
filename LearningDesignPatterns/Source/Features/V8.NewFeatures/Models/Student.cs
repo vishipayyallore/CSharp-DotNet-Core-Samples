@@ -1,10 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace V8.NewFeatures.Models
+﻿namespace V8.NewFeatures.Models
 {
-    class Student
+
+    // Read-only auto-properties. C# 6.0
+    public class Student
     {
+
+        public string FirstName { get; }
+
+        public string LastName { get; }
+
+        public Student(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+        }
+
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName}";
+        }
+
     }
+
 }
