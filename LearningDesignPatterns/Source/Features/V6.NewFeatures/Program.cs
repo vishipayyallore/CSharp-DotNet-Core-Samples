@@ -1,17 +1,15 @@
-﻿using System;
-using V8.NewFeatures.Models;
+﻿using V6.NewFeatures.Models;
 using static System.Console;
 
-namespace V8.NewFeatures
+namespace V6.NewFeatures
 {
+
     class Program
     {
         static void Main(string[] args)
         {
-
-
-            Person person = new Person { Id = Guid.NewGuid(), Name = "Shiva Sai" };
-            WriteLine(person);
+            Student student = new Student("Shiva", "Sai");
+            WriteLine(student);
 
             WriteLine("\n\nPress any key ...");
             ReadKey();

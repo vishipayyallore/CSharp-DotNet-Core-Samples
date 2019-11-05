@@ -1,4 +1,4 @@
-﻿namespace V8.NewFeatures.Models
+﻿namespace V6.NewFeatures.Models
 {
 
     // Read-only auto-properties. C# 6.0
