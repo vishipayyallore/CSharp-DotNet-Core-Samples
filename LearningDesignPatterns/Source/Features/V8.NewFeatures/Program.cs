@@ -8,8 +8,6 @@ namespace V8.NewFeatures
     {
         static void Main(string[] args)
         {
-
-
             Person person = new Person { Id = Guid.NewGuid(), Name = "Shiva Sai" };
             WriteLine(person);
 
