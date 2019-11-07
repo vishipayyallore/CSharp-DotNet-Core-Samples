@@ -61,7 +61,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "V6.NewFeatures", "Source\Fe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataStructures", "DataStructures", "{99DE4835-4EFC-45BF-BD14-5654FAA6B26B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList.Demos", "Source\DataStructures\LinkedList.Demos\LinkedList.Demos.csproj", "{702D0AC3-EC2B-4B02-9D7F-1E9D9DB17B0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedList.Demos", "Source\DataStructures\LinkedList.Demos\LinkedList.Demos.csproj", "{702D0AC3-EC2B-4B02-9D7F-1E9D9DB17B0A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LinkedLists", "LinkedLists", "{59774B6E-CB92-4C3F-B3ED-548EF8975622}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -134,6 +136,7 @@ Global
 		{B7D561BE-EE15-4E33-AAA8-7BE1785FDA7B} = {7071A56C-9BAA-4A30-8627-38A1484BD1C2}
 		{99DE4835-4EFC-45BF-BD14-5654FAA6B26B} = {EB699A35-1CC0-4651-8937-C12EC1A29E70}
 		{702D0AC3-EC2B-4B02-9D7F-1E9D9DB17B0A} = {99DE4835-4EFC-45BF-BD14-5654FAA6B26B}
+		{59774B6E-CB92-4C3F-B3ED-548EF8975622} = {99DE4835-4EFC-45BF-BD14-5654FAA6B26B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2BF57513-B0DF-470E-A2B2-0565A3D18C43}
