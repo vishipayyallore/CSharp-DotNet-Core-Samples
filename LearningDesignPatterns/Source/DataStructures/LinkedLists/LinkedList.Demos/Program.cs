@@ -27,6 +27,8 @@ namespace LinkedList.Demos
         static void Main(string[] args)
         {
 
+            DisplayMonths();
+
             var node = new Node { Value = 101 };
             WriteLine(node);
 
@@ -39,5 +41,15 @@ namespace LinkedList.Demos
             WriteLine("\n\nPress any key ...");
             ReadKey();
         }
+
+
+        private static void DisplayMonths()
+        {
+            for(var month=1; month <=12; month++)
+            {
+                WriteLine($"{month}. {new DateTime(DateTime.Now.Year, month, 1).ToString("MMMM")}");
+            }
+        }
+
     }
 }
