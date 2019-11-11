@@ -14,6 +14,9 @@ namespace LinkedList.Demos
             var node = new Node { Value = 101 };
             WriteLine(node);
 
+            node.NextNode = new Node { Value = 102 };
+            WriteLine(node.NextNode);
+
             //GCHandle handle = GCHandle.Alloc(node, GCHandleType.WeakTrackResurrection);
             //IntPtr address = GCHandle.ToIntPtr(handle);
             //WriteLine($"Value: {node.Value} at Address: {address}");
