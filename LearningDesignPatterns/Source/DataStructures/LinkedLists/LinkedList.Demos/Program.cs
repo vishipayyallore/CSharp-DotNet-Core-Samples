@@ -17,10 +17,6 @@ namespace LinkedList.Demos
             node.NextNode = new Node { Value = 102 };
             WriteLine(node.NextNode);
 
-            //GCHandle handle = GCHandle.Alloc(node, GCHandleType.WeakTrackResurrection);
-            //IntPtr address = GCHandle.ToIntPtr(handle);
-            //WriteLine($"Value: {node.Value} at Address: {address}");
-
             WriteLine("\n\nPress any key ...");
             ReadKey();
         }
@@ -36,3 +32,8 @@ namespace LinkedList.Demos
 
     }
 }
+
+//GCHandle handle = GCHandle.Alloc(node, GCHandleType.WeakTrackResurrection);
+//IntPtr address = GCHandle.ToIntPtr(handle);
+//WriteLine($"Value: {node.Value} at Address: {address}");
+
