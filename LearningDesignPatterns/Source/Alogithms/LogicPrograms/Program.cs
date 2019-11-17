@@ -9,6 +9,9 @@ namespace LogicPrograms
         static void Main(string[] args)
         {
 
+            IMonthNames monthNames = new MonthNames();
+            monthNames.DisplayMonthNames();
+
             //------------------------------------------------------------------------------------------
             var arrayItems = new int[] { 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0 };
 
