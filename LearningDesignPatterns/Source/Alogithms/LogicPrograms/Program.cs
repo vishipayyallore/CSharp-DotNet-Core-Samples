@@ -10,7 +10,11 @@ namespace LogicPrograms
         {
 
             IMonthNames monthNames = new MonthNames();
-            monthNames.DisplayMonthNames();
+
+            for(var counter=1; counter <= 10; counter++)
+            {
+                monthNames.DisplayMonthNames();
+            }
 
             //------------------------------------------------------------------------------------------
             var arrayItems = new int[] { 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0 };
