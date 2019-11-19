@@ -1,5 +1,6 @@
 ﻿using LogicPrograms.Interfaces;
 using LogicPrograms.Logics;
+using System.Linq;
 using static System.Console;
 
 namespace LogicPrograms
@@ -8,6 +9,15 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
+
+
+            // Stair Case Program
+            var number1 = 4;
+            for(var index=1; index <= number1; index++)
+            {
+                WriteLine(string.Concat(Enumerable.Repeat("#", index)).PadLeft(number1));
+            }
+            
 
             IMonthNames monthNames = new MonthNames();
 
