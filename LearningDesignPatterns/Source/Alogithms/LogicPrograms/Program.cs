@@ -1,4 +1,5 @@
-﻿using LogicPrograms.Interfaces;
+﻿using LanguageExt;
+using LogicPrograms.Interfaces;
 using LogicPrograms.Logics;
 using System.Linq;
 using static System.Console;
@@ -9,7 +10,31 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
+            int[] array1 = { 1, 3, 5, 7, 9 };
+            int min = 0, max = 0;
 
+            for(int index=0; index < array1.Length; index++)
+            {
+                var current = array1.Sum() - array1[index];
+
+                if (index == 0)
+                {
+                    min = max = current;
+                }
+                else
+                {
+                    if(current > max)
+                    {
+                        max = current;
+                    }
+                    else if (current <= min)
+                    {
+                        min = current;
+                    }
+                }
+                WriteLine(array1.Sum() - array1[index]);
+            }
+            WriteLine($"{min} {max}");            
 
             GeneralPrograms generalPrograms = new GeneralPrograms();
             generalPrograms.DisplayStairCase(10);
