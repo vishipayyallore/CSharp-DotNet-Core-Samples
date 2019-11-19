@@ -11,6 +11,9 @@ namespace LogicPrograms
         {
 
 
+            GeneralPrograms generalPrograms = new GeneralPrograms();
+            generalPrograms.DisplayStairCase(10);
+
             // Stair Case Program
             var number1 = 4;
             for(var index=1; index <= number1; index++)
