@@ -9,46 +9,22 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
-            int[] array1 = { 1, 3, 5, 7, 9 };
-            int min = 0, max = 0;
-
-            for (int index = 0; index < array1.Length; index++)
-            {
-                var current = array1.Sum() - array1[index];
-
-                if (index == 0)
-                {
-                    min = max = current;
-                }
-                else
-                {
-                    if (current > max)
-                    {
-                        max = current;
-                    }
-                    else if (current <= min)
-                    {
-                        min = current;
-                    }
-                }
-                WriteLine(array1.Sum() - array1[index]);
-            }
-            WriteLine($"{min} {max}");
+            MinMaxInArray();
 
             GeneralPrograms generalPrograms = new GeneralPrograms();
             generalPrograms.DisplayStairCase(10);
 
             // Stair Case Program
             var number1 = 4;
-            for(var index=1; index <= number1; index++)
+            for (var index = 1; index <= number1; index++)
             {
                 WriteLine(string.Concat(Enumerable.Repeat("#", index)).PadLeft(number1));
             }
-            
+
 
             IMonthNames monthNames = new MonthNames();
 
-            for(var counter=1; counter <= 10; counter++)
+            for (var counter = 1; counter <= 10; counter++)
             {
                 monthNames.DisplayMonthNames();
             }
@@ -58,9 +34,9 @@ namespace LogicPrograms
 
             var left = 0;
             var right = arrayItems.Length - 1;
-            for(var index=0; index<arrayItems.Length; index++)
+            for (var index = 0; index < arrayItems.Length; index++)
             {
-                if(arrayItems[left] > arrayItems[right])
+                if (arrayItems[left] > arrayItems[right])
                 {
                     var temp = arrayItems[left];
                     arrayItems[left] = arrayItems[right];
@@ -90,6 +66,34 @@ namespace LogicPrograms
             ReadKey();
         }
 
+        private static void MinMaxInArray()
+        {
+            int[] array1 = { 1, 3, 5, 7, 9 };
+            int min = 0, max = 0;
+
+            for (int index = 0; index < array1.Length; index++)
+            {
+                var current = array1.Sum() - array1[index];
+
+                if (index == 0)
+                {
+                    min = max = current;
+                }
+                else
+                {
+                    if (current > max)
+                    {
+                        max = current;
+                    }
+                    else if (current <= min)
+                    {
+                        min = current;
+                    }
+                }
+                WriteLine(array1.Sum() - array1[index]);
+            }
+            WriteLine($"{min} {max}");
+        }
     }
 
 }
