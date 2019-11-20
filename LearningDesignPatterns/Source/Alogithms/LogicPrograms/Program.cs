@@ -1,5 +1,6 @@
 ﻿using LogicPrograms.Interfaces;
 using LogicPrograms.Logics;
+using System;
 using System.Linq;
 using static System.Console;
 
@@ -9,6 +10,9 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
+
+            BirthdayCandles();
+
             MinMaxInArray();
 
             GeneralPrograms generalPrograms = new GeneralPrograms();
@@ -64,6 +68,28 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static int BirthdayCandles()
+        {
+            int[] array = { 3, 2, 1, 3 };
+            int maxNumber = array[0];
+            int maxNumberCount = 0;
+
+            for(var index=0; index < array.Length; index++)
+            {
+                if(maxNumber < array[index])
+                {
+                    maxNumber = array[index];
+                    maxNumberCount = 1;
+                }
+                else if(maxNumber == array[index])
+                {
+                    maxNumberCount++;
+                }
+            }
+
+            return maxNumberCount;
         }
 
         private static void MinMaxInArray()
