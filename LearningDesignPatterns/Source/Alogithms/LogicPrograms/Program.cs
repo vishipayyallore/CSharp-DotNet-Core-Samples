@@ -1,6 +1,5 @@
 ﻿using LogicPrograms.Interfaces;
 using LogicPrograms.Logics;
-using System;
 using System.Linq;
 using static System.Console;
 
@@ -11,7 +10,8 @@ namespace LogicPrograms
         static void Main(string[] args)
         {
 
-            BirthdayCandles();
+            var candlesCount = BirthdayCandles();
+            WriteLine($"Count: {candlesCount}");
 
             MinMaxInArray();
 
@@ -72,7 +72,7 @@ namespace LogicPrograms
 
         private static int BirthdayCandles()
         {
-            int[] array = { 3, 2, 1, 3 };
+            int[] array = { 3, 5, 2, 5, 1, 3, 5 };
             int maxNumber = array[0];
             int maxNumberCount = 0;
 
