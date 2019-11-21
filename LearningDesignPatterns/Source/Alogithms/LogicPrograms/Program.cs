@@ -1,7 +1,9 @@
 ﻿using LogicPrograms.Interfaces;
 using LogicPrograms.Logics;
+using System;
 using System.Linq;
 using static System.Console;
+using Math = LogicPrograms.Logics.Math;
 
 namespace LogicPrograms
 {
@@ -10,6 +12,12 @@ namespace LogicPrograms
         static void Main(string[] args)
         {
 
+            // Time Conversion
+            var time12 = "07:05:45PM";
+            var timePart = Array.ConvertAll(time12.Substring(0, 8).Split(":"), item => int.Parse(item));
+            var amPm = time12.Substring(8);
+
+            // Candles Count
             var candlesCount = BirthdayCandles();
             WriteLine($"Count: {candlesCount}");
 
