@@ -12,27 +12,43 @@ namespace LogicPrograms
         static void Main(string[] args)
         {
 
-            // Time Conversion
-            var time12 = "07:05:45PM";
-            // var timePart = Array.ConvertAll(time12.Substring(0, 8).Split(":"), item => int.Parse(item));
-            var timePart = Array.ConvertAll(time12.Substring(0, 8).Split(":"), int.Parse);
-            var amPm = time12.Substring(8);
+            // Grading Students
+            var students = int.Parse(ReadLine());
+            var grades = new int[students];
+            for(var i=0; i<students; i++)
+            {
+                var grade = int.Parse(ReadLine());
 
-            if(amPm == "AM")
-            {
-                if(timePart[0] == 12)
+                if(grade < 38)
                 {
-                    timePart[0] = 0;
+                    grades[i] = grade;
                 }
-            } else if(amPm == "PM")
-            {
-                if (timePart[0] < 12)
+                else
                 {
-                    timePart[0] += 12;
+                    var reminder = grade % 10;
+                    var balance = 0;
+                    if (reminder >= 1 && reminder < 5)
+                    {
+                        balance = 5 - reminder;
+                    }
+                    else if (reminder >= 6 && reminder < 10)
+                    {
+                        balance = 10 - reminder;
+                    }
+
+                    if(balance < 3)
+                    {
+                        grades[i] = grade + balance;
+                    }
+                    else
+                    {
+                        grades[i] = grade;
+                    }
                 }
             }
 
-            WriteLine($"{timePart[0]:00}:{timePart[1]:00}:{timePart[2]:00}");
+            // Time Conversion
+            TimeConversion();
 
             // Candles Count
             var candlesCount = BirthdayCandles();
@@ -93,6 +109,31 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void TimeConversion()
+        {
+            var time12 = "07:05:45PM";
+            // var timePart = Array.ConvertAll(time12.Substring(0, 8).Split(":"), item => int.Parse(item));
+            var timePart = Array.ConvertAll(time12.Substring(0, 8).Split(":"), int.Parse);
+            var amPm = time12.Substring(8);
+
+            if (amPm == "AM")
+            {
+                if (timePart[0] == 12)
+                {
+                    timePart[0] = 0;
+                }
+            }
+            else if (amPm == "PM")
+            {
+                if (timePart[0] < 12)
+                {
+                    timePart[0] += 12;
+                }
+            }
+
+            WriteLine($"{timePart[0]:00}:{timePart[1]:00}:{timePart[2]:00}");
         }
 
         private static int BirthdayCandles()
