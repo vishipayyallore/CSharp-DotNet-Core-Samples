@@ -14,8 +14,25 @@ namespace LogicPrograms
 
             // Time Conversion
             var time12 = "07:05:45PM";
-            var timePart = Array.ConvertAll(time12.Substring(0, 8).Split(":"), item => int.Parse(item));
+            // var timePart = Array.ConvertAll(time12.Substring(0, 8).Split(":"), item => int.Parse(item));
+            var timePart = Array.ConvertAll(time12.Substring(0, 8).Split(":"), int.Parse);
             var amPm = time12.Substring(8);
+
+            if(amPm == "AM")
+            {
+                if(timePart[0] == 12)
+                {
+                    timePart[0] = 0;
+                }
+            } else if(amPm == "PM")
+            {
+                if (timePart[0] < 12)
+                {
+                    timePart[0] += 12;
+                }
+            }
+
+            WriteLine($"{timePart[0]:00}:{timePart[1]:00}:{timePart[2]:00}");
 
             // Candles Count
             var candlesCount = BirthdayCandles();
