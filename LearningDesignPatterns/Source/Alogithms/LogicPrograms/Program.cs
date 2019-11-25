@@ -1,27 +1,27 @@
 ﻿using LogicPrograms.Interfaces;
 using LogicPrograms.Logics;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using static System.Console;
 using Math = LogicPrograms.Logics.Math;
 
 namespace LogicPrograms
 {
-    class Program
+
+    class Result
     {
-        static void Main(string[] args)
+        public static List<int> gradingStudents(List<int> grades)
         {
+            var grades_output = new List<int>();
 
-            // Grading Students
-            var students = int.Parse(ReadLine());
-            var grades = new int[students];
-            for(var i=0; i<students; i++)
+            for (var i = 0; i < grades.Count; i++)
             {
-                var grade = int.Parse(ReadLine());
+                var grade = grades[i];
 
-                if(grade < 38)
+                if (grade < 38)
                 {
-                    grades[i] = grade;
+                    grades_output.Add(grade);
                 }
                 else
                 {
@@ -36,16 +36,40 @@ namespace LogicPrograms
                         balance = 10 - reminder;
                     }
 
-                    if(balance < 3)
+                    if (balance < 3)
                     {
-                        grades[i] = grade + balance;
+                        grades_output.Add(grade + balance);
                     }
                     else
                     {
-                        grades[i] = grade;
+                        grades_output.Add(grade);
                     }
                 }
             }
+
+            return grades_output;
+        }
+
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int gradesCount = Convert.ToInt32(Console.ReadLine().Trim());
+            List<int> grades = new List<int>();
+
+            for (int i = 0; i < gradesCount; i++)
+            {
+                int gradesItem = Convert.ToInt32(Console.ReadLine().Trim());
+                grades.Add(gradesItem);
+            }
+
+            List<int> result = Result.gradingStudents(grades);
+
+            // Grading Students
+            GradingStudents();
 
             // Time Conversion
             TimeConversion();
@@ -109,6 +133,43 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void GradingStudents()
+        {
+            var students = int.Parse(ReadLine());
+            var grades = new int[students];
+            for (var i = 0; i < students; i++)
+            {
+                var grade = int.Parse(ReadLine());
+
+                if (grade < 38)
+                {
+                    grades[i] = grade;
+                }
+                else
+                {
+                    var reminder = grade % 10;
+                    var balance = 0;
+                    if (reminder >= 1 && reminder < 5)
+                    {
+                        balance = 5 - reminder;
+                    }
+                    else if (reminder >= 6 && reminder < 10)
+                    {
+                        balance = 10 - reminder;
+                    }
+
+                    if (balance < 3)
+                    {
+                        grades[i] = grade + balance;
+                    }
+                    else
+                    {
+                        grades[i] = grade;
+                    }
+                }
+            }
         }
 
         private static void TimeConversion()
@@ -187,6 +248,9 @@ namespace LogicPrograms
             WriteLine($"{min} {max}");
         }
     }
+
+
+    
 
 }
 
