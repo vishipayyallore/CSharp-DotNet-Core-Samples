@@ -9,49 +9,6 @@ using Math = LogicPrograms.Logics.Math;
 namespace LogicPrograms
 {
 
-    class Result
-    {
-        public static List<int> gradingStudents(List<int> grades)
-        {
-            var grades_output = new List<int>();
-
-            for (var i = 0; i < grades.Count; i++)
-            {
-                var grade = grades[i];
-
-                if (grade < 38)
-                {
-                    grades_output.Add(grade);
-                }
-                else
-                {
-                    var reminder = grade % 10;
-                    var balance = 0;
-                    if (reminder >= 1 && reminder < 5)
-                    {
-                        balance = 5 - reminder;
-                    }
-                    else if (reminder >= 6 && reminder < 10)
-                    {
-                        balance = 10 - reminder;
-                    }
-
-                    if (balance < 3)
-                    {
-                        grades_output.Add(grade + balance);
-                    }
-                    else
-                    {
-                        grades_output.Add(grade);
-                    }
-                }
-            }
-
-            return grades_output;
-        }
-
-    }
-
     class Program
     {
         static void Main(string[] args)
