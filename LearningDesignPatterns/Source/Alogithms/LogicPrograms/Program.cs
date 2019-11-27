@@ -13,7 +13,10 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
+            // Arrays: Left Rotation
+            ArrayLeftRotation();
 
+            // Grading Students
             int gradesCount = Convert.ToInt32(Console.ReadLine().Trim());
             List<int> grades = new List<int>();
 
@@ -90,6 +93,23 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void ArrayLeftRotation()
+        {
+            var arrayData = new int[] { 1, 2, 3, 4, 5 };
+            var d = 4;
+            var tempArray = new int[arrayData.Length];
+            var start = 0;
+            for (var iCtr = (d); iCtr < arrayData.Length; iCtr++)
+            {
+                tempArray[start++] = arrayData[iCtr];
+            }
+
+            for (var iCtr = 0; iCtr < d; iCtr++)
+            {
+                tempArray[start++] = arrayData[iCtr];
+            }
         }
 
         private static void GradingStudents()
