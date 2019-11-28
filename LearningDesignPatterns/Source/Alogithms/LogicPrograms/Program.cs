@@ -17,16 +17,7 @@ namespace LogicPrograms
             ArrayLeftRotation();
 
             // Grading Students
-            int gradesCount = Convert.ToInt32(Console.ReadLine().Trim());
-            List<int> grades = new List<int>();
-
-            for (int i = 0; i < gradesCount; i++)
-            {
-                int gradesItem = Convert.ToInt32(Console.ReadLine().Trim());
-                grades.Add(gradesItem);
-            }
-
-            List<int> result = Result.gradingStudents(grades);
+            GradingStudentsV1();
 
             // Grading Students
             GradingStudents();
@@ -93,6 +84,20 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void GradingStudentsV1()
+        {
+            int gradesCount = Convert.ToInt32(Console.ReadLine().Trim());
+            List<int> grades = new List<int>();
+
+            for (int i = 0; i < gradesCount; i++)
+            {
+                int gradesItem = Convert.ToInt32(Console.ReadLine().Trim());
+                grades.Add(gradesItem);
+            }
+
+            List<int> result = Result.gradingStudents(grades);
         }
 
         private static void ArrayLeftRotation()
