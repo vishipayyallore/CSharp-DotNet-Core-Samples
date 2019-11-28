@@ -13,6 +13,9 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
+            // Library Fines
+            LibraryFines();
+
             // Arrays: Left Rotation
             ArrayLeftRotation();
 
@@ -84,6 +87,34 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void LibraryFines()
+        {
+            var actual = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+            var expected = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+            var fine = 0;
+
+            if (actual[2] > expected[2])
+            {
+                fine = 10000;
+            }
+            else if (actual[2] == expected[2])
+            {
+                if (actual[1] > expected[1])
+                {
+                    fine = 500 * (actual[1] - expected[1]);
+                }
+                else if (actual[1] == expected[1])
+                {
+                    if (actual[0] > expected[0])
+                    {
+                        fine = 15 * (actual[0] - expected[0]);
+                    }
+                }
+            }
+
+            WriteLine($"{fine}");
         }
 
         private static void GradingStudentsV1()
