@@ -2,9 +2,9 @@
 
 namespace LogicPrograms
 {
-    public class Result
+    public class GradingResult
     {
-        public static List<int> gradingStudents(List<int> grades)
+        public static List<int> GradingStudents(List<int> grades)
         {
             var grades_output = new List<int>();
 

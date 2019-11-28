@@ -97,7 +97,7 @@ namespace LogicPrograms
                 grades.Add(gradesItem);
             }
 
-            List<int> result = Result.gradingStudents(grades);
+            List<int> result = GradingResult.GradingStudents(grades);
         }
 
         private static void ArrayLeftRotation()
