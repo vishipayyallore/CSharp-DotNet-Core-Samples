@@ -188,6 +188,7 @@ namespace LogicPrograms
         private static void TimeConversion()
         {
             var time12 = "07:05:45PM";
+
             // var timePart = Array.ConvertAll(time12.Substring(0, 8).Split(":"), item => int.Parse(item));
             var timePart = Array.ConvertAll(time12.Substring(0, 8).Split(":"), int.Parse);
             var amPm = time12.Substring(8);
