@@ -13,44 +13,8 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
-
             // Apples and Oranges
-            string[] st = Console.ReadLine().Split(' ');
-            int s = Convert.ToInt32(st[0]);
-            int t = Convert.ToInt32(st[1]);
-
-            string[] ab = Console.ReadLine().Split(' ');
-            int a = Convert.ToInt32(ab[0]);
-            int b = Convert.ToInt32(ab[1]);
-
-            string[] mn = Console.ReadLine().Split(' ');
-            int m = Convert.ToInt32(mn[0]);
-            int n = Convert.ToInt32(mn[1]);
-
-            int[] apples = Array.ConvertAll(Console.ReadLine().Split(' '), applesTemp => Convert.ToInt32(applesTemp));
-            int[] oranges = Array.ConvertAll(Console.ReadLine().Split(' '), orangesTemp => Convert.ToInt32(orangesTemp));
-
-            var count = 0;
-            foreach(var apple in apples)
-            {
-                var distance = a + apple;
-                if(distance>=s && distance<=t)
-                {
-                    count++;
-                }
-            }
-            WriteLine($"{count}");
-
-            count = 0;
-            foreach (var orange in oranges)
-            {
-                var distance = b + orange;
-                if (distance >= s && distance <= t)
-                {
-                    count++;
-                }
-            }
-            WriteLine($"{count}");
+            AppleAndOrangesCount();
 
             // Library Fines
             LibraryFines();
@@ -126,6 +90,46 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void AppleAndOrangesCount()
+        {
+            string[] st = ReadLine().Split(' ');
+            int s = Convert.ToInt32(st[0]);
+            int t = Convert.ToInt32(st[1]);
+
+            string[] ab = ReadLine().Split(' ');
+            int a = Convert.ToInt32(ab[0]);
+            int b = Convert.ToInt32(ab[1]);
+
+            string[] mn = ReadLine().Split(' ');
+            int m = Convert.ToInt32(mn[0]);
+            int n = Convert.ToInt32(mn[1]);
+
+            int[] apples = Array.ConvertAll(ReadLine().Split(' '), applesTemp => Convert.ToInt32(applesTemp));
+            int[] oranges = Array.ConvertAll(ReadLine().Split(' '), orangesTemp => Convert.ToInt32(orangesTemp));
+
+            var count = 0;
+            foreach (var apple in apples)
+            {
+                var distance = a + apple;
+                if (distance >= s && distance <= t)
+                {
+                    count++;
+                }
+            }
+            WriteLine($"{count}");
+
+            count = 0;
+            foreach (var orange in oranges)
+            {
+                var distance = b + orange;
+                if (distance >= s && distance <= t)
+                {
+                    count++;
+                }
+            }
+            WriteLine($"{count}");
         }
 
         private static void LibraryFines()
