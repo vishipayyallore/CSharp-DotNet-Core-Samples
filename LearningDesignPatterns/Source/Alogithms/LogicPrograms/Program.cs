@@ -304,10 +304,44 @@ namespace LogicPrograms
             }
             WriteLine($"{min} {max}");
         }
+
+        private static void AppleAndOrangesCountV2()
+        {
+            var st = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+            int s = st[0];
+            int t = st[1];
+
+            var ab = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+            int a = ab[0];
+            int b = ab[1];
+
+            var mn = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+            int m = mn[0];
+            int n = mn[1];
+
+            int[] apples = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+            int[] oranges = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+
+            CountFruits(s, t, a, apples);
+
+            CountFruits(s, t, b, oranges);
+        }
+
+        private static void CountFruits(int start, int end, int currentLocation, int[] fruits)
+        {
+            var count = 0;
+            foreach (var fruit in fruits)
+            {
+                var distance = currentLocation + fruit;
+                if (distance >= start && distance <= end)
+                {
+                    count++;
+                }
+            }
+            WriteLine($"{count}");
+        }
+
     }
-
-
-    
 
 }
 
