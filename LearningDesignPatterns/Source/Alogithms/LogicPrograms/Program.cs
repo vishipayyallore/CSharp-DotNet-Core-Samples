@@ -25,7 +25,7 @@ namespace LogicPrograms
 
             if( (x2 > x1) && (v2 > v1))
             {
-                WriteLine("NO");
+                message = "NO";
             }
             else
             {
