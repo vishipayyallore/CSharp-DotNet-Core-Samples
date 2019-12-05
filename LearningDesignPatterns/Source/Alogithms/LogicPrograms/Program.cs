@@ -29,16 +29,18 @@ namespace LogicPrograms
             }
             else
             {
-                while(true)
+                var d1 = x1 + v1;
+                var d2 = x2 + v2;
+                while (true)
                 {
-                    var d1 = x1 + v1;
-                    var d2 = x2 + v2;
-
                     if(d1 == d2)
                     {
                         message = "YES";
                         break;
                     }
+
+                    d1 += v1;
+                    d2 += v2;
                 }
             }
             WriteLine(message);
