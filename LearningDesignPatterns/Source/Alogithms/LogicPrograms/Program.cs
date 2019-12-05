@@ -16,6 +16,8 @@ namespace LogicPrograms
             // Apples and Oranges
             AppleAndOrangesCount();
 
+            AppleAndOrangesCountV2();
+
             // Library Fines
             LibraryFines();
 
