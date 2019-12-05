@@ -13,6 +13,36 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
+
+            // Kangaroo Jumps
+            var x1V1X2V2 = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+            var message = "NO";
+
+            int x1 = x1V1X2V2[0];
+            int v1 = x1V1X2V2[1];
+            int x2 = x1V1X2V2[2];
+            int v2 = x1V1X2V2[3];
+
+            if( (x2 > x1) && (v2 > v1))
+            {
+                WriteLine("NO");
+            }
+            else
+            {
+                while(true)
+                {
+                    var d1 = x1 + v1;
+                    var d2 = x2 + v2;
+
+                    if(d1 == d2)
+                    {
+                        message = "YES";
+                        break;
+                    }
+                }
+            }
+            WriteLine(message);
+
             // Apples and Oranges
             AppleAndOrangesCount();
 
