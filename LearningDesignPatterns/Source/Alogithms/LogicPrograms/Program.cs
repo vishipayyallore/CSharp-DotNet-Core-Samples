@@ -14,7 +14,30 @@ namespace LogicPrograms
         static void Main(string[] args)
         {
 
-            // 
+            // Breaking The Records.
+            int n = Convert.ToInt32(Console.ReadLine());
+            int[] scores = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+            var lowest = scores[0];
+            var highest = scores[0];
+            var lowestCount = 0;
+            var highestCount = 0;
+
+            for(var iCtr=1; iCtr< scores.Length; iCtr++)
+            {
+                if(scores[iCtr] > highest)
+                {
+                    highest = scores[iCtr];
+                    highestCount++;
+                }
+                else if (scores[iCtr] < lowest)
+                {
+                    lowest = scores[iCtr];
+                    lowestCount++;
+                }
+            }
+            WriteLine($"{highestCount} {lowestCount}");
+            var results = new int[] { highestCount, lowestCount};
+
 
             // TODO: Complete the Algorithm
             // Kangaroo Jumps
