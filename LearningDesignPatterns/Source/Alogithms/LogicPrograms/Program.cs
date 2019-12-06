@@ -14,11 +14,7 @@ namespace LogicPrograms
         static void Main(string[] args)
         {
             // Divisible Sum Pairs
-            var nk = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
-            int n = nk[0];
-            int k = nk[1];
-
-            int[] ar = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+            DivisibleSumPairs();
 
             // Breaking The Records.
             BreakingTheRecords();
@@ -106,6 +102,27 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void DivisibleSumPairs()
+        {
+            var nk = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+            int n = nk[0];
+            int k = nk[1];
+            int[] ar = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+
+            var count = 0;
+            for (var iCtr = 0; iCtr < ar.Length - 1; iCtr++)
+            {
+                for (var jCtr = iCtr + 1; jCtr < ar.Length; jCtr++)
+                {
+                    if (((ar[iCtr] + ar[jCtr]) % k) == 0)
+                    {
+                        count++;
+                    }
+                }
+            }
+            WriteLine(count);
         }
 
         private static void BreakingTheRecords()
