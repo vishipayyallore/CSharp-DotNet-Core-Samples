@@ -14,6 +14,11 @@ namespace LogicPrograms
         static void Main(string[] args)
         {
             // Divisible Sum Pairs
+            var nk = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+            int n = nk[0];
+            int k = nk[1];
+
+            int[] ar = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
 
             // Breaking The Records.
             BreakingTheRecords();
