@@ -14,36 +14,11 @@ namespace LogicPrograms
         static void Main(string[] args)
         {
 
+            // 
+
+            // TODO: Complete the Algorithm
             // Kangaroo Jumps
-            var x1V1X2V2 = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
-            var message = "NO";
-
-            int x1 = x1V1X2V2[0];
-            int v1 = x1V1X2V2[1];
-            int x2 = x1V1X2V2[2];
-            int v2 = x1V1X2V2[3];
-
-            if( (x2 > x1) && (v2 > v1))
-            {
-                message = "NO";
-            }
-            else
-            {
-                var d1 = x1 + v1;
-                var d2 = x2 + v2;
-                while (true)
-                {
-                    if(d1 == d2)
-                    {
-                        message = "YES";
-                        break;
-                    }
-
-                    d1 += v1;
-                    d2 += v2;
-                }
-            }
-            WriteLine(message);
+            KangarooJumps();
 
             // Apples and Oranges
             AppleAndOrangesCount();
@@ -124,6 +99,39 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void KangarooJumps()
+        {
+            var x1V1X2V2 = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+            var message = "NO";
+
+            int x1 = x1V1X2V2[0];
+            int v1 = x1V1X2V2[1];
+            int x2 = x1V1X2V2[2];
+            int v2 = x1V1X2V2[3];
+
+            if ((x2 > x1) && (v2 > v1))
+            {
+                message = "NO";
+            }
+            else
+            {
+                var d1 = x1 + v1;
+                var d2 = x2 + v2;
+                while (true)
+                {
+                    if (d1 == d2)
+                    {
+                        message = "YES";
+                        break;
+                    }
+
+                    d1 += v1;
+                    d2 += v2;
+                }
+            }
+            WriteLine(message);
         }
 
         private static void AppleAndOrangesCount()
