@@ -13,6 +13,33 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
+
+            // Migratory Birds
+            int arrCount = Convert.ToInt32(Console.ReadLine().Trim());
+            List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
+            var arrayRank = new int[5];
+            var max = 0;
+
+            for(var iCtr=0; iCtr<arrCount; iCtr++)
+            {
+                var index = arr[iCtr] - 1;
+                arrayRank[index] += 1;
+
+                if(arrayRank[index] > max)
+                {
+                    max = arrayRank[index];
+                }
+            }
+
+            for (var iCtr = 0; iCtr < 5; iCtr++)
+            {
+                if(arrayRank[iCtr] == max)
+                {
+                    WriteLine($"{iCtr + 1}");
+                    break;
+                }
+            }
+
             // Birthday Chocolate
             BirthdayChocolate();
 
