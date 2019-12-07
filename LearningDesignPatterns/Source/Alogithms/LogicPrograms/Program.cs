@@ -19,9 +19,24 @@ namespace LogicPrograms
             List<int> s = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(sTemp => Convert.ToInt32(sTemp)).ToList();
 
             var dm = Array.ConvertAll(Console.ReadLine().TrimEnd().Split(' '), int.Parse);
-            int d = dm[0];
-            int m = dm[1];
+            int d = dm[0];  // Sum
+            int m = dm[1];  // Length
+            var count = 0;
 
+            for (var iCtr = 0; iCtr < (n - m); iCtr++)
+            {
+                var sum = 0;
+                for(var jCtr=iCtr; jCtr<(iCtr+m); jCtr++)
+                {
+                    sum += s[jCtr];
+                }
+
+                if(sum == d)
+                {
+                    count++;
+                }
+            }
+            WriteLine($"{count}");
 
             // Divisible Sum Pairs
             DivisibleSumPairs();
@@ -364,14 +379,14 @@ namespace LogicPrograms
             int maxNumber = array[0];
             int maxNumberCount = 0;
 
-            for(var index=0; index < array.Length; index++)
+            for (var index = 0; index < array.Length; index++)
             {
-                if(maxNumber < array[index])
+                if (maxNumber < array[index])
                 {
                     maxNumber = array[index];
                     maxNumberCount = 1;
                 }
-                else if(maxNumber == array[index])
+                else if (maxNumber == array[index])
                 {
                     maxNumberCount++;
                 }
