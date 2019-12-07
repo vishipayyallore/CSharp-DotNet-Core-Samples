@@ -13,6 +13,16 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
+
+            // Birthday Chocolate
+            int n = Convert.ToInt32(Console.ReadLine().Trim());
+            List<int> s = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(sTemp => Convert.ToInt32(sTemp)).ToList();
+
+            var dm = Array.ConvertAll(Console.ReadLine().TrimEnd().Split(' '), int.Parse);
+            int d = dm[0];
+            int m = dm[1];
+
+
             // Divisible Sum Pairs
             DivisibleSumPairs();
 
@@ -27,6 +37,8 @@ namespace LogicPrograms
             AppleAndOrangesCount();
 
             AppleAndOrangesCountV2();
+
+            AppleAndOrangesCountV3();
 
             // Library Fines
             LibraryFines();
@@ -417,6 +429,23 @@ namespace LogicPrograms
             CountFruits(s, t, a, apples);
 
             CountFruits(s, t, b, oranges);
+        }
+
+        private static void AppleAndOrangesCountV3()
+        {
+            var st = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+            var ab = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+
+            var mn = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+            int m = mn[0];
+            int n = mn[1];
+
+            int[] apples = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+            int[] oranges = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+
+            CountFruits(st[0], st[1], ab[0], apples);
+
+            CountFruits(st[0], st[1], ab[1], oranges);
         }
 
         private static void CountFruits(int start, int end, int currentLocation, int[] fruits)
