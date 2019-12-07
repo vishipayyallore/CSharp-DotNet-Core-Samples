@@ -13,30 +13,8 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
-
             // Birthday Chocolate
-            int n = Convert.ToInt32(Console.ReadLine().Trim());
-            List<int> s = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(sTemp => Convert.ToInt32(sTemp)).ToList();
-
-            var dm = Array.ConvertAll(Console.ReadLine().TrimEnd().Split(' '), int.Parse);
-            int d = dm[0];  // Sum
-            int m = dm[1];  // Length
-            var count = 0;
-
-            for (var iCtr = 0; iCtr < (n - m); iCtr++)
-            {
-                var sum = 0;
-                for(var jCtr=iCtr; jCtr<(iCtr+m); jCtr++)
-                {
-                    sum += s[jCtr];
-                }
-
-                if(sum == d)
-                {
-                    count++;
-                }
-            }
-            WriteLine($"{count}");
+            BirthdayChocolate();
 
             // Divisible Sum Pairs
             DivisibleSumPairs();
@@ -129,6 +107,36 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void BirthdayChocolate()
+        {
+            int n = Convert.ToInt32(Console.ReadLine().Trim());
+            List<int> s = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(sTemp => Convert.ToInt32(sTemp)).ToList();
+
+            var dm = Array.ConvertAll(Console.ReadLine().TrimEnd().Split(' '), int.Parse);
+            int d = dm[0];  // Sum
+            int m = dm[1];  // Length
+            var count = 0;
+
+            for (var iCtr = 0; iCtr < n; iCtr++)
+            {
+                var sum = 0;
+                for (var jCtr = iCtr; jCtr < (iCtr + m); jCtr++)
+                {
+                    if (jCtr >= n)
+                    {
+                        continue;
+                    }
+                    sum += s[jCtr];
+                }
+
+                if (sum == d)
+                {
+                    count++;
+                }
+            }
+            WriteLine($"{count}");
         }
 
         private static void DivisibleSumPairs()
