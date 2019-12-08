@@ -13,34 +13,10 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
-
             // int year = Convert.ToInt32(Console.ReadLine().Trim());
 
             // Bon Appétit
-            var nk = Array.ConvertAll(ReadLine().TrimEnd().Split(' '), int.Parse);
-            int n = nk[0];
-            int k = nk[1];
-            List<int> bill = ReadLine().TrimEnd().Split(' ').ToList().Select(billTemp => Convert.ToInt32(billTemp)).ToList();
-            int b = Convert.ToInt32(ReadLine().Trim());
-
-            var amount = 0;
-            for(var iCtr=0; iCtr < bill.Count; iCtr++)
-            {
-                if(iCtr == k)
-                {
-                    continue;
-                }
-                amount += bill[iCtr];
-            }
-
-            if( (amount/2) == b)
-            {
-                WriteLine("Bon Appetit");
-            }
-            else if(b > ((amount / 2)))
-            {
-                WriteLine($"{bill[k]/2}");
-            }
+            BonAppetit();
 
             // Migratory Birds
             MigratoryBirds();
@@ -139,6 +115,34 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void BonAppetit()
+        {
+            var nk = Array.ConvertAll(ReadLine().TrimEnd().Split(' '), int.Parse);
+            int n = nk[0];
+            int k = nk[1];
+            List<int> bill = ReadLine().TrimEnd().Split(' ').ToList().Select(billTemp => Convert.ToInt32(billTemp)).ToList();
+            int b = Convert.ToInt32(ReadLine().Trim());
+
+            var amount = 0;
+            for (var iCtr = 0; iCtr < bill.Count; iCtr++)
+            {
+                if (iCtr == k)
+                {
+                    continue;
+                }
+                amount += bill[iCtr];
+            }
+
+            if ((amount / 2) == b)
+            {
+                WriteLine("Bon Appetit");
+            }
+            else if (b > ((amount / 2)))
+            {
+                WriteLine($"{bill[k] / 2}");
+            }
         }
 
         private static void MigratoryBirds()
