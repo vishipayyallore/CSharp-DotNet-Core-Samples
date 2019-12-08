@@ -13,6 +13,33 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
+
+            // Bon Appétit
+            var nk = Array.ConvertAll(ReadLine().TrimEnd().Split(' '), int.Parse);
+            int n = nk[0];
+            int k = nk[1];
+            List<int> bill = ReadLine().TrimEnd().Split(' ').ToList().Select(billTemp => Convert.ToInt32(billTemp)).ToList();
+            int b = Convert.ToInt32(ReadLine().Trim());
+
+            var amount = 0;
+            for(var iCtr=0; iCtr < bill.Count; iCtr++)
+            {
+                if(iCtr == k)
+                {
+                    continue;
+                }
+                amount += bill[iCtr];
+            }
+
+            if( (amount/2) == b)
+            {
+                WriteLine("Bon Appetit");
+            }
+            else if(b > ((amount / 2)))
+            {
+                WriteLine($"{bill[k]/2}");
+            }
+
             // Migratory Birds
             MigratoryBirds();
 
