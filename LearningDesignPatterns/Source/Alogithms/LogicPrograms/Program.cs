@@ -14,6 +14,8 @@ namespace LogicPrograms
         static void Main(string[] args)
         {
 
+            // int year = Convert.ToInt32(Console.ReadLine().Trim());
+
             // Bon Appétit
             var nk = Array.ConvertAll(ReadLine().TrimEnd().Split(' '), int.Parse);
             int n = nk[0];
