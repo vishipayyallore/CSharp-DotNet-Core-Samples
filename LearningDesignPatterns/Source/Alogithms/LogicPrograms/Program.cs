@@ -13,7 +13,23 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
-            // int year = Convert.ToInt32(Console.ReadLine().Trim());
+            // Day Of Programmer
+            int year = Convert.ToInt32(Console.ReadLine().Trim());
+            var date = string.Empty;
+
+            if ((year >= 1700) && (year <= 1917))
+            {
+                date = (year % 4 == 0) ? $"12.09.{year}" : $"13.09.{year}";
+            }
+            else if (year == 1918)
+            {
+
+            }
+            else
+            {
+                date = ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))) ? $"12.09.{year}" : $"13.09.{year}";
+            }
+            WriteLine($"{date}");
 
             // Bon Appétit
             BonAppetit();
