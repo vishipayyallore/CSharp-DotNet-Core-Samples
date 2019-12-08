@@ -14,22 +14,9 @@ namespace LogicPrograms
         static void Main(string[] args)
         {
             // Day Of Programmer
-            int year = Convert.ToInt32(Console.ReadLine().Trim());
-            var date = string.Empty;
+            DayOfProgrammerV2();
 
-            if ((year >= 1700) && (year <= 1917))
-            {
-                date = (year % 4 == 0) ? $"12.09.{year}" : $"13.09.{year}";
-            }
-            else if (year == 1918)
-            {
-
-            }
-            else
-            {
-                date = ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))) ? $"12.09.{year}" : $"13.09.{year}";
-            }
-            WriteLine($"{date}");
+            DayOfProgrammerV1();
 
             // Bon Appétit
             BonAppetit();
@@ -131,6 +118,50 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void DayOfProgrammerV2()
+        {
+            int year = Convert.ToInt32(Console.ReadLine().Trim());
+            var theDay = 256;
+            var febDays = new int[] { 28, 29, 15, 16 };
+            var totalDays = 215;
+            var date = string.Empty;
+
+            if ((year >= 1700) && (year <= 1917))
+            {
+                totalDays += (year % 4 == 0) ? febDays[1] : febDays[0];
+            }
+            else if (year == 1918)
+            {
+                totalDays += ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))) ? febDays[3] : febDays[2];
+            }
+            else
+            {
+                totalDays += ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))) ? febDays[1] : febDays[0];
+            }
+            date = $"{theDay - totalDays}.09.{year}";
+            WriteLine(date);
+        }
+
+        private static void DayOfProgrammerV1()
+        {
+            int year = Convert.ToInt32(Console.ReadLine().Trim());
+            var date = string.Empty;
+
+            if ((year >= 1700) && (year <= 1917))
+            {
+                date = (year % 4 == 0) ? $"12.09.{year}" : $"13.09.{year}";
+            }
+            else if (year == 1918)
+            {
+                date = ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))) ? $"25.09.{year}" : $"26.09.{year}";
+            }
+            else
+            {
+                date = ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))) ? $"12.09.{year}" : $"13.09.{year}";
+            }
+            WriteLine($"{date}");
         }
 
         private static void BonAppetit()
