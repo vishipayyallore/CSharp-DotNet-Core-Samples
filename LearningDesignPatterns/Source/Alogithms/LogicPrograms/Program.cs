@@ -15,27 +15,7 @@ namespace LogicPrograms
         {
 
             // Electronics Shop
-            var bnm = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
-            int b = bnm[0];
-            int n = bnm[1];
-            int m = bnm[2];
-            var amountToBeSpent = -1;
-
-            int[] keyboards = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
-            int[] drives = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
-
-            for (var iCtr = 0; iCtr < keyboards.Length; iCtr++)
-            {
-                for (var jCtr = 0; jCtr < drives.Length; jCtr++)
-                {
-                    var amount = keyboards[iCtr] + drives[jCtr];
-                    if (amount < b && amount > amountToBeSpent)
-                    {
-                        amountToBeSpent = amount;
-                    }
-                }
-            }
-            WriteLine(amountToBeSpent);
+            ElectronicsShop();
 
             // Day Of Programmer
             DayOfProgrammerV2();
@@ -142,6 +122,31 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void ElectronicsShop()
+        {
+            var bnm = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+            int b = bnm[0];
+            int n = bnm[1];
+            int m = bnm[2];
+            var amountToBeSpent = -1;
+
+            int[] keyboards = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+            int[] drives = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+
+            for (var iCtr = 0; iCtr < keyboards.Length; iCtr++)
+            {
+                for (var jCtr = 0; jCtr < drives.Length; jCtr++)
+                {
+                    var amount = keyboards[iCtr] + drives[jCtr];
+                    if (amount <= b && amount > amountToBeSpent)
+                    {
+                        amountToBeSpent = amount;
+                    }
+                }
+            }
+            WriteLine(amountToBeSpent);
         }
 
         private static void DayOfProgrammerV2()
