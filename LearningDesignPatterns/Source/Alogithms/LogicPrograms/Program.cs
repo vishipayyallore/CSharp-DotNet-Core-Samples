@@ -14,6 +14,31 @@ namespace LogicPrograms
         static void Main(string[] args)
         {
 
+            // Cats and a Mouse
+            int q = Convert.ToInt32(ReadLine());
+            var xyz = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+
+            int x = xyz[0];
+            int y = xyz[1];
+            int z = xyz[2];
+
+            var distanceOfX = System.Math.Abs(z - x);
+            var distanceOfY = System.Math.Abs(z - y);
+
+            if(distanceOfX == distanceOfY)
+            {
+                WriteLine("Mouse C");
+            }
+            else if(distanceOfX < distanceOfY)
+            {
+                WriteLine("Cat A");
+            }
+            else
+            {
+                WriteLine("Cat B");
+            }
+            
+
             // Electronics Shop
             ElectronicsShop();
 
