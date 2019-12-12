@@ -13,6 +13,31 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
+
+            // The Hurdle Race
+            var nk = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+            int n = nk[0];
+            int k = nk[1];
+
+            int[] height = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+            var heighestJump = height[0];
+            var numberOfDrink = 0;
+
+            // Need to write Generic Logic to find the Max and Min in Array
+            for(var iCtr=1; iCtr < height.Length; iCtr++)
+            {
+                if(height[iCtr] > heighestJump)
+                {
+                    heighestJump = height[iCtr];
+                }
+            }
+
+            if( heighestJump > k)
+            {
+                numberOfDrink = heighestJump - k;
+            }
+            WriteLine($"{numberOfDrink}");
+
             // Cats and a Mouse
             CatsAndMouse();
 
