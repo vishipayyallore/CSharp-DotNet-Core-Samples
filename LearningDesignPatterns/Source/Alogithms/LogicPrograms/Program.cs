@@ -682,6 +682,22 @@ namespace LogicPrograms
             WriteLine($"{count}");
         }
 
+        private static int FindMaximumOfArray(int[] arrayItems)
+        {
+            var maximum = arrayItems[0];
+
+            // Need to write Generic Logic to find the Max and Min in Array
+            for (var iCtr = 1; iCtr < arrayItems.Length; iCtr++)
+            {
+                if (arrayItems[iCtr] > maximum)
+                {
+                    maximum = arrayItems[iCtr];
+                }
+            }
+
+            return maximum;
+        }
+
     }
 
 }
