@@ -13,6 +13,13 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
+            // FindMaximumOfArrayWithItsIndex
+            var data = "1 3 1 3 1 4 1 3 2 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 7";
+            var arr1 = Array.ConvertAll(data.Split(), int.Parse);
+            var results = FindMaximumOfArrayWithItsIndex(arr1);
+
+
+
             // The Hurdle Race
             TheHurdleRace();
 
@@ -686,7 +693,6 @@ namespace LogicPrograms
         {
             var maximum = arrayItems[0];
 
-            // Need to write Generic Logic to find the Max and Min in Array
             for (var iCtr = 1; iCtr < arrayItems.Length; iCtr++)
             {
                 if (arrayItems[iCtr] > maximum)
@@ -696,6 +702,24 @@ namespace LogicPrograms
             }
 
             return maximum;
+        }
+
+        private static int[] FindMaximumOfArrayWithItsIndex(int[] arrayItems)
+        {
+            var maximum = arrayItems[0]-1;
+            var index = -1;
+
+            // Need to write Generic Logic to find the Max and Min in Array
+            for (var iCtr = 0; iCtr < arrayItems.Length; iCtr++)
+            {
+                if (arrayItems[iCtr] > maximum)
+                {
+                    maximum = arrayItems[iCtr];
+                    index = iCtr;
+                }
+            }
+
+            return new int[] { index, maximum };
         }
 
     }
