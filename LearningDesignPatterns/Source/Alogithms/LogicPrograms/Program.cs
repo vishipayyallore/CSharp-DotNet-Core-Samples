@@ -14,6 +14,12 @@ namespace LogicPrograms
         static void Main(string[] args)
         {
 
+            // Drawing Book
+            
+
+            // Angry Professor
+            AngryProfessor();
+
             // Utopian Tree
             for (var n = 0; n <= 5; n++)
             {
@@ -146,6 +152,29 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void AngryProfessor()
+        {
+            int k = 3;
+            int[] a = new int[] { -1, -3, 4, 2 };
+            var count = 0;
+            foreach (var n in a)
+            {
+                if (n <= 0)
+                {
+                    count++;
+                }
+            }
+
+            if (count < k)
+            {
+                WriteLine("YES");
+            }
+            else
+            {
+                WriteLine("NO");
+            }
         }
 
         private static int UtopianTreeV2(int n)
