@@ -13,9 +13,8 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
-
             // Drawing Book
-            
+            DrawingBook();
 
             // Angry Professor
             AngryProfessor();
@@ -152,6 +151,34 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void DrawingBook()
+        {
+            var p = 0;
+            var n1 = 0;
+
+            while (true)
+            {
+                WriteLine("Enter N and P:");
+                n1 = int.Parse(ReadLine());
+                p = int.Parse(ReadLine());
+
+                if (n1 == -1)
+                {
+                    break;
+                }
+
+                if (n1 % 2 == 0)
+                {
+                    n1++;
+                }
+
+                var fromStart = p / 2;
+                var fromEnd = (n1 - p) / 2;
+
+                WriteLine($"{fromStart} :: {fromEnd}");
+            }
         }
 
         private static void AngryProfessor()
