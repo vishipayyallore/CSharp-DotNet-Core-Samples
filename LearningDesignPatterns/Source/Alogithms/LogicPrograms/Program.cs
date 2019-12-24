@@ -15,7 +15,12 @@ namespace LogicPrograms
         {
 
             // Utopian Tree
-            for(var n=0; n <= 5; n++)
+            for (var n = 0; n <= 5; n++)
+            {
+                WriteLine(UtopianTreeV2(n));
+            }
+
+            for (var n = 0; n <= 5; n++)
             {
                 WriteLine(UtopianTree(n));
             }
@@ -141,6 +146,25 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static int UtopianTreeV2(int n)
+        {
+            var previous = 1;
+
+            for (var iCtr = 1; iCtr <= n; iCtr++)
+            {
+                if (iCtr % 2 == 1)
+                {
+                    previous *= 2;
+                }
+                else
+                {
+                    previous += 1;
+                }
+            }
+
+            return previous;
         }
 
         private static int UtopianTree(int n)
