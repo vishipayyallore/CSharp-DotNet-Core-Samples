@@ -13,26 +13,10 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
-            // FindMaximumOfArrayWithItsIndex
-            var alphabets = "abcdefghijklmnopqrstuvwxyz";
-            var word = "abc";
-            // var data = "1 3 1 3 1 4 1 3 2 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 7";
-            var data = "1 3 1 3 1 4 1 3 2 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5";
-            var arr1 = Array.ConvertAll(data.Split(), int.Parse);
-            var maximum = arr1[0];
+            // Designer PDF Viewer
+            int[] arr1 = PDFViewer();
 
-            foreach(var character in word)
-            {
-                var current = arr1[alphabets.IndexOf(character)];
-                if(current > maximum)
-                {
-                    maximum = current;
-                }
-            }
-
-            var length = maximum * word.Length;
-
-            // For testing the reusable method
+            // For testing the reusable method (FindMaximumOfArrayWithItsIndex)
             var results = FindMaximumOfArrayWithItsIndex(arr1);
 
             // The Hurdle Race
@@ -149,6 +133,29 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static int[] PDFViewer()
+        {
+            var alphabets = "abcdefghijklmnopqrstuvwxyz";
+            var word = "abc";
+            // var data = "1 3 1 3 1 4 1 3 2 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 7";
+            var data = "1 3 1 3 1 4 1 3 2 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5";
+            var arr1 = Array.ConvertAll(data.Split(), int.Parse);
+            var maximum = arr1[0];
+
+            foreach (var character in word)
+            {
+                var current = arr1[alphabets.IndexOf(character)];
+                if (current > maximum)
+                {
+                    maximum = current;
+                }
+            }
+
+            var length = maximum * word.Length;
+            WriteLine(length);
+            return arr1;
         }
 
         private static void TheHurdleRace()
