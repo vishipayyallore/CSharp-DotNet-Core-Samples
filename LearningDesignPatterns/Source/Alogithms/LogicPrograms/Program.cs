@@ -13,10 +13,18 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
+
+            // Utopian Tree
+            for(var n=0; n <= 5; n++)
+            {
+                WriteLine(UtopianTree(n));
+            }
+
             // Designer PDF Viewer
-            int[] arr1 = PDFViewer();
+            PDFViewer();
 
             // For testing the reusable method (FindMaximumOfArrayWithItsIndex)
+            var arr1 = new int[] { 0 };
             var results = FindMaximumOfArrayWithItsIndex(arr1);
 
             // The Hurdle Race
@@ -135,7 +143,28 @@ namespace LogicPrograms
             ReadKey();
         }
 
-        private static int[] PDFViewer()
+        private static int UtopianTree(int n)
+        {
+            var current = 1;
+            var previous = 1;
+
+            for (var iCtr = 1; iCtr <= n; iCtr++)
+            {
+                if (iCtr % 2 == 1)
+                {
+                    current = previous * 2;
+                }
+                else
+                {
+                    current = previous + 1;
+                }
+                previous = current;
+            }
+
+            return current;
+        }
+
+        private static void PDFViewer()
         {
             var alphabets = "abcdefghijklmnopqrstuvwxyz";
             var word = "abc";
@@ -155,7 +184,6 @@ namespace LogicPrograms
 
             var length = maximum * word.Length;
             WriteLine(length);
-            return arr1;
         }
 
         private static void TheHurdleRace()
