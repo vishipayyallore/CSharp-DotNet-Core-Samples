@@ -13,6 +13,9 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
+            // Mars Exploration
+            MarsExploration();
+
             // Drawing Book
             DrawingBook();
 
@@ -151,6 +154,28 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void MarsExploration()
+        {
+            const string sosMessage = "SOS";
+            var receivedMessage = "SOSSOS";
+            var iCtr = 0;
+            var difference = 0;
+
+            foreach (var character in receivedMessage)
+            {
+                if (sosMessage[iCtr++] != character)
+                {
+                    difference++;
+                }
+
+                if (iCtr >= 3)
+                {
+                    iCtr = 0;
+                }
+            }
+            WriteLine($"Difference: {difference}");
         }
 
         private static void DrawingBook()
