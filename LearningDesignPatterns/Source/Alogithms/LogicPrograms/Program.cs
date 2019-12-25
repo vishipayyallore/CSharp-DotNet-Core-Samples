@@ -13,6 +13,42 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
+
+            // Strong Password
+            var password = "#HackerRank";
+            var passwordRequirement = new bool[] { false, false, false, false };
+            const string numbers = "0123456789";
+            const string lowerCase = "abcdefghijklmnopqrstuvwxyz";
+            const string upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const string specialCharacters = "!@#$%^&*()-+";
+            var required = 0;
+
+            foreach (var character in password)
+            {
+                if (!passwordRequirement[0] && numbers.IndexOf(character) >= 0)
+                {
+                    passwordRequirement[0] = true;
+                    required++;
+                }
+                else if (!passwordRequirement[1] && lowerCase.IndexOf(character) >= 0)
+                {
+                    passwordRequirement[1] = true;
+                    required++;
+                }
+                else if (!passwordRequirement[2] && upperCase.IndexOf(character) >= 0)
+                {
+                    passwordRequirement[2] = true;
+                    required++;
+                }
+                else if (!passwordRequirement[3] && specialCharacters.IndexOf(character) >= 0)
+                {
+                    passwordRequirement[3] = true;
+                    required++;
+                }
+            }
+
+            WriteLine(required);
+
             // Mars Exploration
             MarsExploration();
 
@@ -861,7 +897,7 @@ namespace LogicPrograms
 
         private static int[] FindMaximumOfArrayWithItsIndex(int[] arrayItems)
         {
-            var maximum = arrayItems[0]-1;
+            var maximum = arrayItems[0] - 1;
             var index = -1;
 
             // Need to write Generic Logic to find the Max and Min in Array
