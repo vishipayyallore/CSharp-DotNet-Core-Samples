@@ -15,7 +15,8 @@ namespace LogicPrograms
         {
 
             // Strong Password
-            var password = "#HackerRank";
+            // var password = "#HackerRank";
+            var password = "Ab1";
             var passwordRequirement = new bool[] { false, false, false, false };
             const string numbers = "0123456789";
             const string lowerCase = "abcdefghijklmnopqrstuvwxyz";
@@ -43,7 +44,15 @@ namespace LogicPrograms
                 }
             }
 
-            WriteLine(required);
+            foreach (var notFound in passwordRequirement)
+            {
+                if(!notFound)
+                {
+                    required++;
+                }
+            }
+
+            WriteLine((required > (6 - password.Length)) ? required : (6 - password.Length));
 
             // Mars Exploration
             MarsExploration();
