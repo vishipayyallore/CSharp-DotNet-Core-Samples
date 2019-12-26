@@ -28,22 +28,18 @@ namespace LogicPrograms
                 if (!passwordRequirement[0] && numbers.IndexOf(character) >= 0)
                 {
                     passwordRequirement[0] = true;
-                    required++;
                 }
                 else if (!passwordRequirement[1] && lowerCase.IndexOf(character) >= 0)
                 {
                     passwordRequirement[1] = true;
-                    required++;
                 }
                 else if (!passwordRequirement[2] && upperCase.IndexOf(character) >= 0)
                 {
                     passwordRequirement[2] = true;
-                    required++;
                 }
                 else if (!passwordRequirement[3] && specialCharacters.IndexOf(character) >= 0)
                 {
                     passwordRequirement[3] = true;
-                    required++;
                 }
             }
 
