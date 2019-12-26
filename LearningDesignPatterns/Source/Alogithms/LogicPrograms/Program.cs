@@ -13,46 +13,8 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
-
             // Strong Password
-            // var password = "#HackerRank";
-            var password = "Ab1";
-            var passwordRequirement = new bool[] { false, false, false, false };
-            const string numbers = "0123456789";
-            const string lowerCase = "abcdefghijklmnopqrstuvwxyz";
-            const string upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            const string specialCharacters = "!@#$%^&*()-+";
-            var required = 0;
-
-            foreach (var character in password)
-            {
-                if (!passwordRequirement[0] && numbers.IndexOf(character) >= 0)
-                {
-                    passwordRequirement[0] = true;
-                }
-                else if (!passwordRequirement[1] && lowerCase.IndexOf(character) >= 0)
-                {
-                    passwordRequirement[1] = true;
-                }
-                else if (!passwordRequirement[2] && upperCase.IndexOf(character) >= 0)
-                {
-                    passwordRequirement[2] = true;
-                }
-                else if (!passwordRequirement[3] && specialCharacters.IndexOf(character) >= 0)
-                {
-                    passwordRequirement[3] = true;
-                }
-            }
-
-            foreach (var notFound in passwordRequirement)
-            {
-                if(!notFound)
-                {
-                    required++;
-                }
-            }
-
-            WriteLine((required > (6 - password.Length)) ? required : (6 - password.Length));
+            StrongPassword();
 
             // Mars Exploration
             MarsExploration();
@@ -195,6 +157,48 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void StrongPassword()
+        {
+            // var password = "#HackerRank";
+            var password = "Ab1";
+            var passwordRequirement = new bool[] { false, false, false, false };
+            const string numbers = "0123456789";
+            const string lowerCase = "abcdefghijklmnopqrstuvwxyz";
+            const string upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const string specialCharacters = "!@#$%^&*()-+";
+            var required = 0;
+
+            foreach (var character in password)
+            {
+                if (!passwordRequirement[0] && numbers.IndexOf(character) >= 0)
+                {
+                    passwordRequirement[0] = true;
+                }
+                else if (!passwordRequirement[1] && lowerCase.IndexOf(character) >= 0)
+                {
+                    passwordRequirement[1] = true;
+                }
+                else if (!passwordRequirement[2] && upperCase.IndexOf(character) >= 0)
+                {
+                    passwordRequirement[2] = true;
+                }
+                else if (!passwordRequirement[3] && specialCharacters.IndexOf(character) >= 0)
+                {
+                    passwordRequirement[3] = true;
+                }
+            }
+
+            foreach (var notFound in passwordRequirement)
+            {
+                if (!notFound)
+                {
+                    required++;
+                }
+            }
+
+            WriteLine((required > (6 - password.Length)) ? required : (6 - password.Length));
         }
 
         private static void MarsExploration()
