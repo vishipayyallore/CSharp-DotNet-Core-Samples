@@ -13,6 +13,10 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
+
+            // Beautiful Days at the Movies
+            var r = ReverseNumber(120);
+
             // Strong Password
             StrongPassword();
 
@@ -26,15 +30,7 @@ namespace LogicPrograms
             AngryProfessor();
 
             // Utopian Tree
-            for (var n = 0; n <= 5; n++)
-            {
-                WriteLine(UtopianTreeV2(n));
-            }
-
-            for (var n = 0; n <= 5; n++)
-            {
-                WriteLine(UtopianTree(n));
-            }
+            UtopianTreeDemo();
 
             // Designer PDF Viewer
             PDFViewer();
@@ -157,6 +153,32 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static int ReverseNumber(int value)
+        {
+            var reverse = 0;
+
+            while(value > 0)
+            {
+                reverse = (reverse * 10) + (value%10);
+                value /= 10;
+            }
+
+            return reverse;
+        }
+
+        private static void UtopianTreeDemo()
+        {
+            for (var n = 0; n <= 5; n++)
+            {
+                WriteLine(UtopianTreeV2(n));
+            }
+
+            for (var n = 0; n <= 5; n++)
+            {
+                WriteLine(UtopianTree(n));
+            }
         }
 
         private static void StrongPassword()
