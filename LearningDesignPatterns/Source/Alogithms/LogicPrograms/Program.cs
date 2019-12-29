@@ -15,7 +15,22 @@ namespace LogicPrograms
         {
 
             // Beautiful Days at the Movies
-            var r = ReverseNumber(120);
+            var ijk = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+            var count = 0;
+
+            for(var iCtr=ijk[0]; iCtr<=ijk[1]; iCtr++)
+            {
+                var rCtr = ReverseNumber(iCtr);
+
+                var result = (iCtr - rCtr) / (ijk[2] * 1.0);
+
+                if(System.Math.Abs(result)  % 1 == 0)
+                {
+                    count++;
+                }
+            }
+
+            WriteLine(count);
 
             // Strong Password
             StrongPassword();
