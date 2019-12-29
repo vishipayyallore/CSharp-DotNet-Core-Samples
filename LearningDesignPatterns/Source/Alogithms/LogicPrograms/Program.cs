@@ -13,24 +13,8 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
-
             // Beautiful Days at the Movies
-            var ijk = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
-            var count = 0;
-
-            for(var iCtr=ijk[0]; iCtr<=ijk[1]; iCtr++)
-            {
-                var rCtr = ReverseNumber(iCtr);
-
-                var result = (iCtr - rCtr) / (ijk[2] * 1.0);
-
-                if(System.Math.Abs(result)  % 1 == 0)
-                {
-                    count++;
-                }
-            }
-
-            WriteLine(count);
+            BeautifulDaysAtTheMovies();
 
             // Strong Password
             StrongPassword();
@@ -168,6 +152,26 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void BeautifulDaysAtTheMovies()
+        {
+            var ijk = Array.ConvertAll(ReadLine().Split(' '), int.Parse);
+            var count = 0;
+
+            for (var iCtr = ijk[0]; iCtr <= ijk[1]; iCtr++)
+            {
+                var rCtr = ReverseNumber(iCtr);
+
+                var result = (iCtr - rCtr) / (ijk[2] * 1.0);
+
+                if (System.Math.Abs(result) % 1 == 0)
+                {
+                    count++;
+                }
+            }
+
+            WriteLine(count);
         }
 
         private static int ReverseNumber(int value)
