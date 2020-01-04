@@ -13,6 +13,28 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
+
+            // Sequence Equation
+            // var p = new int[] { 4, 3, 5, 1, 2 };
+            var p = new int[] { 5, 2, 1, 3, 4 };
+            var indices = new int[p.Length];
+            var itemFound = new int[p.Length];
+
+            for (var iCtr = 0; iCtr < p.Length; iCtr++)
+            {
+                indices[p[iCtr] - 1] = iCtr + 1;
+            }
+
+            for (var iCtr = 0; iCtr < indices.Length; iCtr++)
+            {
+                itemFound[iCtr] = Array.IndexOf(p, indices[iCtr]) + 1;
+            }
+
+            for (var iCtr = 0; iCtr < itemFound.Length; iCtr++)
+            {
+                Console.Write($"{itemFound[iCtr]} ");
+            }
+            
             // Viral Advertising
             ViralAdvertising();
 
@@ -198,9 +220,9 @@ namespace LogicPrograms
         {
             var reverse = 0;
 
-            while(value > 0)
+            while (value > 0)
             {
-                reverse = (reverse * 10) + (value%10);
+                reverse = (reverse * 10) + (value % 10);
                 value /= 10;
             }
 
