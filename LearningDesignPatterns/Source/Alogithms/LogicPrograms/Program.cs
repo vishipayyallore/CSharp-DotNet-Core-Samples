@@ -13,6 +13,23 @@ namespace LogicPrograms
     {
         static void Main(string[] args)
         {
+
+            // Viral Advertising
+            var numberOfDays = 5;
+            var numberOfShares = 5;
+            var numberOfLikes = 0;
+
+            for(var iCtr=0; iCtr < numberOfDays; iCtr++)
+            {
+                var likes = numberOfShares / 2;
+                numberOfLikes += likes;
+
+                numberOfShares = likes * 3;
+
+                WriteLine($"Likes: {numberOfLikes}");
+            }
+            
+
             // Beautiful Days at the Movies
             BeautifulDaysAtTheMovies();
 
