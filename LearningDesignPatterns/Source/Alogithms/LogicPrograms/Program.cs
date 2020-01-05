@@ -43,11 +43,7 @@ namespace LogicPrograms
                 {
                     index = sum;
                 }
-                else if (sum == a.Length)
-                {
-                    index = 0;
-                }
-                else if (sum > a.Length)
+                else if (sum >= a.Length)
                 {
                     index = sum - a.Length;
                 }
