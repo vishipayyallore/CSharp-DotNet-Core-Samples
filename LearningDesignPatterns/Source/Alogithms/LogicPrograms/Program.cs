@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using static System.Console;
-using Math = LogicPrograms.Logics.Math;
 
 namespace LogicPrograms
 {
@@ -145,7 +144,7 @@ namespace LogicPrograms
             //------------------------------------------------------------------------------------------
 
             //------------------------------------------------------------------------------------------
-            IMath math = new Math();
+            ICustomMath math = new CustomMath();
 
             Write("\n\nEnter a number for finding Factorial: ");
 

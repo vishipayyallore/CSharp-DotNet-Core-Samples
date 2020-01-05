@@ -3,7 +3,7 @@
 namespace LogicPrograms.Interfaces
 {
 
-    public interface IMath
+    public interface ICustomMath
     {
 
         BigInteger GetFactorial(int number);

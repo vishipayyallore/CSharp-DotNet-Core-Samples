@@ -4,7 +4,7 @@ using LogicPrograms.Interfaces;
 namespace LogicPrograms.Logics
 {
 
-    public class Math : IMath
+    public class CustomMath : ICustomMath
     {
 
         public BigInteger GetFactorial(int number)
