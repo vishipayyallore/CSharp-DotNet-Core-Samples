@@ -37,17 +37,9 @@ namespace LogicPrograms
 
             for (var iCtr = 0; iCtr < a.Length; iCtr++)
             {
-                var index = 0;
-                var sum = iCtr + k;
-                if (sum < a.Length)
-                {
-                    index = sum;
-                }
-                else if (sum >= a.Length)
-                {
-                    index = sum - a.Length;
-                }
 
+                WriteLine($"{iCtr} {k} {a.Length} = {(iCtr + k) % a.Length}");
+                var index = (iCtr + k) % a.Length;
                 d[index] = a[iCtr];
             }
 
