@@ -13,9 +13,9 @@ namespace LogicPrograms
 
         static int GetCurrentIndex(int value, int k, int length)
         {
-            for(var i=1; i<=k; i++)
+            for (var i = 1; i <= k; i++)
             {
-                if((value + 1) >= length)
+                if ((value + 1) >= length)
                 {
                     value = 0;
                     continue;
@@ -35,9 +35,23 @@ namespace LogicPrograms
             var d = new int[a.Length];
             var queries = new int[] { 0, 1, 2 };
 
-            for (var iCtr=0; iCtr<a.Length; iCtr++)
+            for (var iCtr = 0; iCtr < a.Length; iCtr++)
             {
-                var index = GetCurrentIndex(iCtr, k, a.Length);
+                var index = 0;
+                var sum = iCtr + k;
+                if (sum < a.Length)
+                {
+                    index = sum;
+                }
+                else if (sum == a.Length)
+                {
+                    index = 0;
+                }
+                else if (sum > a.Length)
+                {
+                    index = sum - a.Length;
+                }
+
                 d[index] = a[iCtr];
             }
 
