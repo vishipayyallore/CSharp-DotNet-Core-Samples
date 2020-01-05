@@ -11,43 +11,10 @@ namespace LogicPrograms
     class Program
     {
 
-        static int GetCurrentIndex(int value, int k, int length)
-        {
-            for (var i = 1; i <= k; i++)
-            {
-                if ((value + 1) >= length)
-                {
-                    value = 0;
-                    continue;
-                }
-                value++;
-            }
-
-            return value;
-        }
-
         static void Main(string[] args)
         {
-
             // Circular Array Rotation
-            var a = new int[] { 1, 2, 3 };
-            var k = 2;
-            var d = new int[a.Length];
-            var queries = new int[] { 0, 1, 2 };
-
-            for (var iCtr = 0; iCtr < a.Length; iCtr++)
-            {
-
-                WriteLine($"{iCtr} {k} {a.Length} = {(iCtr + k) % a.Length}");
-                var index = (iCtr + k) % a.Length;
-                d[index] = a[iCtr];
-            }
-
-            for (var iCtr = 0; iCtr < queries.Length; iCtr++)
-            {
-                var v = d[queries[iCtr]];
-                queries[iCtr] = v;
-            }
+            CircularArrayRotation();
 
             // Sequence Equation
             SequenceEquation();
@@ -194,6 +161,28 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void CircularArrayRotation()
+        {
+            var a = new int[] { 1, 2, 3 };
+            var k = 2;
+            var d = new int[a.Length];
+            var queries = new int[] { 0, 1, 2 };
+
+            for (var iCtr = 0; iCtr < a.Length; iCtr++)
+            {
+
+                WriteLine($"{iCtr} {k} {a.Length} = {(iCtr + k) % a.Length}");
+                var index = (iCtr + k) % a.Length;
+                d[index] = a[iCtr];
+            }
+
+            for (var iCtr = 0; iCtr < queries.Length; iCtr++)
+            {
+                var v = d[queries[iCtr]];
+                queries[iCtr] = v;
+            }
         }
 
         private static void SequenceEquation()
