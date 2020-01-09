@@ -13,6 +13,9 @@ namespace LogicPrograms
 
         static void Main(string[] args)
         {
+            // Reverse Array
+            Reverse1DArray();
+
             // Circular Array Rotation
             CircularArrayRotation();
 
@@ -161,6 +164,18 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void Reverse1DArray()
+        {
+            var a = new int[] { 1, 4, 3, 2 };
+            var b = new int[a.Length];
+            var jCtr = 0;
+            for (var iCtr = a.Length - 1; iCtr >= 0; iCtr--)
+            {
+                b[jCtr++] = a[iCtr];
+                Write($"{a[iCtr]} ");
+            }
         }
 
         private static void CircularArrayRotation()
