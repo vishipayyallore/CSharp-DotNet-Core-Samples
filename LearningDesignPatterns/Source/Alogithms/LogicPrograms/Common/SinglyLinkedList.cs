@@ -11,7 +11,7 @@
             Tail = null;
         }
 
-        public void InsertNode(int nodeData)
+        public SinglyLinkedList InsertNode(int nodeData)
         {
             SinglyLinkedListNode node = new SinglyLinkedListNode(nodeData);
 
@@ -25,6 +25,8 @@
             }
 
             Tail = node;
+
+            return this;
         }
     }
 

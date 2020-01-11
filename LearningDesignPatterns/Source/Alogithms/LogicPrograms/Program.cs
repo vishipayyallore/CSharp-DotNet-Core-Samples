@@ -1,4 +1,5 @@
-﻿using LogicPrograms.Interfaces;
+﻿using LogicPrograms.Common;
+using LogicPrograms.Interfaces;
 using LogicPrograms.Logics;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,9 @@ namespace LogicPrograms
 
         static void Main(string[] args)
         {
+            // Print the Elements of a Linked List
+            TraverseSingleLinkedList();
+
             // Reverse Array
             Reverse1DArray();
 
@@ -164,6 +168,26 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void TraverseSingleLinkedList()
+        {
+            var llist = new SinglyLinkedList();
+
+            llist.InsertNode(10)
+                    .InsertNode(20)
+                    .InsertNode(30);
+
+            var head = llist.Head;
+            while (true)
+            {
+                Console.WriteLine(head.Data);
+                if (head.Next == null)
+                {
+                    break;
+                }
+                head = head.Next;
+            }
         }
 
         private static void Reverse1DArray()
