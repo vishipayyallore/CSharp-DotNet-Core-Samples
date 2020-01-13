@@ -33,20 +33,8 @@ namespace LogicPrograms
 
         static void Main(string[] args)
         {
-
             // Insert a Node at the Tail of a Linked List
-            SinglyLinkedListV1 llist = new SinglyLinkedListV1();
-
-            SinglyLinkedListNode llist_head = insertNodeAtTail(llist.head, 141);
-            llist.head = llist_head;
-            llist_head = insertNodeAtTail(llist.head, 302);
-            llist.head = llist_head;
-            llist_head = insertNodeAtTail(llist.head, 164);
-            llist.head = llist_head;
-            llist_head = insertNodeAtTail(llist.head, 530);
-            llist.head = llist_head;
-            llist_head = insertNodeAtTail(llist.head, 474);
-            llist.head = llist_head;
+            AddElementToTailOfLinkedList();
             // 
             // Print the Elements of a Linked List
             TraverseSingleLinkedList();
@@ -202,6 +190,22 @@ namespace LogicPrograms
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
+        }
+
+        private static void AddElementToTailOfLinkedList()
+        {
+            SinglyLinkedListV1 llist = new SinglyLinkedListV1();
+
+            SinglyLinkedListNode llist_head = insertNodeAtTail(llist.head, 141);
+            llist.head = llist_head;
+            llist_head = insertNodeAtTail(llist.head, 302);
+            llist.head = llist_head;
+            llist_head = insertNodeAtTail(llist.head, 164);
+            llist.head = llist_head;
+            llist_head = insertNodeAtTail(llist.head, 530);
+            llist.head = llist_head;
+            llist_head = insertNodeAtTail(llist.head, 474);
+            llist.head = llist_head;
         }
 
         private static void TraverseSingleLinkedList()
