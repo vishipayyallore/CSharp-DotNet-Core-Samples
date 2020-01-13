@@ -12,8 +12,37 @@ namespace LogicPrograms
     class Program
     {
 
+        static SinglyLinkedListNode insertNodeAtTail(SinglyLinkedListNode head, int data)
+        {
+            if(head == null)
+            {
+                head = new SinglyLinkedListNode(data);
+            }
+            else
+            {
+                while(head.Next != null)
+                {
+                    head.Next = head.Next.Next;
+                }
+                head.Next = new SinglyLinkedListNode(data);
+            }
+            
+            return head;
+        }
+
         static void Main(string[] args)
         {
+
+            // Insert a Node at the Tail of a Linked List
+            SinglyLinkedListV1 llist = new SinglyLinkedListV1();
+
+            SinglyLinkedListNode llist_head = insertNodeAtTail(llist.head, 141);
+            llist.head = llist_head;
+            llist_head = insertNodeAtTail(llist.head, 302);
+            llist.head = llist_head;
+            llist_head = insertNodeAtTail(llist.head, 164);
+            llist.head = llist_head;
+            // 
             // Print the Elements of a Linked List
             TraverseSingleLinkedList();
 
