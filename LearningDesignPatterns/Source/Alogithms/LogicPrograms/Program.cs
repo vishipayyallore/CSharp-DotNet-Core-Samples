@@ -20,11 +20,12 @@ namespace LogicPrograms
             }
             else
             {
-                while(head.Next != null)
+                var newNode = head;
+                while (newNode.Next != null)
                 {
-                    head.Next = head.Next.Next;
+                    newNode = newNode.Next;
                 }
-                head.Next = new SinglyLinkedListNode(data);
+                newNode.Next = new SinglyLinkedListNode(data);
             }
             
             return head;
@@ -41,6 +42,10 @@ namespace LogicPrograms
             llist_head = insertNodeAtTail(llist.head, 302);
             llist.head = llist_head;
             llist_head = insertNodeAtTail(llist.head, 164);
+            llist.head = llist_head;
+            llist_head = insertNodeAtTail(llist.head, 530);
+            llist.head = llist_head;
+            llist_head = insertNodeAtTail(llist.head, 474);
             llist.head = llist_head;
             // 
             // Print the Elements of a Linked List
